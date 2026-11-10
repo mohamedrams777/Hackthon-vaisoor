@@ -1,0 +1,161 @@
+{% extends "pressure_app/base.html" %}
+{% block title %}Methodology{% endblock %}
+
+{% block content %}
+<div class="page-header">
+  <div class="container">
+    <h1><i class="bi bi-graph-up-arrow me-2"></i>Methodology</h1>
+    <p class="subtitle">How we built the Pressure Reliability Index (PRI) — SupeRR Selector Season 2</p>
+  </div>
+</div>
+
+<div class="container pb-5">
+  <div class="row g-4">
+    <div class="col-lg-8">
+
+      <!-- Overview -->
+      <div class="method-card">
+        <h4><i class="bi bi-info-circle-fill me-2"></i>Overview</h4>
+        <p>The <strong>Pressure Reliability Index (PRI)</strong> measures how consistently a player performs
+        in high-stakes situations, context-adjusted for league (IPL vs T20I) and match phase (powerplay /
+        middle / death). Data covers <strong>200,999 balls across 867 matches</strong> (IPL 2022–2026 + T20Is).</p>
+        <p>Minimum threshold: <strong>250 pressure balls faced/bowled</strong> for qualification.</p>
+      </div>
+
+      <!-- Pressure Definitions -->
+      <div class="method-card">
+        <h4><i class="bi bi-exclamation-triangle-fill me-2"></i>Pressure Situation Definitions</h4>
+        <p>A ball is classified as a <em>pressure ball</em> if any of these conditions hold:</p>
+        <table class="table table-sm table-bordered">
+          <thead><tr><th>Condition</th><th>Criteria</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><strong>Inn2 Death Close</strong></td>
+              <td>Over ≥ 15, Runs needed > 0, 6 ≤ RRR ≤ 24, Wickets in hand ≥ 1</td>
+            </tr>
+            <tr>
+              <td><strong>Inn2 High RRR</strong></td>
+              <td>Over ≥ 10, RRR ≥ 10, Balls remaining ≤ 66, Wickets in hand ≥ 2</td>
+            </tr>
+            <tr>
+              <td><strong>Inn2 Crisis</strong></td>
+              <td>Over ≤ 7, Cumulative wickets ≥ 3, RRR ≥ 8.5</td>
+            </tr>
+            <tr>
+              <td><strong>Inn1 Death</strong></td>
+              <td>Over ≥ 16</td>
+            </tr>
+            <tr>
+              <td><strong>Inn1 Crisis</strong></td>
+              <td>≥ 3 wickets by over 7 &amp; score ≤ 50 — OR — ≥ 4 wickets by over 11 &amp; score ≤ 75</td>
+            </tr>
+            <tr>
+              <td><strong>Super Overs</strong></td>
+              <td>Innings 3 or 4</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="mb-0">Total pressure balls: <strong>65,698 / 200,999 (32.7%)</strong></p>
+        <p class="mt-1"><em>Knockout matches carry a <strong>1.25× pressure multiplier</strong>.</em></p>
+      </div>
+
+      <!-- Context Baselines -->
+      <div class="method-card">
+        <h4><i class="bi bi-bar-chart-fill me-2"></i>Context Normalisation Baselines</h4>
+        <p>Performances are adjusted for the phase-and-league context in which they occurred:</p>
+        <table class="table table-sm table-bordered">
+          <thead><tr><th>Phase</th><th>IPL Economy</th><th>IPL SR</th><th>T20I Economy</th><th>T20I SR</th></tr></thead>
+          <tbody>
+            <tr><td>Death (overs 16–20)</td><td>9.91</td><td>158.2</td><td>9.11</td><td>145.8</td></tr>
+            <tr><td>Middle (overs 7–15)</td><td>8.12</td><td>136.4</td><td>7.85</td><td>131.0</td></tr>
+            <tr><td>Powerplay (overs 1–6)</td><td>8.65</td><td>138.9</td><td>8.19</td><td>132.6</td></tr>
+          </tbody>
+        </table>
+        <p class="mb-0">The delta-SR metric measures a batter's pressure SR relative to the phase baseline.</p>
+      </div>
+
+      <!-- PRI Formula -->
+      <div class="method-card">
+        <h4><i class="bi bi-calculator-fill me-2"></i>PRI Scoring Formula</h4>
+        <p>For <strong>batters</strong>, six metrics are Z-score normalised and combined with weights:</p>
+        <div class="formula-box">
+PRI_bat = Z(delta_SR)×0.30 + Z(avg_press)×0.20<br>
+        + Z(boundary%)×0.20 + Z(RSAA/100)×0.15<br>
+        + Z(impact_rate)×0.10 + Z(-dot%)×0.05<br>
+<br>
+Rescaled: PRI_bat_score = 50 + 15 × PRI_bat
+        </div>
+        <p>For <strong>bowlers</strong>:</p>
+        <div class="formula-box">
+PRI_bowl = Z(-economy)×0.35 + Z(-boundary%)×0.25<br>
+         + Z(wicket_rate)×0.20 + Z(dot%)×0.15<br>
+         + Z(runs_saved_per_6)×0.05<br>
+<br>
+Rescaled: PRI_bowl_score = 50 + 15 × PRI_bowl
+        </div>
+        <p class="mb-0">Bayesian shrinkage is applied: estimates are pulled toward the population mean for
+        players with fewer pressure balls, ensuring stability.</p>
+      </div>
+
+      <!-- IPL Eligibility -->
+      <div class="method-card">
+        <h4><i class="bi bi-patch-check-fill me-2"></i>IPL Eligibility Filter</h4>
+        <p>Pakistan players are excluded from the IPL-eligible lists (67 players identified from the
+        competition team–player mapping file), including — but not limited to — Shaheen Afridi, Haris Rauf,
+        Shadab Khan, Babar Azam, Mohammad Rizwan, Abrar Ahmed, Sufiyan Muqeem.</p>
+        <p class="mb-0">Players of other nationalities (e.g. UAE's Asif Khan) remain in the eligible pool.</p>
+      </div>
+
+    </div>
+
+    <!-- Sidebar -->
+    <div class="col-lg-4">
+      <div class="method-card">
+        <h4>📊 Quick Stats</h4>
+        <ul class="list-unstyled">
+          <li class="py-1 border-bottom">🏏 <strong>200,999</strong> total balls</li>
+          <li class="py-1 border-bottom">🏟️ <strong>867</strong> matches</li>
+          <li class="py-1 border-bottom">⚡ <strong>65,698</strong> pressure balls</li>
+          <li class="py-1 border-bottom">🎯 <strong>32.7%</strong> balls under pressure</li>
+          <li class="py-1 border-bottom">🏆 <strong>5</strong> IPL seasons (2022–26)</li>
+          <li class="py-1">🌍 <strong>67</strong> Pakistan players excluded</li>
+        </ul>
+      </div>
+
+      <div class="method-card">
+        <h4>🏅 Official Top 10 Batters</h4>
+        <ol class="small">
+          <li>Suryakumar Yadav — 81.8</li>
+          <li>Dinesh Karthik — 74.9</li>
+          <li>Shashank Singh — 74.6</li>
+          <li>Tim David — 73.2</li>
+          <li>Tilak Varma — 72.7</li>
+          <li>Tristan Stubbs — 72.5</li>
+          <li>Heinrich Klaasen — 70.1</li>
+          <li>Rinku Singh — 70.1</li>
+          <li>Rishabh Pant — 67.4</li>
+          <li>Jos Buttler — 66.1</li>
+        </ol>
+      </div>
+
+      <div class="method-card">
+        <h4>🎳 Official Top 10 Bowlers</h4>
+        <ol class="small">
+          <li>Sunil Narine — 89.1</li>
+          <li>Jasprit Bumrah — 80.5</li>
+          <li>Mitchell Santner — 79.9</li>
+          <li>Rashid Khan — 79.6</li>
+          <li>Akeal Hosein — 77.3</li>
+          <li>Matheesha Pathirana — 75.2</li>
+          <li>Varun Chakravarthy — 69.8</li>
+          <li>Kuldeep Yadav — 68.3</li>
+          <li>Mustafizur Rahman — 66.2</li>
+          <li>Wanindu Hasaranga — 65.8</li>
+        </ol>
+      </div>
+    </div>
+
+  </div>
+</div>
+{% endblock %}
+

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}SupeRR Selector{% endblock %} | Rajasthan Royals</title>
+  <!-- Bootstrap 5 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- Custom RR theme -->
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+  {% block extra_head %}{% endblock %}
+</head>
+<body>
+
+<!-- ── Navbar ──────────────────────────────────────── -->
+<nav class="navbar navbar-expand-lg navbar-rr sticky-top">
+  <div class="container-fluid px-4">
+    <a class="navbar-brand" href="{% url 'home' %}">
+      🏏 <span>SupeRR</span><span class="pink">Selector</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto gap-1">
+        <li class="nav-item">
+          <a class="nav-link {% if request.resolver_match.url_name == 'home' %}active{% endif %}"
+             href="{% url 'home' %}"><i class="bi bi-house-fill me-1"></i>Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {% if request.resolver_match.url_name == 'batters' %}active{% endif %}"
+             href="{% url 'batters' %}"><i class="bi bi-person-fill me-1"></i>Batters</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {% if request.resolver_match.url_name == 'bowlers' %}active{% endif %}"
+             href="{% url 'bowlers' %}"><i class="bi bi-arrow-down-circle-fill me-1"></i>Bowlers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {% if request.resolver_match.url_name == 'ipl_eligible' %}active{% endif %}"
+             href="{% url 'ipl_eligible' %}"><i class="bi bi-patch-check-fill me-1"></i>IPL Eligible</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {% if request.resolver_match.url_name == 'recent_2025_2026' %}active{% endif %}"
+             href="{% url 'recent_2025_2026' %}"><i class="bi bi-calendar-week-fill me-1"></i>2025-26</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {% if request.resolver_match.url_name == 'matches' %}active{% endif %}"
+             href="{% url 'matches' %}"><i class="bi bi-collection-fill me-1"></i>Matches</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {% if request.resolver_match.url_name == 'methodology' %}active{% endif %}"
+             href="{% url 'methodology' %}"><i class="bi bi-graph-up-arrow me-1"></i>Methodology</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ── Page Content ───────────────────────────────── -->
+{% block content %}{% endblock %}
+
+<!-- ── Footer ────────────────────────────────────── -->
+<footer>
+  <span class="pink">SupeRR Selector</span> &mdash; Rajasthan Royals Hackathon &nbsp;|&nbsp;
+  Pressure Reliability Index (PRI) &nbsp;|&nbsp; IPL + T20I Data 2022–2026
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+{% block extra_js %}{% endblock %}
+</body>
+</html>
+

@@ -1,0 +1,279 @@
+/* SupeRR Selector — Rajasthan Royals Theme */
+:root {
+  --rr-blue: #002D6A;
+  --rr-pink: #E91E8C;
+  --rr-gold: #FFD700;
+  --rr-light: #f0f4ff;
+  --rr-card-bg: #ffffff;
+}
+
+body {
+  background: var(--rr-light);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #1a1a2e;
+}
+
+/* ── Navbar ─────────────────────────────────────── */
+.navbar-rr {
+  background: linear-gradient(135deg, var(--rr-blue) 0%, #003f9e 100%);
+  border-bottom: 3px solid var(--rr-pink);
+  box-shadow: 0 2px 12px rgba(0,45,106,0.4);
+}
+
+.navbar-rr .navbar-brand {
+  font-weight: 800;
+  font-size: 1.3rem;
+  color: #fff !important;
+  letter-spacing: 1px;
+}
+
+.navbar-rr .navbar-brand span.pink {
+  color: var(--rr-pink);
+}
+
+.navbar-rr .nav-link {
+  color: rgba(255,255,255,0.85) !important;
+  font-weight: 600;
+  font-size: 0.88rem;
+  transition: color 0.2s;
+  padding: 0.5rem 0.9rem;
+  border-radius: 6px;
+}
+
+.navbar-rr .nav-link:hover,
+.navbar-rr .nav-link.active {
+  color: var(--rr-gold) !important;
+  background: rgba(255,255,255,0.08);
+}
+
+.navbar-toggler { border-color: rgba(255,255,255,0.4); }
+.navbar-toggler-icon { filter: invert(1); }
+
+/* ── Page header ─────────────────────────────────── */
+.page-header {
+  background: linear-gradient(135deg, var(--rr-blue) 0%, #1a4b9e 100%);
+  color: #fff;
+  padding: 2.5rem 0 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 4px solid var(--rr-pink);
+}
+
+.page-header h1 { font-weight: 800; letter-spacing: 1px; }
+.page-header .subtitle { color: rgba(255,255,255,0.75); font-size: 0.95rem; margin-top: 0.3rem; }
+
+/* ── Stat cards ──────────────────────────────────── */
+.stat-card {
+  background: var(--rr-card-bg);
+  border-radius: 14px;
+  border: none;
+  box-shadow: 0 4px 20px rgba(0,45,106,0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  overflow: hidden;
+}
+
+.stat-card:hover { transform: translateY(-4px); box-shadow: 0 8px 28px rgba(0,45,106,0.18); }
+
+.stat-card .card-body { padding: 1.5rem; }
+.stat-card .stat-icon { font-size: 2.4rem; margin-bottom: 0.5rem; }
+.stat-card .stat-number { font-size: 2.2rem; font-weight: 800; color: var(--rr-blue); }
+.stat-card .stat-label { font-size: 0.82rem; color: #6c757d; text-transform: uppercase; letter-spacing: 1px; }
+.stat-card .card-accent { height: 4px; background: linear-gradient(90deg, var(--rr-pink), var(--rr-gold)); }
+
+/* ── Section headers ─────────────────────────────── */
+.section-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--rr-blue);
+  border-left: 4px solid var(--rr-pink);
+  padding-left: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+/* ── Tables ──────────────────────────────────────── */
+.rr-table-wrap {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 4px 20px rgba(0,45,106,0.08);
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.table { margin-bottom: 0; font-size: 0.875rem; }
+
+.table thead th {
+  background: var(--rr-blue);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  border: none;
+  padding: 0.9rem 1rem;
+  white-space: nowrap;
+}
+
+.table tbody tr { transition: background 0.15s; }
+.table tbody tr:hover { background: #edf2ff; }
+.table tbody td { padding: 0.75rem 1rem; border-color: #e8edf8; vertical-align: middle; }
+
+.rank-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px; height: 30px;
+  border-radius: 50%;
+  font-weight: 800;
+  font-size: 0.85rem;
+  color: #fff;
+  background: var(--rr-blue);
+}
+
+.rank-badge.gold { background: linear-gradient(135deg, #FFD700, #FFA500); color: #333; }
+.rank-badge.silver { background: linear-gradient(135deg, #C0C0C0, #A9A9A9); }
+.rank-badge.bronze { background: linear-gradient(135deg, #CD7F32, #A0522D); }
+
+.pri-score {
+  font-weight: 800;
+  color: var(--rr-blue);
+  font-size: 1rem;
+}
+
+.pri-bar {
+  height: 6px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, var(--rr-pink), var(--rr-blue));
+  display: block;
+  margin-top: 3px;
+}
+
+/* ── Badges ──────────────────────────────────────── */
+.badge-ipl {
+  background: linear-gradient(135deg, var(--rr-blue), #003f9e);
+  color: #fff;
+  font-size: 0.72rem;
+  padding: 3px 8px;
+  border-radius: 20px;
+}
+
+.badge-t20i {
+  background: linear-gradient(135deg, #28a745, #1d7a34);
+  color: #fff;
+  font-size: 0.72rem;
+  padding: 3px 8px;
+  border-radius: 20px;
+}
+
+.badge-ko {
+  background: linear-gradient(135deg, var(--rr-pink), #c01070);
+  color: #fff;
+  font-size: 0.72rem;
+  padding: 3px 8px;
+  border-radius: 20px;
+}
+
+/* ── Filter bar ──────────────────────────────────── */
+.filter-bar {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,45,106,0.07);
+  padding: 1.2rem 1.5rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+.filter-bar .form-control,
+.filter-bar .form-select {
+  border: 2px solid #d0daf0;
+  border-radius: 8px;
+  font-size: 0.88rem;
+}
+
+.filter-bar .form-control:focus,
+.filter-bar .form-select:focus {
+  border-color: var(--rr-blue);
+  box-shadow: 0 0 0 3px rgba(0,45,106,0.1);
+}
+
+.btn-rr {
+  background: var(--rr-blue);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  padding: 0.5rem 1.2rem;
+  font-size: 0.88rem;
+  transition: background 0.2s;
+}
+
+.btn-rr:hover { background: var(--rr-pink); color: #fff; }
+
+.btn-rr-outline {
+  background: transparent;
+  color: var(--rr-blue);
+  border: 2px solid var(--rr-blue);
+  border-radius: 8px;
+  font-weight: 600;
+  padding: 0.4rem 1rem;
+  font-size: 0.88rem;
+  transition: all 0.2s;
+}
+
+.btn-rr-outline:hover { background: var(--rr-blue); color: #fff; }
+
+/* ── Methodology page ────────────────────────────── */
+.method-card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 4px 18px rgba(0,45,106,0.08);
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  border-left: 5px solid var(--rr-pink);
+}
+
+.method-card h4 { color: var(--rr-blue); font-weight: 700; }
+
+.formula-box {
+  background: var(--rr-blue);
+  color: var(--rr-gold);
+  font-family: 'Courier New', monospace;
+  font-size: 0.95rem;
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  margin: 1rem 0;
+  overflow-x: auto;
+}
+
+/* ── Tabs ────────────────────────────────────────── */
+.nav-tabs .nav-link { color: var(--rr-blue); font-weight: 600; }
+.nav-tabs .nav-link.active {
+  color: var(--rr-pink) !important;
+  border-bottom: 3px solid var(--rr-pink);
+  font-weight: 700;
+}
+
+/* ── Footer ──────────────────────────────────────── */
+footer {
+  background: var(--rr-blue);
+  color: rgba(255,255,255,0.7);
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.82rem;
+  margin-top: 3rem;
+  border-top: 3px solid var(--rr-pink);
+}
+
+footer span.pink { color: var(--rr-pink); font-weight: 700; }
+
+/* ── Responsive ──────────────────────────────────── */
+@media (max-width: 768px) {
+  .table { font-size: 0.78rem; }
+  .table thead th { padding: 0.6rem 0.5rem; }
+  .table tbody td { padding: 0.5rem 0.5rem; }
+  .page-header h1 { font-size: 1.5rem; }
+  .filter-bar { flex-direction: column; }
+  .stat-card .stat-number { font-size: 1.7rem; }
+}
+

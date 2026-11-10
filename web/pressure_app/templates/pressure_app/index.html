@@ -1,0 +1,169 @@
+{% extends "pressure_app/base.html" %}
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<!-- Hero -->
+<div class="page-header">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-8">
+        <h1>🏏 SupeRR Selector <span style="color:#E91E8C">Season 2</span></h1>
+        <p class="subtitle">Rajasthan Royals Hackathon &mdash; Most Reliable Players Under Pressure<br>
+          Ball-by-ball PRI analysis across IPL 2022–2026 &amp; T20 Internationals</p>
+      </div>
+      <div class="col-lg-4 text-end">
+        <a href="{% url 'methodology' %}" class="btn btn-outline-light">
+          <i class="bi bi-graph-up-arrow me-1"></i> View Methodology
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container pb-5">
+
+  <!-- Stat Cards -->
+  <div class="row g-4 mb-4">
+    <div class="col-sm-6 col-lg-3">
+      <div class="stat-card card h-100">
+        <div class="card-accent"></div>
+        <div class="card-body text-center">
+          <div class="stat-icon">🏟️</div>
+          <div class="stat-number">{{ total_matches }}</div>
+          <div class="stat-label">Total Matches</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-lg-3">
+      <div class="stat-card card h-100">
+        <div class="card-accent"></div>
+        <div class="card-body text-center">
+          <div class="stat-icon">🏆</div>
+          <div class="stat-number">{{ ipl_matches }}</div>
+          <div class="stat-label">IPL Matches</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-lg-3">
+      <div class="stat-card card h-100">
+        <div class="card-accent"></div>
+        <div class="card-body text-center">
+          <div class="stat-icon">⚡</div>
+          <div class="stat-number">{{ ko_matches }}</div>
+          <div class="stat-label">Knockout Matches</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-lg-3">
+      <div class="stat-card card h-100">
+        <div class="card-accent"></div>
+        <div class="card-body text-center">
+          <div class="stat-icon">🎯</div>
+          <div class="stat-number">32.7%</div>
+          <div class="stat-label">Balls Under Pressure</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Top Batters -->
+  <h2 class="section-title"><i class="bi bi-person-fill me-2"></i>Top 10 Batters Under Pressure</h2>
+  <div class="rr-table-wrap mb-4">
+    <div class="table-responsive">
+      <table class="table table-hover align-middle">
+        <thead>
+          <tr>
+            <th>Rank</th><th>Player</th><th>Press. Balls</th><th>Runs</th>
+            <th>SR</th><th>Avg</th><th>Δ SR</th><th>Boundary%</th>
+            <th>Impact Rate</th><th>PRI Score</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for b in top_batters %}
+          <tr>
+            <td>
+              {% if b.rank == 1 %}<span class="rank-badge gold">1</span>
+              {% elif b.rank == 2 %}<span class="rank-badge silver">2</span>
+              {% elif b.rank == 3 %}<span class="rank-badge bronze">3</span>
+              {% else %}<span class="rank-badge">{{ b.rank }}</span>{% endif %}
+            </td>
+            <td><strong>{{ b.striker_name }}</strong></td>
+            <td>{{ b.balls_press }}</td>
+            <td>{{ b.runs_press }}</td>
+            <td>{{ b.sr_press|floatformat:1 }}</td>
+            <td>{{ b.avg_press|floatformat:1 }}</td>
+            <td>
+              <span class="{% if b.delta_sr > 0 %}text-success{% else %}text-danger{% endif %} fw-semibold">
+                {% if b.delta_sr > 0 %}+{% endif %}{{ b.delta_sr|floatformat:1 }}
+              </span>
+            </td>
+            <td>{{ b.boundary_pct_press|floatformat:1 }}%</td>
+            <td>{{ b.impact_rate|floatformat:2 }}</td>
+            <td>
+              <span class="pri-score">{{ b.pri_bat_score|floatformat:1 }}</span>
+              <span class="pri-bar" style="width:{{ b.pri_bat_score|floatformat:0 }}%"></span>
+            </td>
+          </tr>
+          {% empty %}
+          <tr><td colspan="10" class="text-center text-muted py-4">
+            No data loaded yet. Run <code>python load_data.py</code> from the web folder.
+          </td></tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="text-end mb-4">
+    <a href="{% url 'batters' %}" class="btn-rr btn">View All Batters <i class="bi bi-arrow-right ms-1"></i></a>
+  </div>
+
+  <!-- Top Bowlers -->
+  <h2 class="section-title"><i class="bi bi-arrow-down-circle-fill me-2"></i>Top 10 Bowlers Under Pressure</h2>
+  <div class="rr-table-wrap mb-4">
+    <div class="table-responsive">
+      <table class="table table-hover align-middle">
+        <thead>
+          <tr>
+            <th>Rank</th><th>Player</th><th>Press. Balls</th><th>Wickets</th>
+            <th>Economy</th><th>Bowl SR</th><th>Dot%</th><th>Boundary%</th>
+            <th>Impact Rate</th><th>PRI Score</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for b in top_bowlers %}
+          <tr>
+            <td>
+              {% if b.rank == 1 %}<span class="rank-badge gold">1</span>
+              {% elif b.rank == 2 %}<span class="rank-badge silver">2</span>
+              {% elif b.rank == 3 %}<span class="rank-badge bronze">3</span>
+              {% else %}<span class="rank-badge">{{ b.rank }}</span>{% endif %}
+            </td>
+            <td><strong>{{ b.bowler_name }}</strong></td>
+            <td>{{ b.balls_press }}</td>
+            <td>{{ b.wickets_press }}</td>
+            <td>{{ b.econ_press|floatformat:2 }}</td>
+            <td>{{ b.sr_press|floatformat:1 }}</td>
+            <td>{{ b.dot_pct_press|floatformat:1 }}%</td>
+            <td>{{ b.boundary_pct_press|floatformat:1 }}%</td>
+            <td>{{ b.impact_rate|floatformat:2 }}</td>
+            <td>
+              <span class="pri-score">{{ b.pri_bowl_score|floatformat:1 }}</span>
+              <span class="pri-bar" style="width:{{ b.pri_bowl_score|floatformat:0 }}%"></span>
+            </td>
+          </tr>
+          {% empty %}
+          <tr><td colspan="10" class="text-center text-muted py-4">
+            No data loaded yet. Run <code>python load_data.py</code> from the web folder.
+          </td></tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="text-end">
+    <a href="{% url 'bowlers' %}" class="btn-rr btn">View All Bowlers <i class="bi bi-arrow-right ms-1"></i></a>
+  </div>
+
+</div>
+{% endblock %}
+
