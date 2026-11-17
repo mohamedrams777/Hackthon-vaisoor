@@ -20,3 +20,15 @@ ENV/
 .DS_Store
 Thumbs.db
 
+# Django
+*.log
+local_settings.py
+db.sqlite3
+web/db.sqlite3
+staticfiles/
+staticfiles_build/
+
+# Data files (large)
+data/
+web/mysql_data_dump.sql
+
