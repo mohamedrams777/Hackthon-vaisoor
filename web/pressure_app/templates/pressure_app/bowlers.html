@@ -4,8 +4,8 @@
 {% block content %}
 <div class="page-header">
   <div class="container">
-    <h1><i class="bi bi-arrow-down-circle-fill me-2"></i>Bowlers Under Pressure</h1>
-    <p class="subtitle">Pressure Reliability Index (PRI) rankings — IPL 2022–2026 &amp; T20Is</p>
+    <h1><i class="bi bi-bullseye me-2"></i>Bowlers Under Pressure</h1>
+    <p class="subtitle">Pressure Reliability Index (PRI) rankings &mdash; IPL 2022&ndash;2026 &amp; T20Is</p>
   </div>
 </div>
 
@@ -14,7 +14,7 @@
   <!-- Filter Bar -->
   <form method="get" class="filter-bar">
     <div>
-      <input type="text" name="q" class="form-control" placeholder="🔍 Search player..." value="{{ query }}" style="min-width:200px">
+      <input type="text" name="q" class="form-control" placeholder="🔍 Search bowler..." value="{{ query }}" style="min-width:220px">
     </div>
     <div>
       <select name="season" class="form-select">
@@ -29,7 +29,7 @@
     </div>
     <button type="submit" class="btn-rr btn"><i class="bi bi-funnel-fill me-1"></i>Filter</button>
     <a href="{% url 'bowlers' %}" class="btn-rr-outline btn">Reset</a>
-    <span class="ms-auto text-muted small">{{ bowlers|length }} player(s)</span>
+    <span class="ms-auto text-muted small font-mono">{{ bowlers|length }} bowler(s) found</span>
   </form>
 
   <!-- Table -->
@@ -38,15 +38,23 @@
       <table class="table table-hover align-middle">
         <thead>
           <tr>
-            <th>Rank</th><th>Player</th><th>Press. Balls</th><th>Wickets</th>
-            <th>Economy</th><th>Bowl SR</th><th>Dot%</th><th>Boundary%</th>
-            <th>Runs Saved/6</th><th>Impact Rate</th><th>PRI Score</th>
+            <th style="width:50px;">Rank</th>
+            <th>Player Name</th>
+            <th>Press. Balls</th>
+            <th>Wickets</th>
+            <th>Economy</th>
+            <th>Bowling SR</th>
+            <th>Dot Ball %</th>
+            <th>Boundary Conceded</th>
+            <th>Runs Saved / 6</th>
+            <th>Impact Rate</th>
+            <th>PRI Score</th>
           </tr>
         </thead>
         <tbody>
           {% for b in bowlers %}
           <tr>
-            <td>
+            <td class="text-center">
               {% if b.rank == 1 %}<span class="rank-badge gold">1</span>
               {% elif b.rank == 2 %}<span class="rank-badge silver">2</span>
               {% elif b.rank == 3 %}<span class="rank-badge bronze">3</span>
@@ -56,15 +64,18 @@
               <strong>{{ b.bowler_name }}</strong>
               {% if b.is_ipl_eligible %}<span class="badge-ipl ms-1">IPL ✓</span>{% endif %}
             </td>
-            <td>{{ b.balls_press }}</td>
-            <td>{{ b.wickets_press }}</td>
-            <td>{{ b.econ_press|floatformat:2 }}</td>
-            <td>{{ b.sr_press|floatformat:1 }}</td>
-            <td>{{ b.dot_pct_press|floatformat:1 }}%</td>
-            <td>{{ b.boundary_pct_press|floatformat:1 }}%</td>
-            <td>{{ b.runs_saved_per_6|floatformat:2 }}</td>
-            <td>{{ b.impact_rate|floatformat:2 }}</td>
-            <td><span class="pri-score">{{ b.pri_bowl_score|floatformat:1 }}</span></td>
+            <td class="font-mono">{{ b.balls_press }}</td>
+            <td class="font-mono fw-bold">{{ b.wickets_press }}</td>
+            <td class="font-mono text-primary fw-bold">{{ b.econ_press|floatformat:2 }}</td>
+            <td class="font-mono">{{ b.sr_press|floatformat:1 }}</td>
+            <td class="font-mono">{{ b.dot_pct_press|floatformat:1 }}%</td>
+            <td class="font-mono">{{ b.boundary_pct_press|floatformat:1 }}%</td>
+            <td class="font-mono">{{ b.runs_saved_per_6|floatformat:2 }}</td>
+            <td class="font-mono">{{ b.impact_rate|floatformat:2 }}</td>
+            <td>
+              <span class="pri-score">{{ b.pri_bowl_score|floatformat:1 }}</span>
+              <span class="pri-bar" style="width:{{ b.pri_bowl_score|floatformat:0 }}%;"></span>
+            </td>
           </tr>
           {% empty %}
           <tr><td colspan="11" class="text-center text-muted py-5">
@@ -77,4 +88,3 @@
   </div>
 </div>
 {% endblock %}
-

@@ -5,7 +5,7 @@
 <div class="page-header">
   <div class="container">
     <h1><i class="bi bi-person-fill me-2"></i>Batters Under Pressure</h1>
-    <p class="subtitle">Pressure Reliability Index (PRI) rankings — IPL 2022–2026 &amp; T20Is</p>
+    <p class="subtitle">Pressure Reliability Index (PRI) rankings &mdash; IPL 2022&ndash;2026 &amp; T20Is</p>
   </div>
 </div>
 
@@ -14,7 +14,7 @@
   <!-- Filter Bar -->
   <form method="get" class="filter-bar">
     <div>
-      <input type="text" name="q" class="form-control" placeholder="🔍 Search player..." value="{{ query }}" style="min-width:200px">
+      <input type="text" name="q" class="form-control" placeholder="🔍 Search player..." value="{{ query }}" style="min-width:220px">
     </div>
     <div>
       <select name="season" class="form-select">
@@ -29,7 +29,7 @@
     </div>
     <button type="submit" class="btn-rr btn"><i class="bi bi-funnel-fill me-1"></i>Filter</button>
     <a href="{% url 'batters' %}" class="btn-rr-outline btn">Reset</a>
-    <span class="ms-auto text-muted small">{{ batters|length }} player(s)</span>
+    <span class="ms-auto text-muted small font-mono">{{ batters|length }} player(s) found</span>
   </form>
 
   <!-- Table -->
@@ -38,15 +38,24 @@
       <table class="table table-hover align-middle">
         <thead>
           <tr>
-            <th>Rank</th><th>Player</th><th>Press. Balls</th><th>Runs</th>
-            <th>SR</th><th>Avg</th><th>Δ SR</th><th>Boundary%</th>
-            <th>Dot%</th><th>RSAA/100</th><th>Impact Rate</th><th>PRI Score</th>
+            <th style="width:50px;">Rank</th>
+            <th>Player Name</th>
+            <th>Press. Balls</th>
+            <th>Runs</th>
+            <th>Strike Rate</th>
+            <th>Average</th>
+            <th>&Delta; SR</th>
+            <th>Boundary %</th>
+            <th>Dot %</th>
+            <th>RSAA / 100</th>
+            <th>Impact Rate</th>
+            <th>PRI Score</th>
           </tr>
         </thead>
         <tbody>
           {% for b in batters %}
           <tr>
-            <td>
+            <td class="text-center">
               {% if b.rank == 1 %}<span class="rank-badge gold">1</span>
               {% elif b.rank == 2 %}<span class="rank-badge silver">2</span>
               {% elif b.rank == 3 %}<span class="rank-badge bronze">3</span>
@@ -56,18 +65,23 @@
               <strong>{{ b.striker_name }}</strong>
               {% if b.is_ipl_eligible %}<span class="badge-ipl ms-1">IPL ✓</span>{% endif %}
             </td>
-            <td>{{ b.balls_press }}</td>
-            <td>{{ b.runs_press }}</td>
-            <td>{{ b.sr_press|floatformat:1 }}</td>
-            <td>{{ b.avg_press|floatformat:1 }}</td>
-            <td class="{% if b.delta_sr > 0 %}text-success{% else %}text-danger{% endif %} fw-semibold">
-              {% if b.delta_sr > 0 %}+{% endif %}{{ b.delta_sr|floatformat:1 }}
+            <td class="font-mono">{{ b.balls_press }}</td>
+            <td class="font-mono fw-bold">{{ b.runs_press }}</td>
+            <td class="font-mono">{{ b.sr_press|floatformat:1 }}</td>
+            <td class="font-mono">{{ b.avg_press|floatformat:1 }}</td>
+            <td>
+              <span class="{% if b.delta_sr > 0 %}text-success fw-bold{% else %}text-danger{% endif %} font-mono">
+                {% if b.delta_sr > 0 %}+{% endif %}{{ b.delta_sr|floatformat:1 }}
+              </span>
             </td>
-            <td>{{ b.boundary_pct_press|floatformat:1 }}%</td>
-            <td>{{ b.dot_pct_press|floatformat:1 }}%</td>
-            <td>{{ b.rsaa_bat_per_100|floatformat:2 }}</td>
-            <td>{{ b.impact_rate|floatformat:2 }}</td>
-            <td><span class="pri-score">{{ b.pri_bat_score|floatformat:1 }}</span></td>
+            <td class="font-mono">{{ b.boundary_pct_press|floatformat:1 }}%</td>
+            <td class="font-mono">{{ b.dot_pct_press|floatformat:1 }}%</td>
+            <td class="font-mono">{{ b.rsaa_bat_per_100|floatformat:2 }}</td>
+            <td class="font-mono">{{ b.impact_rate|floatformat:2 }}</td>
+            <td>
+              <span class="pri-score">{{ b.pri_bat_score|floatformat:1 }}</span>
+              <span class="pri-bar" style="width:{{ b.pri_bat_score|floatformat:0 }}%;"></span>
+            </td>
           </tr>
           {% empty %}
           <tr><td colspan="12" class="text-center text-muted py-5">
@@ -80,4 +94,3 @@
   </div>
 </div>
 {% endblock %}
-

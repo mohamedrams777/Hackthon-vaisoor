@@ -1,22 +1,30 @@
 {% extends "pressure_app/base.html" %}
-{% block title %}Dashboard{% endblock %}
+{% block title %}Dashboard &ndash; SupeRR Selector{% endblock %}
 
 {% block content %}
-<!-- Hero -->
+<!-- Hero Header -->
 <div class="page-header">
   <div class="container">
-    <div class="row align-items-center">
+    <div class="row align-items-center g-4">
       <div class="col-lg-8">
-        <h1>🏏 SupeRR Selector <span style="color:#E91E8C">Season 2</span></h1>
-        <p class="subtitle">Rajasthan Royals Hackathon &mdash; Most Reliable Players Under Pressure<br>
-          Ball-by-ball PRI analysis across IPL 2022–2026 &amp; T20 Internationals</p>
+        <div class="d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill bg-white bg-opacity-10 mb-2 border border-white border-opacity-15">
+          <span style="color:#FFC107;">★</span>
+          <span class="small fw-semibold text-white">Rajasthan Royals Hackathon Season 2</span>
+          <span class="badge bg-danger rounded-pill px-2" style="font-size:0.68rem;">LIVE</span>
+        </div>
+        <h1 class="display-6 fw-bold mb-2">
+          Identify the Most Reliable Players Under Pressure
+        </h1>
+        <p class="subtitle mb-0">
+          Context-adjusted Pressure Reliability Index (PRI) built from 200,999 deliveries across 5 IPL seasons (2022&ndash;2026) and T20 Internationals.
+        </p>
       </div>
-      <div class="col-lg-4 text-end d-flex gap-2 justify-content-end">
-        <a href="{% url 'strategy' %}" class="btn btn-warning fw-bold text-dark">
-          <i class="bi bi-bullseye me-1"></i> RR Strategy 2027
+      <div class="col-lg-4 text-lg-end text-start d-flex flex-wrap gap-2 justify-content-lg-end">
+        <a href="{% url 'strategy' %}" class="btn btn-warning fw-bold text-dark px-3 py-2 shadow-sm">
+          <i class="bi bi-stars me-1 text-danger"></i> RR Strategy 2027
         </a>
-        <a href="{% url 'methodology' %}" class="btn btn-outline-light">
-          <i class="bi bi-graph-up-arrow me-1"></i> Methodology
+        <a href="{% url 'methodology' %}" class="btn btn-outline-light px-3 py-2">
+          <i class="bi bi-cpu me-1"></i> Methodology
         </a>
       </div>
     </div>
@@ -25,104 +33,132 @@
 
 <div class="container pb-5">
 
-  <!-- RR Strategy 2027 Spotlight Banner / Module -->
-  <div class="card border-0 shadow-sm mb-4" style="background: linear-gradient(135deg, #002D6A 0%, #001A3D 100%); color: #fff; border-radius: 14px; overflow: hidden; border-left: 6px solid #E91E8C !important;">
-    <div class="card-body p-4">
-      <div class="row align-items-center g-4">
-        <div class="col-lg-8">
-          <div class="d-flex align-items-center gap-2 mb-2 flex-wrap">
-            <span class="badge" style="background:#E91E8C; font-size:0.8rem; font-weight:700;">SQUAD PLANNING MODULE</span>
-            <span class="badge bg-warning text-dark font-monospace" style="font-size:0.8rem; font-weight:700;">IPL 2027</span>
-            <span class="text-white-50 small">&middot; By <strong>Mohamed B</strong> (Thiagarajar College of Engineering, Madurai)</span>
+  <!-- Strategy Module Spotlight Card -->
+  <div class="strategy-banner p-lg-4 p-3 mb-4">
+    <div class="row align-items-center g-4">
+      <div class="col-lg-8">
+        <div class="d-flex align-items-center gap-2 mb-2 flex-wrap">
+          <span class="badge" style="background:#E91E8C; font-weight:800; font-size:0.75rem; letter-spacing:0.5px;">EXECUTIVE MODULE</span>
+          <span class="badge bg-warning text-dark font-mono" style="font-size:0.75rem; font-weight:700;">IPL 2027 SQUAD PLANNING</span>
+          <span class="text-white-50 small">&middot; By <strong>Mohamed B</strong> (Thiagarajar College of Engineering)</span>
+        </div>
+        <h2 class="h3 fw-bold mb-2 text-white">
+          🎯 Rajasthan Royals: Retentions, Releases, Two XIs &amp; Auction Strategy
+        </h2>
+        <p class="text-white-50 mb-3 small" style="line-height:1.6;">
+          Complete PPT strategy: Retaining 18 players (₹87.15 Cr), releasing 9 to unlock a <strong>₹33.5 Crore</strong> auction purse, diagnosing Sawai Mansingh Stadium's 220+ chasing pitch, solving death overs (16&ndash;20), and targeting No. 6 Finisher &amp; No. 11 Death Quick.
+        </p>
+        <div class="row g-2 text-center">
+          <div class="col-6 col-md-3">
+            <div class="strategy-stat-pill">
+              <div class="h5 fw-bold text-warning mb-0 font-mono">₹33.5 Cr</div>
+              <div class="text-white-50 small" style="font-size:0.75rem;">Auction Purse (9 Released)</div>
+            </div>
           </div>
-          <h2 class="h3 fw-bold mb-2">🎯 Rajasthan Royals: Retentions, Releases and Two Playing XIs</h2>
-          <p class="text-white-50 mb-3" style="font-size: 0.95rem;">
-            Built from your squad notes. Player form covers the last 24 months, November 2024 to November 2026. Retain 18 players for ₹87.15 crore, release 9 to free ₹33.5 crore, solve Jaipur's 220-plus chasing ground, and fill the two critical XI gaps.
-          </p>
-          <div class="row g-2 text-center mb-3">
-            <div class="col-6 col-md-3">
-              <div class="p-2 rounded" style="background: rgba(255,255,255,0.08);">
-                <div class="text-warning fw-bold">₹33.5 Cr</div>
-                <div class="small text-white-50">Purse Freed (9 Released)</div>
-              </div>
+          <div class="col-6 col-md-3">
+            <div class="strategy-stat-pill">
+              <div class="h5 fw-bold text-white mb-0 font-mono">18 Kept</div>
+              <div class="text-white-50 small" style="font-size:0.75rem;">₹87.15 Cr Retained</div>
             </div>
-            <div class="col-6 col-md-3">
-              <div class="p-2 rounded" style="background: rgba(255,255,255,0.08);">
-                <div class="text-warning fw-bold">18 Kept</div>
-                <div class="small text-white-50">₹87.15 Cr Retained</div>
-              </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="strategy-stat-pill">
+              <div class="h5 fw-bold text-warning mb-0 font-mono">Gap 1: ₹15 Cr</div>
+              <div class="text-white-50 small" style="font-size:0.75rem;">No. 6 Power Finisher</div>
             </div>
-            <div class="col-6 col-md-3">
-              <div class="p-2 rounded" style="background: rgba(255,255,255,0.08);">
-                <div class="text-warning fw-bold">Gap 1: ₹15 Cr</div>
-                <div class="small text-white-50">No. 6 Firepower</div>
-              </div>
-            </div>
-            <div class="col-6 col-md-3">
-              <div class="p-2 rounded" style="background: rgba(255,255,255,0.08);">
-                <div class="text-warning fw-bold">Gap 2: ₹10 Cr</div>
-                <div class="small text-white-50">Death Specialist</div>
-              </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="strategy-stat-pill">
+              <div class="h5 fw-bold text-white mb-0 font-mono">Gap 2: ₹10 Cr</div>
+              <div class="text-white-50 small" style="font-size:0.75rem;">Death Specialist</div>
             </div>
           </div>
         </div>
-        <div class="col-lg-4 text-lg-end text-center">
-          <a href="{% url 'strategy' %}" class="btn btn-lg fw-bold px-4 py-3" style="background: linear-gradient(135deg, #E91E8C, #FF4081); color: #fff; border-radius: 10px; box-shadow: 0 4px 15px rgba(233,30,140,0.4);">
-            <i class="bi bi-journal-text me-2"></i>View Complete PPT Strategy <i class="bi bi-arrow-right ms-1"></i>
-          </a>
-          <div class="small text-white-50 mt-2">Includes Jaipur Pitch Specs, 24M Splits &amp; Both XIs</div>
+      </div>
+      <div class="col-lg-4 text-lg-end text-center">
+        <a href="{% url 'strategy' %}" class="btn btn-lg fw-bold px-4 py-3" style="background: linear-gradient(135deg, #E91E8C, #FF2E93); color:#fff; border-radius:12px; box-shadow:0 8px 24px rgba(233,30,140,0.35);">
+          <i class="bi bi-rocket-takeoff-fill me-2"></i>Open Strategy Module <i class="bi bi-arrow-right ms-1"></i>
+        </a>
+        <div class="small text-white-50 mt-2">Includes Jaipur Pitch Specs, 24M Splits &amp; Both XIs</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Metric Stat Cards -->
+  <div class="row g-3 mb-4">
+    <div class="col-sm-6 col-lg-3">
+      <div class="stat-card card h-100">
+        <div class="card-accent"></div>
+        <div class="card-body">
+          <div class="d-flex justify-content-between align-items-center">
+            <div>
+              <div class="stat-number font-mono">{{ total_matches }}</div>
+              <div class="stat-label">Total Matches</div>
+            </div>
+            <div class="stat-icon text-primary"><i class="bi bi-collection-fill"></i></div>
+          </div>
+          <div class="small text-muted mt-2 border-top pt-2" style="font-size:0.75rem;">
+            IPL 2022&ndash;2026 + T20 Internationals
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-lg-3">
+      <div class="stat-card card h-100">
+        <div class="card-accent"></div>
+        <div class="card-body">
+          <div class="d-flex justify-content-between align-items-center">
+            <div>
+              <div class="stat-number font-mono text-warning" style="color:#B45309 !important;">{{ ipl_matches }}</div>
+              <div class="stat-label">IPL Matches</div>
+            </div>
+            <div class="stat-icon text-warning"><i class="bi bi-trophy-fill"></i></div>
+          </div>
+          <div class="small text-muted mt-2 border-top pt-2" style="font-size:0.75rem;">
+            5 High-intensity IPL Tournaments
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-lg-3">
+      <div class="stat-card card h-100">
+        <div class="card-accent"></div>
+        <div class="card-body">
+          <div class="d-flex justify-content-between align-items-center">
+            <div>
+              <div class="stat-number font-mono text-danger">{{ ko_matches }}</div>
+              <div class="stat-label">Knockouts / Play-offs</div>
+            </div>
+            <div class="stat-icon text-danger"><i class="bi bi-lightning-charge-fill"></i></div>
+          </div>
+          <div class="small text-muted mt-2 border-top pt-2" style="font-size:0.75rem;">
+            1.25&times; Pressure Multiplier Applied
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-lg-3">
+      <div class="stat-card card h-100">
+        <div class="card-accent"></div>
+        <div class="card-body">
+          <div class="d-flex justify-content-between align-items-center">
+            <div>
+              <div class="stat-number font-mono" style="color:#002D6A;">32.7%</div>
+              <div class="stat-label">Balls in Crisis / Death</div>
+            </div>
+            <div class="stat-icon text-success"><i class="bi bi-crosshair"></i></div>
+          </div>
+          <div class="small text-muted mt-2 border-top pt-2" style="font-size:0.75rem;">
+            65,698 deliveries classified under pressure
+          </div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Stat Cards -->
-  <div class="row g-4 mb-4">
-    <div class="col-sm-6 col-lg-3">
-      <div class="stat-card card h-100">
-        <div class="card-accent"></div>
-        <div class="card-body text-center">
-          <div class="stat-icon">🏟️</div>
-          <div class="stat-number">{{ total_matches }}</div>
-          <div class="stat-label">Total Matches</div>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-6 col-lg-3">
-      <div class="stat-card card h-100">
-        <div class="card-accent"></div>
-        <div class="card-body text-center">
-          <div class="stat-icon">🏆</div>
-          <div class="stat-number">{{ ipl_matches }}</div>
-          <div class="stat-label">IPL Matches</div>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-6 col-lg-3">
-      <div class="stat-card card h-100">
-        <div class="card-accent"></div>
-        <div class="card-body text-center">
-          <div class="stat-icon">⚡</div>
-          <div class="stat-number">{{ ko_matches }}</div>
-          <div class="stat-label">Knockout Matches</div>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-6 col-lg-3">
-      <div class="stat-card card h-100">
-        <div class="card-accent"></div>
-        <div class="card-body text-center">
-          <div class="stat-icon">🎯</div>
-          <div class="stat-number">32.7%</div>
-          <div class="stat-label">Balls Under Pressure</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Top Batters -->
-  <div class="d-flex justify-content-between align-items-center mb-2">
-    <h2 class="section-title mb-0"><i class="bi bi-person-fill me-2"></i>Top 10 Batters Under Pressure (All IPL-Eligible)</h2>
+  <!-- Top 10 Batters Table -->
+  <div class="d-flex justify-content-between align-items-center mb-2 mt-4">
+    <h2 class="section-title mb-0">Top 10 Batters Under Pressure (PRI Model)</h2>
     <a href="{% url 'batters' %}" class="btn-rr-outline btn btn-sm">Full Batters Table <i class="bi bi-arrow-right ms-1"></i></a>
   </div>
   <div class="rr-table-wrap mb-4">
@@ -130,50 +166,55 @@
       <table class="table table-hover align-middle">
         <thead>
           <tr>
-            <th>Rank</th><th>Player</th><th>Press. Balls</th><th>Runs</th>
-            <th>SR</th><th>Avg</th><th>Δ SR</th><th>Boundary%</th>
-            <th>Impact Rate</th><th>PRI Score</th>
+            <th style="width:50px;">Rank</th>
+            <th>Player Name</th>
+            <th>Press. Balls</th>
+            <th>Runs</th>
+            <th>Strike Rate</th>
+            <th>Average</th>
+            <th>&Delta; SR vs Baseline</th>
+            <th>Boundary %</th>
+            <th>Impact Rate</th>
+            <th>PRI Score</th>
           </tr>
         </thead>
         <tbody>
           {% for b in top_batters %}
           <tr>
-            <td>
+            <td class="text-center">
               {% if b.rank == 1 %}<span class="rank-badge gold">1</span>
               {% elif b.rank == 2 %}<span class="rank-badge silver">2</span>
               {% elif b.rank == 3 %}<span class="rank-badge bronze">3</span>
               {% else %}<span class="rank-badge">{{ b.rank }}</span>{% endif %}
             </td>
             <td><strong>{{ b.striker_name }}</strong></td>
-            <td>{{ b.balls_press }}</td>
-            <td>{{ b.runs_press }}</td>
-            <td>{{ b.sr_press|floatformat:1 }}</td>
-            <td>{{ b.avg_press|floatformat:1 }}</td>
+            <td class="font-mono">{{ b.balls_press }}</td>
+            <td class="font-mono fw-bold">{{ b.runs_press }}</td>
+            <td class="font-mono">{{ b.sr_press|floatformat:1 }}</td>
+            <td class="font-mono">{{ b.avg_press|floatformat:1 }}</td>
             <td>
-              <span class="{% if b.delta_sr > 0 %}text-success{% else %}text-danger{% endif %} fw-semibold">
+              <span class="{% if b.delta_sr > 0 %}text-success fw-bold{% else %}text-danger{% endif %} font-mono">
                 {% if b.delta_sr > 0 %}+{% endif %}{{ b.delta_sr|floatformat:1 }}
               </span>
             </td>
-            <td>{{ b.boundary_pct_press|floatformat:1 }}%</td>
-            <td>{{ b.impact_rate|floatformat:2 }}</td>
+            <td class="font-mono">{{ b.boundary_pct_press|floatformat:1 }}%</td>
+            <td class="font-mono">{{ b.impact_rate|floatformat:2 }}</td>
             <td>
               <span class="pri-score">{{ b.pri_bat_score|floatformat:1 }}</span>
-              <span class="pri-bar" style="width:{{ b.pri_bat_score|floatformat:0 }}%"></span>
+              <span class="pri-bar" style="width:{{ b.pri_bat_score|floatformat:0 }}%;"></span>
             </td>
           </tr>
           {% empty %}
-          <tr><td colspan="10" class="text-center text-muted py-4">
-            No data loaded yet. Run <code>python load_data.py</code> from the web folder.
-          </td></tr>
+          <tr><td colspan="10" class="text-center text-muted py-4">No data loaded yet. Run <code>python load_data.py</code>.</td></tr>
           {% endfor %}
         </tbody>
       </table>
     </div>
   </div>
 
-  <!-- Top Bowlers -->
-  <div class="d-flex justify-content-between align-items-center mb-2">
-    <h2 class="section-title mb-0"><i class="bi bi-arrow-down-circle-fill me-2"></i>Top 10 Bowlers Under Pressure (All IPL-Eligible)</h2>
+  <!-- Top 10 Bowlers Table -->
+  <div class="d-flex justify-content-between align-items-center mb-2 mt-4">
+    <h2 class="section-title mb-0">Top 10 Bowlers Under Pressure (PRI Model)</h2>
     <a href="{% url 'bowlers' %}" class="btn-rr-outline btn btn-sm">Full Bowlers Table <i class="bi bi-arrow-right ms-1"></i></a>
   </div>
   <div class="rr-table-wrap mb-4">
@@ -181,37 +222,42 @@
       <table class="table table-hover align-middle">
         <thead>
           <tr>
-            <th>Rank</th><th>Player</th><th>Press. Balls</th><th>Wickets</th>
-            <th>Economy</th><th>Bowl SR</th><th>Dot%</th><th>Boundary%</th>
-            <th>Impact Rate</th><th>PRI Score</th>
+            <th style="width:50px;">Rank</th>
+            <th>Player Name</th>
+            <th>Press. Balls</th>
+            <th>Wickets</th>
+            <th>Economy</th>
+            <th>Bowling SR</th>
+            <th>Dot Ball %</th>
+            <th>Boundary Conceded</th>
+            <th>Impact Rate</th>
+            <th>PRI Score</th>
           </tr>
         </thead>
         <tbody>
           {% for b in top_bowlers %}
           <tr>
-            <td>
+            <td class="text-center">
               {% if b.rank == 1 %}<span class="rank-badge gold">1</span>
               {% elif b.rank == 2 %}<span class="rank-badge silver">2</span>
               {% elif b.rank == 3 %}<span class="rank-badge bronze">3</span>
               {% else %}<span class="rank-badge">{{ b.rank }}</span>{% endif %}
             </td>
             <td><strong>{{ b.bowler_name }}</strong></td>
-            <td>{{ b.balls_press }}</td>
-            <td>{{ b.wickets_press }}</td>
-            <td>{{ b.econ_press|floatformat:2 }}</td>
-            <td>{{ b.sr_press|floatformat:1 }}</td>
-            <td>{{ b.dot_pct_press|floatformat:1 }}%</td>
-            <td>{{ b.boundary_pct_press|floatformat:1 }}%</td>
-            <td>{{ b.impact_rate|floatformat:2 }}</td>
+            <td class="font-mono">{{ b.balls_press }}</td>
+            <td class="font-mono fw-bold">{{ b.wickets_press }}</td>
+            <td class="font-mono text-primary fw-bold">{{ b.econ_press|floatformat:2 }}</td>
+            <td class="font-mono">{{ b.sr_press|floatformat:1 }}</td>
+            <td class="font-mono">{{ b.dot_pct_press|floatformat:1 }}%</td>
+            <td class="font-mono">{{ b.boundary_pct_press|floatformat:1 }}%</td>
+            <td class="font-mono">{{ b.impact_rate|floatformat:2 }}</td>
             <td>
               <span class="pri-score">{{ b.pri_bowl_score|floatformat:1 }}</span>
-              <span class="pri-bar" style="width:{{ b.pri_bowl_score|floatformat:0 }}%"></span>
+              <span class="pri-bar" style="width:{{ b.pri_bowl_score|floatformat:0 }}%;"></span>
             </td>
           </tr>
           {% empty %}
-          <tr><td colspan="10" class="text-center text-muted py-4">
-            No data loaded yet. Run <code>python load_data.py</code> from the web folder.
-          </td></tr>
+          <tr><td colspan="10" class="text-center text-muted py-4">No data loaded yet. Run <code>python load_data.py</code>.</td></tr>
           {% endfor %}
         </tbody>
       </table>

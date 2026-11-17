@@ -1,11 +1,11 @@
 {% extends "pressure_app/base.html" %}
-{% block title %}Matches{% endblock %}
+{% block title %}Matches Explorer{% endblock %}
 
 {% block content %}
 <div class="page-header">
   <div class="container">
-    <h1><i class="bi bi-collection-fill me-2"></i>Matches</h1>
-    <p class="subtitle">IPL 2022–2026 &amp; T20 International fixtures (latest 100 shown)</p>
+    <h1><i class="bi bi-collection-fill me-2 text-info"></i>Matches Explorer</h1>
+    <p class="subtitle">IPL 2022&ndash;2026 &amp; T20 International fixtures (latest 100 shown)</p>
   </div>
 </div>
 
@@ -14,7 +14,7 @@
   <!-- Filter Bar -->
   <form method="get" class="filter-bar">
     <div>
-      <input type="text" name="q" class="form-control" placeholder="🔍 Search team / competition..." value="{{ query }}" style="min-width:220px">
+      <input type="text" name="q" class="form-control" placeholder="🔍 Search team / competition..." value="{{ query }}" style="min-width:240px">
     </div>
     <div>
       <select name="format" class="form-select" onchange="this.form.submit()">
@@ -26,7 +26,7 @@
     </div>
     <button type="submit" class="btn-rr btn"><i class="bi bi-funnel-fill me-1"></i>Filter</button>
     <a href="{% url 'matches' %}" class="btn-rr-outline btn">Reset</a>
-    <span class="ms-auto text-muted small">{{ matches|length }} match(es)</span>
+    <span class="ms-auto text-muted small font-mono">{{ matches|length }} match(es)</span>
   </form>
 
   <!-- Table -->
@@ -35,18 +35,23 @@
       <table class="table table-hover align-middle">
         <thead>
           <tr>
-            <th>Date</th><th>Competition</th><th>Home</th><th>Away</th>
-            <th>Stage</th><th>Type</th><th>Result</th>
+            <th>Date</th>
+            <th>Competition</th>
+            <th>Home Team</th>
+            <th>Away Team</th>
+            <th>Stage</th>
+            <th>Type</th>
+            <th>Result</th>
           </tr>
         </thead>
         <tbody>
           {% for m in matches %}
           <tr>
-            <td class="text-nowrap">{{ m.match_date }}</td>
-            <td>{{ m.comp_name }}</td>
+            <td class="text-nowrap font-mono small">{{ m.match_date }}</td>
+            <td class="fw-semibold">{{ m.comp_name }}</td>
             <td><strong>{{ m.home_team }}</strong></td>
             <td><strong>{{ m.away_team }}</strong></td>
-            <td>{{ m.stage }}</td>
+            <td><span class="badge bg-light text-dark border">{{ m.stage }}</span></td>
             <td>
               {% if m.is_ipl %}<span class="badge-ipl">IPL</span>{% else %}<span class="badge-t20i">T20I</span>{% endif %}
               {% if m.knock_out %}<span class="badge-ko ms-1">KO</span>{% endif %}
@@ -65,4 +70,3 @@
 
 </div>
 {% endblock %}
-
