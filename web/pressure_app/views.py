@@ -1,6 +1,9 @@
+import os
+import pandas as pd
 from django.shortcuts import render, get_object_or_404
 from .models import BatterRanking, BowlerRanking, MatchSummary
 from django.db.models import Q
+from django.conf import settings
 
 def home(request):
     top_batters = BatterRanking.objects.filter(season_category='all_2022_2026', is_ipl_eligible=False).order_by('rank')[:10]
@@ -112,3 +115,29 @@ def matches_view(request):
 
 def methodology_view(request):
     return render(request, 'pressure_app/methodology.html')
+
+def strategy_view(request):
+    # Load Top 20 Batters & Bowlers for Rajasthan Royals auction strategy
+    bat_csv_path = os.path.join(settings.BASE_DIR, 'rr_auction_top_20_batters.csv')
+    bowl_csv_path = os.path.join(settings.BASE_DIR, 'rr_auction_top_20_bowlers.csv')
+    
+    if not os.path.exists(bat_csv_path):
+        bat_csv_path = os.path.join(settings.BASE_DIR.parent, 'rr_auction_top_20_batters.csv')
+    if not os.path.exists(bowl_csv_path):
+        bowl_csv_path = os.path.join(settings.BASE_DIR.parent, 'rr_auction_top_20_bowlers.csv')
+
+    auction_batters = []
+    if os.path.exists(bat_csv_path):
+        df_bat = pd.read_csv(bat_csv_path)
+        auction_batters = df_bat.to_dict('records')
+
+    auction_bowlers = []
+    if os.path.exists(bowl_csv_path):
+        df_bowl = pd.read_csv(bowl_csv_path)
+        auction_bowlers = df_bowl.to_dict('records')
+
+    context = {
+        'auction_batters': auction_batters,
+        'auction_bowlers': auction_bowlers,
+    }
+    return render(request, 'pressure_app/strategy.html', context)

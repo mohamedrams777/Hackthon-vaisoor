@@ -9,5 +9,5 @@ urlpatterns = [
     path('recent-2025-2026/', views.recent_2025_2026_view, name='recent_2025_2026'),
     path('matches/', views.matches_view, name='matches'),
     path('methodology/', views.methodology_view, name='methodology'),
+    path('strategy/', views.strategy_view, name='strategy'),
 ]
-
