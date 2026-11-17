@@ -2,10 +2,10 @@
 {% block title %}Bowlers Under Pressure{% endblock %}
 
 {% block content %}
-<div class="page-header">
+<div class="page-header" style="background: linear-gradient(135deg, #00173B 0%, #002D6A 60%, #0A3D82 100%) !important; color: #FFFFFF !important; padding: 2.5rem 0 2rem; margin-bottom: 2rem; border-bottom: 4px solid #E91E8C !important;">
   <div class="container">
-    <h1><i class="bi bi-bullseye me-2"></i>Bowlers Under Pressure</h1>
-    <p class="subtitle">Pressure Reliability Index (PRI) rankings &mdash; IPL 2022&ndash;2026 &amp; T20Is</p>
+    <h1 style="color: #FFFFFF !important; font-weight: 800;"><i class="bi bi-bullseye me-2 text-warning"></i>Bowlers Under Pressure</h1>
+    <p class="subtitle" style="color: #CBD5E1 !important;">Pressure Reliability Index (PRI) rankings &mdash; IPL 2022&ndash;2026 &amp; T20Is</p>
   </div>
 </div>
 
@@ -14,17 +14,20 @@
   <!-- Filter Bar -->
   <form method="get" class="filter-bar">
     <div>
-      <input type="text" name="q" class="form-control" placeholder="🔍 Search bowler..." value="{{ query }}" style="min-width:220px">
+      <input type="text" name="q" class="form-control" placeholder="🔍 Search bowler..." value="{{ query }}"
+        style="min-width:220px">
     </div>
     <div>
       <select name="season" class="form-select">
-        <option value="all_2022_2026" {% if season == 'all_2022_2026' %}selected{% endif %}>All Seasons (2022–2026)</option>
-        <option value="recent_2025_2026" {% if season == 'recent_2025_2026' %}selected{% endif %}>Recent (2025–2026)</option>
+        <option value="all_2022_2026" {% if season=='all_2022_2026' %}selected{% endif %}>All Seasons (2022–2026)
+        </option>
+        <option value="recent_2025_2026" {% if season=='recent_2025_2026' %}selected{% endif %}>Recent (2025–2026)
+        </option>
       </select>
     </div>
     <div class="form-check d-flex align-items-center gap-2 mb-0">
-      <input class="form-check-input" type="checkbox" name="ipl_only" value="true" id="iplOnly"
-             {% if ipl_only %}checked{% endif %} onchange="this.form.submit()">
+      <input class="form-check-input" type="checkbox" name="ipl_only" value="true" id="iplOnly" {% if ipl_only
+        %}checked{% endif %} onchange="this.form.submit()">
       <label class="form-check-label fw-semibold" for="iplOnly">IPL Eligible Only</label>
     </div>
     <button type="submit" class="btn-rr btn"><i class="bi bi-funnel-fill me-1"></i>Filter</button>
@@ -78,9 +81,12 @@
             </td>
           </tr>
           {% empty %}
-          <tr><td colspan="11" class="text-center text-muted py-5">
-            No bowlers found. {% if query %}Try a different search term.{% else %}Run <code>python load_data.py</code>.{% endif %}
-          </td></tr>
+          <tr>
+            <td colspan="11" class="text-center text-muted py-5">
+              No bowlers found. {% if query %}Try a different search term.{% else %}Run
+              <code>python load_data.py</code>.{% endif %}
+            </td>
+          </tr>
           {% endfor %}
         </tbody>
       </table>

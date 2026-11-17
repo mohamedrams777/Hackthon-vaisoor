@@ -2,8 +2,8 @@
 {% block title %}IPL 2027 Squad Planning &ndash; Rajasthan Royals{% endblock %}
 
 {% block content %}
-<!-- Executive Header -->
-<div class="page-header">
+<!-- Executive Header (Explicit Inline Navy Gradient) -->
+<div class="page-header" style="background: linear-gradient(135deg, #00173B 0%, #002D6A 60%, #0A3D82 100%) !important; color: #FFFFFF !important; padding: 2.8rem 0 2.2rem; margin-bottom: 2.2rem; border-bottom: 4px solid #E91E8C !important;">
   <div class="container">
     <div class="row align-items-center g-4">
       <div class="col-lg-8">
@@ -15,16 +15,16 @@
         <h1 class="display-6 fw-bold text-white mb-2">
           Rajasthan Royals: Retentions, Releases &amp; Two Playing XIs
         </h1>
-        <p class="subtitle mb-0 text-white-50">
+        <p class="subtitle mb-0" style="color: #CBD5E1 !important;">
           Built from your squad notes. Player form covers the last 24 months, November 2024 to November 2026.
         </p>
       </div>
       <div class="col-lg-4 text-lg-end text-start">
-        <div class="p-3 rounded-4 shadow-sm" style="background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255,255,255,0.15); display: inline-block;">
+        <div class="p-3 rounded-4 shadow-sm" style="background: rgba(255, 255, 255, 0.12) !important; border: 1px solid rgba(255,255,255,0.25) !important; display: inline-block;">
           <div class="small text-warning text-uppercase fw-bold font-mono" style="letter-spacing:1px; font-size:0.72rem;">About the Analyst</div>
           <div class="h5 fw-bold text-white mb-0">Mohamed B</div>
           <div class="small text-white-50">B.Tech, Computer Science and Business Systems</div>
-          <div class="small" style="color:var(--rr-pink-light);">Thiagarajar College of Engineering, Madurai</div>
+          <div class="small" style="color:#FF4081; font-weight:600;">Thiagarajar College of Engineering, Madurai</div>
         </div>
       </div>
     </div>
@@ -36,25 +36,25 @@
   <!-- Overview Cards: Why, Started, Became -->
   <div class="row g-3 mb-4">
     <div class="col-md-4">
-      <div class="card border-0 shadow-sm p-4 h-100" style="border-radius:14px; border-left: 4px solid #E91E8C !important;">
+      <div class="card border-0 shadow-sm p-4 h-100 bg-white" style="border-radius:14px; border-left: 4px solid #E91E8C !important;">
         <h6 class="fw-bold text-dark mb-2"><i class="bi bi-heart-fill me-2 text-danger"></i>Why This Project</h6>
-        <p class="small text-muted mb-0" style="line-height:1.6;">
+        <p class="small text-muted mb-0" style="line-height:1.6; color:#475569 !important;">
           A passion for cricket and for data analysis, brought together to plan Rajasthan Royals' squad for the IPL 2027 auction.
         </p>
       </div>
     </div>
     <div class="col-md-4">
-      <div class="card border-0 shadow-sm p-4 h-100" style="border-radius:14px; border-left: 4px solid #002D6A !important;">
+      <div class="card border-0 shadow-sm p-4 h-100 bg-white" style="border-radius:14px; border-left: 4px solid #002D6A !important;">
         <h6 class="fw-bold text-dark mb-2"><i class="bi bi-database-fill me-2 text-primary"></i>Where It Started</h6>
-        <p class="small text-muted mb-0" style="line-height:1.6;">
+        <p class="small text-muted mb-0" style="line-height:1.6; color:#475569 !important;">
           The SupeRR Selector Season 2 hackathon: a Pressure Reliability Index built on 200,999 deliveries from 867 IPL and T20I matches.
         </p>
       </div>
     </div>
     <div class="col-md-4">
-      <div class="card border-0 shadow-sm p-4 h-100" style="border-radius:14px; border-left: 4px solid #10B981 !important;">
+      <div class="card border-0 shadow-sm p-4 h-100 bg-white" style="border-radius:14px; border-left: 4px solid #10B981 !important;">
         <h6 class="fw-bold text-dark mb-2"><i class="bi bi-trophy-fill me-2 text-success"></i>What It Became</h6>
-        <p class="small text-muted mb-0" style="line-height:1.6;">
+        <p class="small text-muted mb-0" style="line-height:1.6; color:#475569 !important;">
           A full squad review: retentions, releases, buybacks, playing XIs, ground analysis, and auction targets.
         </p>
       </div>
@@ -62,7 +62,7 @@
   </div>
 
   <!-- Eight Stages Pipeline Overview -->
-  <div class="card border-0 shadow-sm p-4 mb-4" style="border-radius:16px;">
+  <div class="card border-0 shadow-sm p-4 mb-4 bg-white" style="border-radius:16px;">
     <div class="d-flex justify-content-between align-items-center mb-3">
       <h5 class="fw-bold mb-0 text-dark"><i class="bi bi-diagram-3-fill me-2 text-primary"></i>Eight Stages from Raw Ball-by-Ball Data to an Auction Plan</h5>
       <span class="badge bg-secondary font-mono">End-to-End Workflow</span>
@@ -72,62 +72,62 @@
         <div class="p-3 border rounded-3 bg-light h-100">
           <span class="badge bg-primary mb-1 font-mono">Stage 1</span>
           <div class="fw-bold small text-dark">Pressure Model</div>
-          <div class="text-muted" style="font-size:0.75rem;">Tagged every ball as pressure/not; 0&ndash;100 PRI scale</div>
+          <div class="text-muted" style="font-size:0.75rem; color:#475569 !important;">Tagged every ball as pressure/not; 0&ndash;100 PRI scale</div>
         </div>
       </div>
       <div class="col-6 col-md-3">
         <div class="p-3 border rounded-3 bg-light h-100">
           <span class="badge bg-primary mb-1 font-mono">Stage 2</span>
           <div class="fw-bold small text-dark">Team Diagnosis</div>
-          <div class="text-muted" style="font-size:0.75rem;">Phase runs: best powerplay in 2026, weak death batting</div>
+          <div class="text-muted" style="font-size:0.75rem; color:#475569 !important;">Phase runs: best powerplay in 2026, weak death batting</div>
         </div>
       </div>
       <div class="col-6 col-md-3">
         <div class="p-3 border rounded-3 bg-light h-100">
           <span class="badge bg-primary mb-1 font-mono">Stage 3</span>
           <div class="fw-bold small text-dark">Grounds</div>
-          <div class="text-muted" style="font-size:0.75rem;">Jaipur's pitch, bowling types that work, 9 away venues</div>
+          <div class="text-muted" style="font-size:0.75rem; color:#475569 !important;">Jaipur's pitch, bowling types that work, 9 away venues</div>
         </div>
       </div>
       <div class="col-6 col-md-3">
         <div class="p-3 border rounded-3 bg-light h-100">
           <span class="badge bg-primary mb-1 font-mono">Stage 4</span>
           <div class="fw-bold small text-dark">Player Form</div>
-          <div class="text-muted" style="font-size:0.75rem;">24-month batting and bowling splits for XI &amp; targets</div>
+          <div class="text-muted" style="font-size:0.75rem; color:#475569 !important;">24-month batting and bowling splits for XI &amp; targets</div>
         </div>
       </div>
       <div class="col-6 col-md-3">
         <div class="p-3 border rounded-3 bg-light h-100">
           <span class="badge bg-primary mb-1 font-mono">Stage 5</span>
           <div class="fw-bold small text-dark">Squad &amp; Prices</div>
-          <div class="text-muted" style="font-size:0.75rem;">All 27 players of 2026 with price and games played</div>
+          <div class="text-muted" style="font-size:0.75rem; color:#475569 !important;">All 27 players of 2026 with price and games played</div>
         </div>
       </div>
       <div class="col-6 col-md-3">
         <div class="p-3 border rounded-3 bg-light h-100">
           <span class="badge bg-primary mb-1 font-mono">Stage 6</span>
           <div class="fw-bold small text-dark">Retain / Release</div>
-          <div class="text-muted" style="font-size:0.75rem;">18 kept for ₹87.15 cr; 9 released; 2 buybacks</div>
+          <div class="text-muted" style="font-size:0.75rem; color:#475569 !important;">18 kept for ₹87.15 cr; 9 released; 2 buybacks</div>
         </div>
       </div>
       <div class="col-6 col-md-3">
         <div class="p-3 border rounded-3 bg-light h-100">
           <span class="badge bg-primary mb-1 font-mono">Stage 7</span>
           <div class="fw-bold small text-dark">Playing XIs</div>
-          <div class="text-muted" style="font-size:0.75rem;">Probable XI (no trades), plus +/- Jaiswal &amp; backups</div>
+          <div class="text-muted" style="font-size:0.75rem; color:#475569 !important;">Probable XI (no trades), plus +/- Jaiswal &amp; backups</div>
         </div>
       </div>
       <div class="col-6 col-md-3">
         <div class="p-3 border rounded-3 bg-light h-100">
           <span class="badge bg-primary mb-1 font-mono">Stage 8</span>
           <div class="fw-bold small text-dark">Auction Plan</div>
-          <div class="text-muted" style="font-size:0.75rem;">₹33 crore aimed at two gaps: No. 6 &amp; death quick</div>
+          <div class="text-muted" style="font-size:0.75rem; color:#475569 !important;">₹33 crore aimed at two gaps: No. 6 &amp; death quick</div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- PPT Section Navigation Tabs -->
+  <!-- PPT Section Navigation Tabs (High Contrast) -->
   <ul class="nav nav-strategy-tabs nav-pills nav-fill mb-4 p-2 rounded-4 shadow-sm bg-white gap-2" id="pptTabs" role="tablist">
     <li class="nav-item">
       <button class="nav-link active" id="tab-ground-btn" data-bs-toggle="tab" data-bs-target="#tab-ground" type="button">
@@ -167,33 +167,33 @@
     <!-- ==================== TAB 1: GROUNDS & JAIPUR ==================== -->
     <div class="tab-pane fade show active" id="tab-ground">
 
-      <!-- Where RR Stand Banner -->
-      <div class="strategy-banner p-4 mb-4">
+      <!-- Where RR Stand Banner (GUARANTEED NAVY BACKGROUND WITH INLINE STYLES) -->
+      <div class="strategy-banner p-4 mb-4" style="background: linear-gradient(135deg, #00173B 0%, #002D6A 60%, #001A3D 100%) !important; color: #FFFFFF !important; border-radius: 18px; border: 1px solid rgba(255, 255, 255, 0.2) !important; border-left: 6px solid #E91E8C !important; box-shadow: 0 10px 30px rgba(0, 23, 59, 0.4) !important;">
         <h4 class="fw-bold mb-1 text-white">WHERE RR STAND</h4>
-        <p class="text-white-50 small mb-3">2026 ended in Qualifier 2 while RCB retained the title. The top order and Archer carried the season. The plan for 2027 is about what comes after over 15 with bat and ball.</p>
+        <p class="small mb-3" style="color: #CBD5E1 !important;">2026 ended in Qualifier 2 while RCB retained the title. The top order and Archer carried the season. The plan for 2027 is about what comes after over 15 with bat and ball.</p>
         <div class="row g-3 text-center">
           <div class="col-6 col-md-3">
-            <div class="strategy-stat-pill">
+            <div class="strategy-stat-pill" style="background: rgba(255, 255, 255, 0.12) !important; border: 1px solid rgba(255, 255, 255, 0.25) !important; border-radius: 12px; padding: 0.85rem 1rem;">
               <div class="display-6 fw-bold text-warning mb-0 font-mono">4th</div>
-              <div class="small text-white-50">League finish with 8 wins; beat SRH in Eliminator</div>
+              <div class="small" style="color: #E2E8F0;">League finish with 8 wins; beat SRH in Eliminator</div>
             </div>
           </div>
           <div class="col-6 col-md-3">
-            <div class="strategy-stat-pill">
+            <div class="strategy-stat-pill" style="background: rgba(255, 255, 255, 0.12) !important; border: 1px solid rgba(255, 255, 255, 0.25) !important; border-radius: 12px; padding: 0.85rem 1rem;">
               <div class="display-6 fw-bold text-warning mb-0 font-mono">776</div>
-              <div class="small text-white-50">Sooryavanshi's runs at SR 237 (Orange Cap)</div>
+              <div class="small" style="color: #E2E8F0;">Sooryavanshi's runs at SR 237 (Orange Cap)</div>
             </div>
           </div>
           <div class="col-6 col-md-3">
-            <div class="strategy-stat-pill">
+            <div class="strategy-stat-pill" style="background: rgba(255, 255, 255, 0.12) !important; border: 1px solid rgba(255, 255, 255, 0.25) !important; border-radius: 12px; padding: 0.85rem 1rem;">
               <div class="display-6 fw-bold text-warning mb-0 font-mono">25</div>
-              <div class="small text-white-50">Archer's wickets (third-most in season)</div>
+              <div class="small" style="color: #E2E8F0;">Archer's wickets (third-most in season)</div>
             </div>
           </div>
           <div class="col-6 col-md-3">
-            <div class="strategy-stat-pill">
+            <div class="strategy-stat-pill" style="background: rgba(255, 255, 255, 0.12) !important; border: 1px solid rgba(255, 255, 255, 0.25) !important; border-radius: 12px; padding: 0.85rem 1rem;">
               <div class="display-6 fw-bold text-danger mb-0 font-mono">7</div>
-              <div class="small text-white-50">Wickets GT won Qualifier 2 by, chasing 215</div>
+              <div class="small" style="color: #E2E8F0;">Wickets GT won Qualifier 2 by, chasing 215</div>
             </div>
           </div>
         </div>
@@ -202,15 +202,15 @@
       <!-- Sawai Mansingh Stadium Details -->
       <div class="row g-4 mb-4">
         <div class="col-lg-7">
-          <div class="card border-0 shadow-sm p-4 h-100" style="border-radius:16px;">
-            <h4 class="fw-bold mb-2" style="color:#002D6A;">Sawai Mansingh, Jaipur: 220-Plus Chasing Ground</h4>
+          <div class="card border-0 shadow-sm p-4 h-100 bg-white" style="border-radius:16px;">
+            <h4 class="fw-bold mb-2" style="color:#00173B;">Sawai Mansingh, Jaipur: 220-Plus Chasing Ground</h4>
             <div class="row g-2 mb-3 text-center">
-              <div class="col-3 p-2 bg-light rounded-3"><span class="small text-muted font-mono">2023 Avg</span><div class="h5 fw-bold mb-0 font-mono">170</div></div>
-              <div class="col-3 p-2 bg-light rounded-3"><span class="small text-muted font-mono">2024 Avg</span><div class="h5 fw-bold mb-0 font-mono">186</div></div>
-              <div class="col-3 p-2 bg-light rounded-3"><span class="small text-muted font-mono">2025 Avg</span><div class="h5 fw-bold mb-0 font-mono">197</div></div>
-              <div class="col-3 p-2 bg-primary text-white rounded-3"><span class="small font-mono">2026 Avg</span><div class="h5 fw-bold mb-0 text-white font-mono">225</div></div>
+              <div class="col-3 p-2 bg-light rounded-3"><span class="small text-muted font-mono">2023 Avg</span><div class="h5 fw-bold mb-0 font-mono text-dark">170</div></div>
+              <div class="col-3 p-2 bg-light rounded-3"><span class="small text-muted font-mono">2024 Avg</span><div class="h5 fw-bold mb-0 font-mono text-dark">186</div></div>
+              <div class="col-3 p-2 bg-light rounded-3"><span class="small text-muted font-mono">2025 Avg</span><div class="h5 fw-bold mb-0 font-mono text-dark">197</div></div>
+              <div class="col-3 p-2 rounded-3 text-white" style="background:#002D6A !important;"><span class="small font-mono">2026 Avg</span><div class="h5 fw-bold mb-0 text-white font-mono">225</div></div>
             </div>
-            <ul class="list-unstyled small mb-3">
+            <ul class="list-unstyled small mb-3" style="color:#334155;">
               <li class="py-1 border-bottom"><strong>3 of 4</strong> RR home games in 2026 won by the chasing side.</li>
               <li class="py-1 border-bottom"><strong>43&ndash;24</strong> All-time IPL wins chasing vs batting first (67 games).</li>
               <li class="py-1 border-bottom"><strong>6 of 13</strong> RR home wins across 2024&ndash;26 (4&ndash;1 in 2024, 1&ndash;4 in 2025, 1&ndash;3 in 2026).</li>
@@ -219,7 +219,7 @@
             </ul>
 
             <h6 class="fw-bold text-dark mb-1">How the Pitch Plays:</h6>
-            <p class="small text-muted mb-0">
+            <p class="small text-muted mb-0" style="color:#475569 !important;">
               Pace and carry early, then slows and grips in overs 7&ndash;15. Least swing of any IPL ground in 2026. Bounce truer under lights; dew helps the chase. Square boundaries longer than straight ones.
             </p>
           </div>
@@ -227,8 +227,8 @@
 
         <div class="col-lg-5">
           <div class="card border-0 shadow-sm p-4 h-100" style="background:#FFF0F5; border-left: 5px solid #E91E8C !important; border-radius:16px;">
-            <h5 class="fw-bold mb-2" style="color:#002D6A;">HOME GROUND: Who Succeeds in Jaipur</h5>
-            <p class="small text-muted mb-3">Spin and left-arm angle take wickets; right-arm pace leaks.</p>
+            <h5 class="fw-bold mb-2" style="color:#00173B;">HOME GROUND: Who Succeeds in Jaipur</h5>
+            <p class="small text-muted mb-3" style="color:#475569 !important;">Spin and left-arm angle take wickets; right-arm pace leaks.</p>
             <div class="table-responsive">
               <table class="table table-sm table-bordered small text-center mb-3 bg-white">
                 <thead class="table-light">
@@ -244,7 +244,7 @@
                 </tbody>
               </table>
             </div>
-            <div class="small text-muted">
+            <div class="small" style="color:#334155;">
               <strong>Pace vs Spin (2025&ndash;26 at Jaipur):</strong><br>
               &bull; Pace in Jaipur: <strong class="text-danger font-mono">10.8 an over</strong>, a wicket every 24.5 balls (IPL-wide 9.9 and 19.3).<br>
               &bull; Spin: <strong class="text-success font-mono">9.3 and 22.6</strong>.<br>
@@ -255,35 +255,35 @@
       </div>
 
       <!-- How to Win in Jaipur -->
-      <div class="card border-0 shadow-sm p-4 mb-4" style="border-radius:16px;">
+      <div class="card border-0 shadow-sm p-4 mb-4 bg-white" style="border-radius:16px;">
         <h5 class="fw-bold text-dark mb-3"><i class="bi bi-compass-fill me-2 text-primary"></i>HOME GROUND: How to Win in Jaipur</h5>
         <div class="row g-3">
           <div class="col-md-3">
             <div class="p-3 border rounded-3 bg-light h-100">
               <span class="badge bg-primary mb-1 font-mono">Step 1</span>
               <div class="fw-bold small text-dark">Win the toss, bowl</div>
-              <div class="text-muted" style="font-size:0.8rem;">Chasers won 3 of 4 in 2026 and 2nd innings powerplay runs 1.4 an over faster.</div>
+              <div class="text-muted" style="font-size:0.8rem; color:#475569 !important;">Chasers won 3 of 4 in 2026 and 2nd innings powerplay runs 1.4 an over faster.</div>
             </div>
           </div>
           <div class="col-md-3">
             <div class="p-3 border rounded-3 bg-light h-100">
               <span class="badge bg-primary mb-1 font-mono">Step 2</span>
               <div class="fw-bold small text-dark">Spin the middle</div>
-              <div class="text-muted" style="font-size:0.8rem;">Jadeja and Punja for 8 overs between 7 and 15; Parag or Ferreira as 6th option.</div>
+              <div class="text-muted" style="font-size:0.8rem; color:#475569 !important;">Jadeja and Punja for 8 overs between 7 and 15; Parag or Ferreira as 6th option.</div>
             </div>
           </div>
           <div class="col-md-3">
             <div class="p-3 border rounded-3 bg-light h-100">
               <span class="badge bg-primary mb-1 font-mono">Step 3</span>
               <div class="fw-bold small text-dark">Pace at the ends</div>
-              <div class="text-muted" style="font-size:0.8rem;">Archer with new ball; Curran's slower balls and gap-2 specialist at death. Avoid middle right-arm pace.</div>
+              <div class="text-muted" style="font-size:0.8rem; color:#475569 !important;">Archer with new ball; Curran's slower balls and gap-2 specialist at death. Avoid middle right-arm pace.</div>
             </div>
           </div>
           <div class="col-md-3">
             <div class="p-3 border rounded-3 bg-light h-100">
               <span class="badge bg-primary mb-1 font-mono">Step 4</span>
               <div class="fw-bold small text-dark">Chase 220</div>
-              <div class="text-muted" style="font-size:0.8rem;">Sooryavanshi &amp; Jaiswal attack PP; gap-1 finisher &amp; Ferreira close. If batting first, par is now 225.</div>
+              <div class="text-muted" style="font-size:0.8rem; color:#475569 !important;">Sooryavanshi &amp; Jaiswal attack PP; gap-1 finisher &amp; Ferreira close. If batting first, par is now 225.</div>
             </div>
           </div>
         </div>
@@ -298,15 +298,15 @@
               <tr><th>Ground (Team)</th><th>Pitch</th><th>Avg 1st Inns</th><th>RR 2026</th><th>Players Needed</th></tr>
             </thead>
             <tbody>
-              <tr><td>Hyderabad (SRH)</td><td>Flat, black soil</td><td class="font-mono">~205</td><td>Lost by 57; won Eliminator</td><td>Death bowlers, deep batting</td></tr>
-              <tr><td>Bengaluru (RCB)</td><td>Flat, small, altitude</td><td class="font-mono">~183</td><td>&ndash;</td><td>Six-hitters, yorker bowlers</td></tr>
-              <tr><td>Ahmedabad (GT)</td><td>Fast, high bounce</td><td class="font-mono">170&ndash;195</td><td>Won by 6; lost Q2 by 7 wkts</td><td>Hit-the-deck pace</td></tr>
-              <tr><td>Mumbai (MI)</td><td>True bounce, early swing</td><td class="font-mono">~170</td><td>&ndash;</td><td>Swing bowler, chase depth</td></tr>
-              <tr><td>Mullanpur (PBKS)</td><td>Low bounce, little swing</td><td class="font-mono">170&ndash;180</td><td>Won by 6 wkts</td><td>Cutters, slower balls</td></tr>
-              <tr><td>Kolkata (KKR)</td><td>Balanced, quick outfield</td><td class="font-mono">~190</td><td>&ndash;</td><td>Mystery spin, powerplay hitters</td></tr>
-              <tr class="table-warning"><td>Chennai (CSK)</td><td>Slow, turning</td><td class="font-mono">150&ndash;165</td><td>&ndash;</td><td>Two spinners, sweepers</td></tr>
-              <tr class="table-warning"><td>Delhi (DC)</td><td>Slow, grippy</td><td class="font-mono">~170</td><td>&ndash;</td><td>Spin, middle-overs anchors</td></tr>
-              <tr class="table-warning"><td>Lucknow (LSG)</td><td>Slow, most swing in 2026</td><td class="font-mono">150&ndash;170</td><td>&ndash;</td><td>Swing, wrist spin</td></tr>
+              <tr><td><strong>Hyderabad (SRH)</strong></td><td>Flat, black soil</td><td class="font-mono">~205</td><td>Lost by 57; won Eliminator</td><td>Death bowlers, deep batting</td></tr>
+              <tr><td><strong>Bengaluru (RCB)</strong></td><td>Flat, small, altitude</td><td class="font-mono">~183</td><td>&ndash;</td><td>Six-hitters, yorker bowlers</td></tr>
+              <tr><td><strong>Ahmedabad (GT)</strong></td><td>Fast, high bounce</td><td class="font-mono">170&ndash;195</td><td>Won by 6; lost Q2 by 7 wkts</td><td>Hit-the-deck pace</td></tr>
+              <tr><td><strong>Mumbai (MI)</strong></td><td>True bounce, early swing</td><td class="font-mono">~170</td><td>&ndash;</td><td>Swing bowler, chase depth</td></tr>
+              <tr><td><strong>Mullanpur (PBKS)</strong></td><td>Low bounce, little swing</td><td class="font-mono">170&ndash;180</td><td>Won by 6 wkts</td><td>Cutters, slower balls</td></tr>
+              <tr><td><strong>Kolkata (KKR)</strong></td><td>Balanced, quick outfield</td><td class="font-mono">~190</td><td>&ndash;</td><td>Mystery spin, powerplay hitters</td></tr>
+              <tr class="table-warning"><td><strong>Chennai (CSK)</strong></td><td>Slow, turning</td><td class="font-mono">150&ndash;165</td><td>&ndash;</td><td>Two spinners, sweepers</td></tr>
+              <tr class="table-warning"><td><strong>Delhi (DC)</strong></td><td>Slow, grippy</td><td class="font-mono">~170</td><td>&ndash;</td><td>Spin, middle-overs anchors</td></tr>
+              <tr class="table-warning"><td><strong>Lucknow (LSG)</strong></td><td>Slow, most swing in 2026</td><td class="font-mono">150&ndash;170</td><td>&ndash;</td><td>Swing, wrist spin</td></tr>
             </tbody>
           </table>
         </div>
@@ -317,7 +317,7 @@
         <div class="col-md-6">
           <div class="p-4 bg-white rounded-4 border shadow-sm h-100">
             <h6 class="fw-bold text-dark mb-2"><i class="bi bi-fire me-2 text-danger"></i>Flat Grounds (SRH, RCB, GT, MI, KKR):</h6>
-            <ul class="small text-muted mb-0 ps-3" style="line-height:1.7;">
+            <ul class="small mb-0 ps-3" style="line-height:1.7; color:#334155;">
               <li>Gap-1 power finisher in the XI</li>
               <li>Two death bowlers: Archer plus gap-2 specialist</li>
               <li>Impact player: extra batter when chasing</li>
@@ -327,7 +327,7 @@
         <div class="col-md-6">
           <div class="p-4 bg-white rounded-4 border shadow-sm h-100">
             <h6 class="fw-bold text-dark mb-2"><i class="bi bi-disc me-2 text-primary"></i>Slow Grounds (CSK, DC, LSG, PBKS, GAU):</h6>
-            <ul class="small text-muted mb-0 ps-3" style="line-height:1.7;">
+            <ul class="small mb-0 ps-3" style="line-height:1.7; color:#334155;">
               <li>Jadeja, Punja and Puthur together</li>
               <li>Curran and Brijesh using cutters</li>
               <li>Impact player: second spinner when bowling</li>
@@ -409,7 +409,7 @@
       <!-- Retain vs Release -->
       <div class="row g-4 mb-4">
         <div class="col-md-6">
-          <div class="card h-100 border-0 shadow-sm p-4" style="border-top: 4px solid #10B981 !important; border-radius:16px;">
+          <div class="card h-100 border-0 shadow-sm p-4 bg-white" style="border-top: 4px solid #10B981 !important; border-radius:16px;">
             <div class="d-flex justify-content-between align-items-center mb-2">
               <h5 class="fw-bold text-success mb-0"><i class="bi bi-check-circle-fill me-2"></i>YOUR PLAN: RETAIN (18 Players, ₹87.15 Cr)</h5>
             </div>
@@ -418,15 +418,15 @@
               <table class="table table-sm table-borderless small mb-0">
                 <tbody>
                   <tr>
-                    <td class="fw-bold" style="width:140px;">Batters &amp; Keepers:</td>
+                    <td class="fw-bold" style="width:140px; color:#0F172A;">Batters &amp; Keepers:</td>
                     <td>Yashasvi Jaiswal, Vaibhav Sooryavanshi, Lhuan-dre Pretorius (F), Dhruv Jurel (WK), Ravi Singh (WK), Shubham Dubey</td>
                   </tr>
                   <tr>
-                    <td class="fw-bold">All-Rounders:</td>
+                    <td class="fw-bold" style="color:#0F172A;">All-Rounders:</td>
                     <td>Riyan Parag (C), Ravindra Jadeja, Donovan Ferreira (F), Dasun Shanaka (F), Emanjot Singh Chahal</td>
                   </tr>
                   <tr>
-                    <td class="fw-bold">Bowlers:</td>
+                    <td class="fw-bold" style="color:#0F172A;">Bowlers:</td>
                     <td>Jofra Archer (F), Sandeep Sharma, Brijesh Sharma, Sushant Mishra, Yash Raj Punja, Vignesh Puthur, Sam Curran (F)</td>
                   </tr>
                 </tbody>
@@ -440,7 +440,7 @@
         </div>
 
         <div class="col-md-6">
-          <div class="card h-100 border-0 shadow-sm p-4" style="border-top: 4px solid #EF4444 !important; border-radius:16px;">
+          <div class="card h-100 border-0 shadow-sm p-4 bg-white" style="border-top: 4px solid #EF4444 !important; border-radius:16px;">
             <div class="d-flex justify-content-between align-items-center mb-2">
               <h5 class="fw-bold text-danger mb-0"><i class="bi bi-x-circle-fill me-2"></i>YOUR PLAN: RELEASE (9 Players, ₹33.5 Cr Freed)</h5>
             </div>
@@ -476,7 +476,7 @@
           <div class="card border-0 shadow-sm p-4 h-100 bg-white" style="border-radius:16px;">
             <h5 class="fw-bold text-dark mb-2">YOUR PLAN: BUYBACKS</h5>
             <p class="small text-muted mb-2">Two players to win back cheaper; Curran stays.</p>
-            <ul class="small text-muted ps-3 mb-2" style="line-height:1.7;">
+            <ul class="small ps-3 mb-2" style="line-height:1.7; color:#334155;">
               <li class="mb-2"><strong>Shimron Hetmyer:</strong> Released at ₹11 crore; buy back for less. Only 78 IPL runs in 2026, but 248 runs at the 2026 T20 World Cup and a CPL hundred since.</li>
               <li class="mb-2"><strong>Tushar Deshpande:</strong> Released at ₹6.5 crore; buy back for less. Reason: delivered in some pressure games. Data warns: death economy 12.1 over 24 months.</li>
               <li><strong>Sam Curran:</strong> No trade: kept as Archer's death-overs partner. Over 24 months his death economy was 9.2 against 10.3 in powerplay.</li>
@@ -489,7 +489,7 @@
           <div class="card border-0 shadow-sm p-4 h-100 bg-white" style="border-radius:16px;">
             <h5 class="fw-bold text-dark mb-2">YOUR PLAN: NEEDS</h5>
             <p class="small text-muted mb-2">Four slots to fill before the season:</p>
-            <ol class="small text-muted ps-3 mb-2" style="line-height:1.7;">
+            <ol class="small ps-3 mb-2" style="line-height:1.7; color:#334155;">
               <li class="mb-2"><strong>Indian finisher:</strong> Named in your notes: <em>Suryansh Shedge</em>, with a question mark.</li>
               <li class="mb-2"><strong>Foreign finisher and an Indian No. 5:</strong> Named: <em>Nehal Wadhera</em> for No. 5.</li>
               <li class="mb-2"><strong>Indian opener:</strong> Only needed if Jaiswal leaves.</li>
@@ -506,7 +506,7 @@
     <div class="tab-pane fade" id="tab-xis">
 
       <!-- Probable XI -->
-      <div class="card border-0 shadow-sm mb-4" style="border-radius:16px; overflow:hidden;">
+      <div class="card border-0 shadow-sm mb-4 bg-white" style="border-radius:16px; overflow:hidden;">
         <div class="card-header bg-primary text-white py-3 px-4">
           <h5 class="fw-bold mb-0">Probable Starting XI: No Trades, Two Gaps to Fill</h5>
         </div>
@@ -542,7 +542,7 @@
       <!-- Scenarios: Without Jaiswal & Trading Curran -->
       <div class="row g-4 mb-4">
         <div class="col-md-6">
-          <div class="card border-0 shadow-sm h-100" style="border-radius:16px; overflow:hidden;">
+          <div class="card border-0 shadow-sm h-100 bg-white" style="border-radius:16px; overflow:hidden;">
             <div class="card-header bg-dark text-white py-3 px-4">
               <h6 class="fw-bold mb-0">Pretorius Opens and All Four Overseas Slots Are Used</h6>
             </div>
@@ -572,7 +572,7 @@
         </div>
 
         <div class="col-md-6">
-          <div class="card border-0 shadow-sm h-100" style="border-radius:16px; overflow:hidden;">
+          <div class="card border-0 shadow-sm h-100 bg-white" style="border-radius:16px; overflow:hidden;">
             <div class="card-header bg-dark text-white py-3 px-4">
               <h6 class="fw-bold mb-0">Trading Curran Keeps Jaiswal and Frees a Slot</h6>
             </div>
@@ -636,16 +636,16 @@
       <!-- Death Bowling & Batting Comparisons -->
       <div class="row g-4 mb-4">
         <div class="col-md-6">
-          <div class="card border-0 shadow-sm p-4 h-100" style="border-radius:16px;">
+          <div class="card border-0 shadow-sm p-4 h-100 bg-white" style="border-radius:16px;">
             <h5 class="fw-bold mb-2 text-primary">Death Bowling: RR Went from Worst in 2025 to Fifth in 2026</h5>
             <p class="small text-muted mb-2">Runs conceded per over in overs 16&ndash;20, all IPL matches incl. playoffs:</p>
             <div class="p-3 bg-light rounded-3 mb-3">
               <div class="d-flex justify-content-between align-items-center mb-1">
-                <span class="fw-bold">2025 Season:</span>
+                <span class="fw-bold text-dark">2025 Season:</span>
                 <span class="text-danger fw-bold font-mono">12.26 rpo (Rank 10 &ndash; Worst)</span>
               </div>
               <div class="d-flex justify-content-between align-items-center">
-                <span class="fw-bold">2026 Season:</span>
+                <span class="fw-bold text-dark">2026 Season:</span>
                 <span class="text-success fw-bold font-mono">10.58 rpo (Rank 5)</span>
               </div>
             </div>
@@ -656,16 +656,16 @@
         </div>
 
         <div class="col-md-6">
-          <div class="card border-0 shadow-sm p-4 h-100" style="border-left: 5px solid #E91E8C !important; border-radius:16px;">
+          <div class="card border-0 shadow-sm p-4 h-100 bg-white" style="border-left: 5px solid #E91E8C !important; border-radius:16px;">
             <h5 class="fw-bold mb-2 text-danger">Death Batting: RR Ranked Ninth in 2025 and Seventh in 2026</h5>
             <p class="small text-muted mb-2">Team runs scored per over in overs 16&ndash;20, all IPL matches incl. playoffs:</p>
             <div class="p-3 bg-light rounded-3 mb-3">
               <div class="d-flex justify-content-between align-items-center mb-1">
-                <span class="fw-bold">2025 Season:</span>
+                <span class="fw-bold text-dark">2025 Season:</span>
                 <span class="text-danger fw-bold font-mono">10.05 rpo (Rank 9)</span>
               </div>
               <div class="d-flex justify-content-between align-items-center">
-                <span class="fw-bold">2026 Season:</span>
+                <span class="fw-bold text-dark">2026 Season:</span>
                 <span class="text-danger fw-bold font-mono">10.29 rpo (Rank 7)</span>
               </div>
             </div>
@@ -690,16 +690,16 @@
               </tr>
             </thead>
             <tbody>
-              <tr><td>SRH</td><td class="font-mono">10.97</td><td class="font-mono">9.96</td><td class="font-mono">10.93</td><td class="font-mono">10.64</td><td class="font-mono">38</td><td class="font-mono">4.36</td></tr>
-              <tr><td>KKR</td><td class="font-mono">9.86</td><td class="font-mono">10.08</td><td class="font-mono">11.30</td><td class="font-mono">10.52</td><td class="font-mono">17</td><td class="font-mono">4.13</td></tr>
-              <tr><td>DC</td><td class="font-mono">10.44</td><td class="font-mono">10.14</td><td class="font-mono">11.09</td><td class="font-mono">11.21</td><td class="font-mono">29</td><td class="font-mono">4.03</td></tr>
-              <tr><td>RCB</td><td class="font-mono">10.65</td><td class="font-mono">10.19</td><td class="font-mono">11.33</td><td class="font-mono">11.52</td><td class="font-mono">21</td><td class="font-mono">3.75</td></tr>
+              <tr><td><strong>SRH</strong></td><td class="font-mono">10.97</td><td class="font-mono">9.96</td><td class="font-mono">10.93</td><td class="font-mono">10.64</td><td class="font-mono">38</td><td class="font-mono">4.36</td></tr>
+              <tr><td><strong>KKR</strong></td><td class="font-mono">9.86</td><td class="font-mono">10.08</td><td class="font-mono">11.30</td><td class="font-mono">10.52</td><td class="font-mono">17</td><td class="font-mono">4.13</td></tr>
+              <tr><td><strong>DC</strong></td><td class="font-mono">10.44</td><td class="font-mono">10.14</td><td class="font-mono">11.09</td><td class="font-mono">11.21</td><td class="font-mono">29</td><td class="font-mono">4.03</td></tr>
+              <tr><td><strong>RCB</strong></td><td class="font-mono">10.65</td><td class="font-mono">10.19</td><td class="font-mono">11.33</td><td class="font-mono">11.52</td><td class="font-mono">21</td><td class="font-mono">3.75</td></tr>
               <tr class="table-warning fw-bold"><td>RR</td><td class="font-mono">12.26</td><td class="font-mono">10.58</td><td class="font-mono">10.05</td><td class="font-mono">10.29</td><td class="font-mono">34</td><td class="font-mono text-danger">4.86</td></tr>
-              <tr><td>CSK</td><td class="font-mono">10.77</td><td class="font-mono">10.89</td><td class="font-mono">9.90</td><td class="font-mono">10.40</td><td class="font-mono">23</td><td class="font-mono">4.14</td></tr>
-              <tr><td>MI</td><td class="font-mono">10.11</td><td class="font-mono">11.13</td><td class="font-mono">11.05</td><td class="font-mono">10.26</td><td class="font-mono">30</td><td class="font-mono">4.36</td></tr>
-              <tr><td>GT</td><td class="font-mono">10.87</td><td class="font-mono">11.19</td><td class="font-mono">10.81</td><td class="font-mono">9.97</td><td class="font-mono">32</td><td class="font-mono">4.72</td></tr>
-              <tr><td>LSG</td><td class="font-mono">11.21</td><td class="font-mono">11.29</td><td class="font-mono">10.49</td><td class="font-mono">10.20</td><td class="font-mono">34</td><td class="font-mono">4.28</td></tr>
-              <tr><td>PBKS</td><td class="font-mono">11.27</td><td class="font-mono">11.86</td><td class="font-mono">11.95</td><td class="font-mono">12.49</td><td class="font-mono">23</td><td class="font-mono">3.38</td></tr>
+              <tr><td><strong>CSK</strong></td><td class="font-mono">10.77</td><td class="font-mono">10.89</td><td class="font-mono">9.90</td><td class="font-mono">10.40</td><td class="font-mono">23</td><td class="font-mono">4.14</td></tr>
+              <tr><td><strong>MI</strong></td><td class="font-mono">10.11</td><td class="font-mono">11.13</td><td class="font-mono">11.05</td><td class="font-mono">10.26</td><td class="font-mono">30</td><td class="font-mono">4.36</td></tr>
+              <tr><td><strong>GT</strong></td><td class="font-mono">10.87</td><td class="font-mono">11.19</td><td class="font-mono">10.81</td><td class="font-mono">9.97</td><td class="font-mono">32</td><td class="font-mono">4.72</td></tr>
+              <tr><td><strong>LSG</strong></td><td class="font-mono">11.21</td><td class="font-mono">11.29</td><td class="font-mono">10.49</td><td class="font-mono">10.20</td><td class="font-mono">34</td><td class="font-mono">4.28</td></tr>
+              <tr><td><strong>PBKS</strong></td><td class="font-mono">11.27</td><td class="font-mono">11.86</td><td class="font-mono">11.95</td><td class="font-mono">12.49</td><td class="font-mono">23</td><td class="font-mono">3.38</td></tr>
             </tbody>
           </table>
         </div>
@@ -709,17 +709,17 @@
       <div class="row g-4 mb-4">
         <!-- Ferreira -->
         <div class="col-md-6">
-          <div class="card border-0 shadow-sm p-4 h-100" style="border-radius:16px;">
-            <h5 class="fw-bold mb-1" style="color:#002D6A;">IPL 2026 IMPACT: Donovan Ferreira, ₹1 Crore</h5>
+          <div class="card border-0 shadow-sm p-4 h-100 bg-white" style="border-radius:16px;">
+            <h5 class="fw-bold mb-1" style="color:#00173B;">IPL 2026 IMPACT: Donovan Ferreira, ₹1 Crore</h5>
             <p class="small text-muted mb-2">Ferreira lifted RR's death strike rate from 147 to 163.</p>
             <div class="row g-2 text-center mb-3">
-              <div class="col-3 p-2 bg-light rounded-3"><span class="small text-muted">Death SR</span><div class="h5 fw-bold text-primary mb-0 font-mono">222</div></div>
-              <div class="col-3 p-2 bg-light rounded-3"><span class="small text-muted">Runs Added</span><div class="h5 fw-bold text-success mb-0 font-mono">+43</div></div>
-              <div class="col-3 p-2 bg-light rounded-3"><span class="small text-muted">Press. SR</span><div class="h5 fw-bold text-danger mb-0 font-mono">198</div></div>
-              <div class="col-3 p-2 bg-light rounded-3"><span class="small text-muted">Rest of RR</span><div class="h5 fw-bold text-dark mb-0 font-mono">147</div></div>
+              <div class="col-3 p-2 bg-light rounded-3"><span class="small text-muted font-mono">Death SR</span><div class="h5 fw-bold text-primary mb-0 font-mono">222</div></div>
+              <div class="col-3 p-2 bg-light rounded-3"><span class="small text-muted font-mono">Runs Added</span><div class="h5 fw-bold text-success mb-0 font-mono">+43</div></div>
+              <div class="col-3 p-2 bg-light rounded-3"><span class="small text-muted font-mono">Press. SR</span><div class="h5 fw-bold text-danger mb-0 font-mono">198</div></div>
+              <div class="col-3 p-2 bg-light rounded-3"><span class="small text-muted font-mono">Rest of RR</span><div class="h5 fw-bold text-dark mb-0 font-mono">147</div></div>
             </div>
             <div class="table-responsive">
-              <table class="table table-sm table-bordered small text-center mb-2">
+              <table class="table table-sm table-bordered small text-center mb-2 bg-white">
                 <thead class="table-light"><tr><th>Phase</th><th>Balls</th><th>Runs</th><th>SR</th></tr></thead>
                 <tbody>
                   <tr><td>Powerplay</td><td class="font-mono">11</td><td class="font-mono">14</td><td class="font-mono">127</td></tr>
@@ -735,17 +735,17 @@
 
         <!-- Brijesh -->
         <div class="col-md-6">
-          <div class="card border-0 shadow-sm p-4 h-100" style="border-radius:16px;">
-            <h5 class="fw-bold mb-1" style="color:#002D6A;">IPL 2026 IMPACT: Brijesh Sharma, ₹30 Lakh</h5>
+          <div class="card border-0 shadow-sm p-4 h-100 bg-white" style="border-radius:16px;">
+            <h5 class="fw-bold mb-1" style="color:#00173B;">IPL 2026 IMPACT: Brijesh Sharma, ₹30 Lakh</h5>
             <p class="small text-muted mb-2">A ₹30 lakh buy out-bowled RR's senior seamers.</p>
             <div class="row g-2 text-center mb-3">
-              <div class="col-3 p-2 bg-light rounded-3"><span class="small text-muted">Wickets</span><div class="h5 fw-bold text-primary mb-0 font-mono">14</div></div>
-              <div class="col-3 p-2 bg-light rounded-3"><span class="small text-muted">Balls/Wkt</span><div class="h5 fw-bold text-success mb-0 font-mono">19.8</div></div>
-              <div class="col-3 p-2 bg-light rounded-3"><span class="small text-muted">Death Wkts</span><div class="h5 fw-bold text-danger mb-0 font-mono">8</div></div>
-              <div class="col-3 p-2 bg-light rounded-3"><span class="small text-muted">Press. Wkts</span><div class="h5 fw-bold text-dark mb-0 font-mono">11</div></div>
+              <div class="col-3 p-2 bg-light rounded-3"><span class="small text-muted font-mono">Wickets</span><div class="h5 fw-bold text-primary mb-0 font-mono">14</div></div>
+              <div class="col-3 p-2 bg-light rounded-3"><span class="small text-muted font-mono">Balls/Wkt</span><div class="h5 fw-bold text-success mb-0 font-mono">19.8</div></div>
+              <div class="col-3 p-2 bg-light rounded-3"><span class="small text-muted font-mono">Death Wkts</span><div class="h5 fw-bold text-danger mb-0 font-mono">8</div></div>
+              <div class="col-3 p-2 bg-light rounded-3"><span class="small text-muted font-mono">Press. Wkts</span><div class="h5 fw-bold text-dark mb-0 font-mono">11</div></div>
             </div>
             <div class="table-responsive">
-              <table class="table table-sm table-bordered small text-center mb-2">
+              <table class="table table-sm table-bordered small text-center mb-2 bg-white">
                 <thead class="table-light"><tr><th>Phase</th><th>Overs</th><th>Wkts</th><th>Econ</th><th>League</th></tr></thead>
                 <tbody>
                   <tr><td>Powerplay</td><td class="font-mono">12.1</td><td class="font-mono">1</td><td class="font-mono">10.77</td><td class="font-mono">9.86</td></tr>
@@ -832,27 +832,27 @@
             </thead>
             <tbody>
               <tr class="table-success fw-bold">
-                <td>Shashank Singh</td><td class="font-mono">1</td><td>Indian finisher</td>
+                <td><strong>Shashank Singh</strong></td><td class="font-mono">1</td><td>Indian finisher</td>
                 <td>482 runs &middot; SR 162 &middot; death SR 195</td>
                 <td>Only if PBKS release him</td>
               </tr>
               <tr>
-                <td>Suryansh Shedge</td><td class="font-mono">1</td><td>Indian finisher</td>
+                <td><strong>Suryansh Shedge</strong></td><td class="font-mono">1</td><td>Indian finisher</td>
                 <td>173 runs &middot; SR 155 &middot; death SR 127</td>
                 <td>Likely PBKS release; small sample</td>
               </tr>
               <tr>
-                <td>Nandre Burger (F)</td><td class="font-mono">2</td><td>Left-arm seam</td>
+                <td><strong>Nandre Burger (F)</strong></td><td class="font-mono">2</td><td>Left-arm seam</td>
                 <td>14 wkts &middot; death econ 9.9</td>
                 <td>At base price; knows RR</td>
               </tr>
               <tr>
-                <td>Mahli Beardman (F)</td><td class="font-mono">2</td><td>Right-arm fast</td>
+                <td><strong>Mahli Beardman (F)</strong></td><td class="font-mono">2</td><td>Right-arm fast</td>
                 <td>BBL: 16 wkts &middot; econ 8.0</td>
                 <td>Age 21; stress fractures in 2025</td>
               </tr>
               <tr>
-                <td>Ottneil Baartman (F)</td><td class="font-mono">2</td><td>Right-arm seam</td>
+                <td><strong>Ottneil Baartman (F)</strong></td><td class="font-mono">2</td><td>Right-arm seam</td>
                 <td>15 T20I wkts &middot; death econ 11.8</td>
                 <td>Death numbers are weak</td>
               </tr>
@@ -867,7 +867,7 @@
       <!-- Backups with Remaining Purse -->
       <div class="card border-0 shadow-sm p-4 bg-light" style="border-radius:16px;">
         <h5 class="fw-bold text-dark mb-2">BACKUPS WITH THE REMAINING PURSE (Five Backup Places, Two Overseas)</h5>
-        <ul class="small text-muted ps-3 mb-2" style="line-height:1.7;">
+        <ul class="small ps-3 mb-2" style="line-height:1.7; color:#334155;">
           <li class="mb-1"><strong>Indian batter:</strong> From your notes. Covers Jaiswal and Sooryavanshi; Pretorius is the only other opener and uses an overseas slot.</li>
           <li class="mb-1"><strong>Foreign finisher:</strong> From your notes. A Hetmyer buyback at a lower price fits here.</li>
           <li class="mb-1"><strong>Seam cover:</strong> A Deshpande buyback, or a cheaper seamer. Sandeep and Sushant Mishra are already in.</li>
@@ -891,15 +891,15 @@
               <tr><th>Batter</th><th>Matches</th><th>Runs</th><th>Strike Rate</th><th>Average</th><th>Death-over SR</th></tr>
             </thead>
             <tbody>
-              <tr class="table-success fw-bold"><td>Vaibhav Sooryavanshi</td><td class="font-mono">35</td><td class="font-mono">1,509</td><td class="font-mono text-success">223</td><td class="font-mono">43.1</td><td class="font-mono">&ndash;</td></tr>
-              <tr><td>Yashasvi Jaiswal</td><td class="font-mono">30</td><td class="font-mono">986</td><td class="font-mono">157</td><td class="font-mono">36.5</td><td class="font-mono">&ndash;</td></tr>
-              <tr><td>Shimron Hetmyer</td><td class="font-mono">42</td><td class="font-mono">895</td><td class="font-mono">161</td><td class="font-mono">24.9</td><td class="font-mono">146</td></tr>
-              <tr><td>Dhruv Jurel</td><td class="font-mono">31</td><td class="font-mono">854</td><td class="font-mono">154</td><td class="font-mono">34.2</td><td class="font-mono">171</td></tr>
-              <tr><td>Riyan Parag</td><td class="font-mono">28</td><td class="font-mono">702</td><td class="font-mono">163</td><td class="font-mono">28.1</td><td class="font-mono">166</td></tr>
-              <tr><td>Ravindra Jadeja</td><td class="font-mono">27</td><td class="font-mono">567</td><td class="font-mono">135</td><td class="font-mono">43.6</td><td class="font-mono">150</td></tr>
-              <tr class="table-info fw-bold"><td>Donovan Ferreira</td><td class="font-mono">25</td><td class="font-mono">482</td><td class="font-mono">167</td><td class="font-mono">26.8</td><td class="font-mono text-primary">211</td></tr>
-              <tr><td>Shubham Dubey</td><td class="font-mono">14</td><td class="font-mono">187</td><td class="font-mono">151</td><td class="font-mono">23.4</td><td class="font-mono">171</td></tr>
-              <tr><td>Lhuan-dre Pretorius</td><td class="font-mono">9</td><td class="font-mono">103</td><td class="font-mono">134</td><td class="font-mono">12.9</td><td class="font-mono">&ndash;</td></tr>
+              <tr class="table-success fw-bold"><td><strong>Vaibhav Sooryavanshi</strong></td><td class="font-mono">35</td><td class="font-mono">1,509</td><td class="font-mono text-success">223</td><td class="font-mono">43.1</td><td class="font-mono">&ndash;</td></tr>
+              <tr><td><strong>Yashasvi Jaiswal</strong></td><td class="font-mono">30</td><td class="font-mono">986</td><td class="font-mono">157</td><td class="font-mono">36.5</td><td class="font-mono">&ndash;</td></tr>
+              <tr><td><strong>Shimron Hetmyer</strong></td><td class="font-mono">42</td><td class="font-mono">895</td><td class="font-mono">161</td><td class="font-mono">24.9</td><td class="font-mono">146</td></tr>
+              <tr><td><strong>Dhruv Jurel</strong></td><td class="font-mono">31</td><td class="font-mono">854</td><td class="font-mono">154</td><td class="font-mono">34.2</td><td class="font-mono">171</td></tr>
+              <tr><td><strong>Riyan Parag</strong></td><td class="font-mono">28</td><td class="font-mono">702</td><td class="font-mono">163</td><td class="font-mono">28.1</td><td class="font-mono">166</td></tr>
+              <tr><td><strong>Ravindra Jadeja</strong></td><td class="font-mono">27</td><td class="font-mono">567</td><td class="font-mono">135</td><td class="font-mono">43.6</td><td class="font-mono">150</td></tr>
+              <tr class="table-info fw-bold"><td><strong>Donovan Ferreira</strong></td><td class="font-mono">25</td><td class="font-mono">482</td><td class="font-mono">167</td><td class="font-mono">26.8</td><td class="font-mono text-primary">211</td></tr>
+              <tr><td><strong>Shubham Dubey</strong></td><td class="font-mono">14</td><td class="font-mono">187</td><td class="font-mono">151</td><td class="font-mono">23.4</td><td class="font-mono">171</td></tr>
+              <tr><td><strong>Lhuan-dre Pretorius</strong></td><td class="font-mono">9</td><td class="font-mono">103</td><td class="font-mono">134</td><td class="font-mono">12.9</td><td class="font-mono">&ndash;</td></tr>
             </tbody>
           </table>
         </div>
@@ -916,15 +916,15 @@
               <tr><th>Bowler</th><th>Matches</th><th>Overs</th><th>Wkts</th><th>Econ</th><th>Powerplay</th><th>Middle</th><th>Death</th></tr>
             </thead>
             <tbody>
-              <tr class="table-success fw-bold"><td>Jofra Archer</td><td class="font-mono">44</td><td class="font-mono">164</td><td class="font-mono">59</td><td class="font-mono text-success">9.15</td><td class="font-mono">9.14</td><td class="font-mono">7.46</td><td class="font-mono">10.07</td></tr>
-              <tr><td>Prince Yadav</td><td class="font-mono">32</td><td class="font-mono">118</td><td class="font-mono">31</td><td class="font-mono">9.17</td><td class="font-mono">8.84</td><td class="font-mono">8.76</td><td class="font-mono">10.05</td></tr>
-              <tr class="table-danger"><td>Mohammed Shami</td><td class="font-mono">24</td><td class="font-mono">87</td><td class="font-mono">21</td><td class="font-mono">9.71</td><td class="font-mono">8.74</td><td class="font-mono">9.84</td><td class="font-mono text-danger">13.97</td></tr>
-              <tr><td>Ravindra Jadeja</td><td class="font-mono">27</td><td class="font-mono">71</td><td class="font-mono">20</td><td class="font-mono">8.48</td><td class="font-mono">&ndash;</td><td class="font-mono">8.44</td><td class="font-mono">&ndash;</td></tr>
-              <tr><td>Mayank Yadav</td><td class="font-mono">15</td><td class="font-mono">58</td><td class="font-mono">15</td><td class="font-mono">10.30</td><td class="font-mono">8.79</td><td class="font-mono">11.37</td><td class="font-mono">11.77</td></tr>
-              <tr><td>Brijesh Sharma</td><td class="font-mono">13</td><td class="font-mono">46</td><td class="font-mono">14</td><td class="font-mono">9.73</td><td class="font-mono">10.77</td><td class="font-mono">8.61</td><td class="font-mono">10.19</td></tr>
-              <tr class="table-danger"><td>Tushar Deshpande</td><td class="font-mono">17</td><td class="font-mono">55</td><td class="font-mono">13</td><td class="font-mono">11.18</td><td class="font-mono">10.68</td><td class="font-mono">10.89</td><td class="font-mono text-danger">12.06</td></tr>
-              <tr><td>Yash Raj Punja</td><td class="font-mono">8</td><td class="font-mono">30</td><td class="font-mono">9</td><td class="font-mono">9.30</td><td class="font-mono">&ndash;</td><td class="font-mono">9.54</td><td class="font-mono">&ndash;</td></tr>
-              <tr><td>Riyan Parag</td><td class="font-mono">28</td><td class="font-mono">24</td><td class="font-mono">5</td><td class="font-mono">8.62</td><td class="font-mono">&ndash;</td><td class="font-mono">8.55</td><td class="font-mono">&ndash;</td></tr>
+              <tr class="table-success fw-bold"><td><strong>Jofra Archer</strong></td><td class="font-mono">44</td><td class="font-mono">164</td><td class="font-mono">59</td><td class="font-mono text-success">9.15</td><td class="font-mono">9.14</td><td class="font-mono">7.46</td><td class="font-mono">10.07</td></tr>
+              <tr><td><strong>Prince Yadav</strong></td><td class="font-mono">32</td><td class="font-mono">118</td><td class="font-mono">31</td><td class="font-mono">9.17</td><td class="font-mono">8.84</td><td class="font-mono">8.76</td><td class="font-mono">10.05</td></tr>
+              <tr class="table-danger"><td><strong>Mohammed Shami</strong></td><td class="font-mono">24</td><td class="font-mono">87</td><td class="font-mono">21</td><td class="font-mono">9.71</td><td class="font-mono">8.74</td><td class="font-mono">9.84</td><td class="font-mono text-danger">13.97</td></tr>
+              <tr><td><strong>Ravindra Jadeja</strong></td><td class="font-mono">27</td><td class="font-mono">71</td><td class="font-mono">20</td><td class="font-mono">8.48</td><td class="font-mono">&ndash;</td><td class="font-mono">8.44</td><td class="font-mono">&ndash;</td></tr>
+              <tr><td><strong>Mayank Yadav</strong></td><td class="font-mono">15</td><td class="font-mono">58</td><td class="font-mono">15</td><td class="font-mono">10.30</td><td class="font-mono">8.79</td><td class="font-mono">11.37</td><td class="font-mono">11.77</td></tr>
+              <tr><td><strong>Brijesh Sharma</strong></td><td class="font-mono">13</td><td class="font-mono">46</td><td class="font-mono">14</td><td class="font-mono">9.73</td><td class="font-mono">10.77</td><td class="font-mono">8.61</td><td class="font-mono">10.19</td></tr>
+              <tr class="table-danger"><td><strong>Tushar Deshpande</strong></td><td class="font-mono">17</td><td class="font-mono">55</td><td class="font-mono">13</td><td class="font-mono">11.18</td><td class="font-mono">10.68</td><td class="font-mono">10.89</td><td class="font-mono text-danger">12.06</td></tr>
+              <tr><td><strong>Yash Raj Punja</strong></td><td class="font-mono">8</td><td class="font-mono">30</td><td class="font-mono">9</td><td class="font-mono">9.30</td><td class="font-mono">&ndash;</td><td class="font-mono">9.54</td><td class="font-mono">&ndash;</td></tr>
+              <tr><td><strong>Riyan Parag</strong></td><td class="font-mono">28</td><td class="font-mono">24</td><td class="font-mono">5</td><td class="font-mono">8.62</td><td class="font-mono">&ndash;</td><td class="font-mono">8.55</td><td class="font-mono">&ndash;</td></tr>
             </tbody>
           </table>
         </div>
@@ -936,7 +936,7 @@
           <div class="card border-0 shadow-sm p-4 h-100 bg-white" style="border-radius:16px;">
             <h5 class="fw-bold text-dark mb-2">SLOT 11: The Indian Quick</h5>
             <p class="small text-muted mb-2">Prince Yadav is the safest pick for slot 11:</p>
-            <ul class="small text-muted ps-3 mb-2" style="line-height:1.7;">
+            <ul class="small ps-3 mb-2" style="line-height:1.7; color:#334155;">
               <li class="mb-2"><strong>Prince Yadav:</strong> 16 IPL 2026 wickets at 8.82 an over. Fit all season and now an India T20I player. 31 wickets in 24 months.</li>
               <li class="mb-2"><strong>Mayank Yadav:</strong> 0 IPL 2026 wickets in 4 games, 11.4 an over. Recurring lumbar stress fracture; retained by LSG at 11 crore.</li>
               <li><strong>Mohammed Shami:</strong> 14.0 death-over economy in 24 months. 21 wickets at 9.7 overall; turned 36 in September.</li>
@@ -949,7 +949,7 @@
           <div class="card border-0 shadow-sm p-4 h-100 bg-white" style="border-radius:16px;">
             <h5 class="fw-bold text-dark mb-2">SLOTS 5 AND 7: Finishers</h5>
             <p class="small text-muted mb-2">None of the named finishers is yet a proven death hitter:</p>
-            <ul class="small text-muted ps-3 mb-2" style="line-height:1.7;">
+            <ul class="small ps-3 mb-2" style="line-height:1.7; color:#334155;">
               <li class="mb-2"><strong>Suryansh Shedge:</strong> 155 strike rate, 173 runs in 13 games. Death SR 127 on small sample. PBKS player.</li>
               <li class="mb-2"><strong>Nehal Wadhera:</strong> 133 strike rate, 511 runs in 25 games. Death SR 136. Steady No. 5, not a finisher. PBKS player.</li>
               <li class="mb-2"><strong>Shubham Dubey:</strong> 171 death-over SR, already in squad. 187 runs at 151 overall in 14 games.</li>
@@ -962,8 +962,8 @@
 
       <!-- 4 Numbers Before Retention Deadline -->
       <div class="card border-0 shadow-sm p-4 mb-4" style="background:#FFF0F5; border-left: 5px solid #E91E8C !important; border-radius:16px;">
-        <h5 class="fw-bold mb-2" style="color:#002D6A;">BEFORE THE RETENTION DEADLINE: Four Numbers to Check Against the Plan</h5>
-        <ol class="small text-muted ps-3 mb-0" style="line-height:1.7;">
+        <h5 class="fw-bold mb-2" style="color:#00173B;">BEFORE THE RETENTION DEADLINE: Four Numbers to Check Against the Plan</h5>
+        <ol class="small ps-3 mb-0" style="line-height:1.7; color:#334155;">
           <li class="mb-2"><strong>Burger out, Sandeep kept.</strong> Burger's death-over economy was 9.9 against Sandeep's 12.7. Sushant Mishra (22 SMAT wickets) becomes the only left-arm seamer.</li>
           <li class="mb-2"><strong>Bishnoi out.</strong> He took 36 wickets in 36 games over 24 months, more than any spinner kept, leaving Jadeja, Punja and Puthur to carry the spin.</li>
           <li class="mb-2"><strong>Buybacks are a gamble.</strong> With no Right to Match, Hetmyer's T20 World Cup form could push his price back up.</li>
@@ -974,7 +974,7 @@
       <!-- Method and Sources -->
       <div class="card border-0 shadow-sm p-4 bg-white" style="border-radius:16px;">
         <h5 class="fw-bold text-dark mb-2">METHOD AND SOURCES</h5>
-        <div class="small text-muted">
+        <div class="small" style="color:#334155;">
           <p class="mb-1"><strong>How the numbers were built:</strong> 24-month splits computed from the SupeRR Selector ball-by-ball dataset (IPL plus internationals and A-team T20s), 13 Nov 2024 to 1 Nov 2026. Domestic leagues such as SA20 and CPL are not in it.</p>
           <p class="mb-1"><strong>Cross-checks:</strong> IPL 2026 season totals from ESPNcricinfo's tables, as published by Business Standard on 31 May 2026. Sooryavanshi, Jurel, Archer and Prince Yadav match within a run or wicket.</p>
           <p class="mb-1"><strong>Other sources:</strong> The Quint and Al Jazeera (Pretorius); Business Standard (Mayank Yadav fitness); Delhi Capitals and Tribune/ANI (Hetmyer); Wikipedia from ESPNcricinfo records (SMAT 2025&ndash;26).</p>

@@ -1,6 +1,6 @@
 /* ==============================================================
    SupeRR Selector — Rajasthan Royals Premium Analytics UI
-   Modern Sports Intelligence Platform Aesthetic
+   Modern Sports Intelligence Platform Aesthetic (High Contrast)
    ============================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
@@ -17,12 +17,11 @@
   --rr-bg: #F4F7FC;
   --rr-card-bg: #FFFFFF;
   --rr-text-primary: #0F172A;
-  --rr-text-muted: #64748B;
-  --rr-border-subtle: rgba(0, 45, 106, 0.08);
-  --rr-glass: rgba(255, 255, 255, 0.85);
-  --shadow-sm: 0 2px 8px rgba(0, 29, 74, 0.05);
-  --shadow-md: 0 6px 24px rgba(0, 29, 74, 0.08);
-  --shadow-lg: 0 12px 36px rgba(0, 29, 74, 0.12);
+  --rr-text-muted: #475569;
+  --rr-border-subtle: rgba(0, 45, 106, 0.12);
+  --shadow-sm: 0 2px 8px rgba(0, 29, 74, 0.06);
+  --shadow-md: 0 6px 24px rgba(0, 29, 74, 0.1);
+  --shadow-lg: 0 12px 36px rgba(0, 29, 74, 0.14);
   --shadow-glow: 0 0 25px rgba(233, 30, 140, 0.25);
   --transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -30,8 +29,8 @@
 body {
   background-color: var(--rr-bg);
   background-image: 
-    radial-gradient(at 10% 20%, rgba(0, 45, 106, 0.03) 0px, transparent 50%),
-    radial-gradient(at 90% 80%, rgba(233, 30, 140, 0.03) 0px, transparent 50%);
+    radial-gradient(at 10% 20%, rgba(0, 45, 106, 0.04) 0px, transparent 50%),
+    radial-gradient(at 90% 80%, rgba(233, 30, 140, 0.04) 0px, transparent 50%);
   font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   color: var(--rr-text-primary);
   line-height: 1.6;
@@ -43,14 +42,12 @@ body {
   font-family: 'JetBrains Mono', monospace !important;
 }
 
-/* ── Navbar: Frosted Glass & Luxury Polish ───────── */
+/* ── Navbar: Deep Royal Navy ─────────────────────── */
 .navbar-rr {
-  background: rgba(0, 23, 59, 0.94) !important;
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border-bottom: 2px solid transparent;
-  border-image: linear-gradient(90deg, #E91E8C 0%, #FFC107 50%, #002D6A 100%) 1;
-  box-shadow: 0 8px 30px rgba(0, 23, 59, 0.35);
+  background: #00173B !important;
+  background: linear-gradient(135deg, #00173B 0%, #002D6A 100%) !important;
+  border-bottom: 3px solid var(--rr-pink);
+  box-shadow: 0 6px 25px rgba(0, 23, 59, 0.35);
   padding: 0.85rem 1rem;
 }
 
@@ -73,13 +70,12 @@ body {
   border-radius: 6px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  box-shadow: var(--shadow-glow);
 }
 
 .navbar-rr .nav-link {
-  color: rgba(255, 255, 255, 0.8) !important;
+  color: #E2E8F0 !important;
   font-weight: 600;
-  font-size: 0.86rem;
+  font-size: 0.88rem;
   padding: 0.55rem 0.95rem !important;
   border-radius: 8px;
   transition: var(--transition);
@@ -89,60 +85,121 @@ body {
 
 .navbar-rr .nav-link:hover {
   color: #FFFFFF !important;
-  background: rgba(255, 255, 255, 0.09);
+  background: rgba(255, 255, 255, 0.12);
   transform: translateY(-1px);
 }
 
 .navbar-rr .nav-link.active {
   color: #FFFFFF !important;
-  background: rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.18);
   box-shadow: inset 0 -2px 0 var(--rr-pink);
 }
 
 .nav-strategy-pill {
-  background: linear-gradient(135deg, rgba(233, 30, 140, 0.2), rgba(255, 193, 7, 0.15)) !important;
-  border: 1px solid rgba(233, 30, 140, 0.5) !important;
+  background: linear-gradient(135deg, rgba(233, 30, 140, 0.35), rgba(255, 193, 7, 0.25)) !important;
+  border: 1.5px solid var(--rr-pink) !important;
   color: #FFF !important;
-  box-shadow: 0 0 15px rgba(233, 30, 140, 0.2);
 }
 
 .nav-strategy-pill:hover {
-  background: linear-gradient(135deg, rgba(233, 30, 140, 0.4), rgba(255, 193, 7, 0.25)) !important;
-  border-color: var(--rr-pink) !important;
+  background: linear-gradient(135deg, rgba(233, 30, 140, 0.5), rgba(255, 193, 7, 0.35)) !important;
 }
 
 /* ── Hero & Page Header ─────────────────────────── */
 .page-header {
-  position: relative;
-  background: linear-gradient(135deg, #00173B 0%, #002D6A 60%, #0A3D82 100%);
-  color: #fff;
+  background: #00173B !important;
+  background: linear-gradient(135deg, #00173B 0%, #002D6A 60%, #0A3D82 100%) !important;
+  color: #FFFFFF !important;
   padding: 2.8rem 0 2.2rem;
   margin-bottom: 2.2rem;
   border-bottom: 4px solid var(--rr-pink);
-  overflow: hidden;
-}
-
-.page-header::before {
-  content: "";
-  position: absolute;
-  top: -50%;
-  right: -10%;
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(circle, rgba(233, 30, 140, 0.15) 0%, transparent 70%);
-  pointer-events: none;
 }
 
 .page-header h1 {
   font-weight: 800;
   letter-spacing: -0.5px;
   font-size: 2.1rem;
+  color: #FFFFFF !important;
 }
 
 .page-header .subtitle {
-  color: rgba(255, 255, 255, 0.75);
-  font-size: 0.95rem;
-  max-width: 780px;
+  color: #CBD5E1 !important;
+  font-size: 0.98rem;
+  max-width: 820px;
+}
+
+/* ── Strategy Banner (CRITICAL: High Contrast Deep Navy) ── */
+.strategy-banner {
+  background: #00173B !important;
+  background: linear-gradient(135deg, #00173B 0%, #002D6A 60%, #001A3D 100%) !important;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 23, 59, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-left: 6px solid var(--rr-pink) !important;
+  color: #FFFFFF !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.strategy-banner h1,
+.strategy-banner h2,
+.strategy-banner h3,
+.strategy-banner h4,
+.strategy-banner h5 {
+  color: #FFFFFF !important;
+}
+
+.strategy-banner p,
+.strategy-banner .text-white-50 {
+  color: #CBD5E1 !important;
+}
+
+.strategy-stat-pill {
+  background: rgba(255, 255, 255, 0.12) !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  border-radius: 12px;
+  padding: 0.85rem 1rem;
+  transition: var(--transition);
+}
+
+.strategy-stat-pill:hover {
+  background: rgba(255, 255, 255, 0.18) !important;
+  transform: translateY(-2px);
+}
+
+.strategy-stat-pill .small,
+.strategy-stat-pill .text-white-50 {
+  color: #E2E8F0 !important;
+}
+
+/* ── Tab Navigation (High Contrast) ──────────────── */
+.nav-strategy-tabs {
+  background: #FFFFFF !important;
+  border: 1px solid #E2E8F0;
+}
+
+.nav-strategy-tabs .nav-link {
+  color: #1E293B !important;
+  font-weight: 700;
+  font-size: 0.88rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 10px;
+  background: #F8FAFC !important;
+  border: 1px solid #E2E8F0 !important;
+  transition: var(--transition);
+}
+
+.nav-strategy-tabs .nav-link:hover {
+  color: #002D6A !important;
+  background: #EDF2F7 !important;
+}
+
+.nav-strategy-tabs .nav-link.active {
+  color: #FFFFFF !important;
+  background: #002D6A !important;
+  background: linear-gradient(135deg, #002D6A, #0A3D82) !important;
+  box-shadow: 0 4px 14px rgba(0, 45, 106, 0.3) !important;
+  border-color: #002D6A !important;
 }
 
 /* ── Modern Stat Cards ──────────────────────────── */
@@ -190,7 +247,7 @@ body {
 .stat-card .stat-number {
   font-size: 2.3rem;
   font-weight: 800;
-  color: var(--rr-navy-deep);
+  color: #00173B !important;
   line-height: 1.1;
   letter-spacing: -1px;
 }
@@ -198,7 +255,7 @@ body {
 .stat-card .stat-label {
   font-size: 0.78rem;
   font-weight: 700;
-  color: var(--rr-text-muted);
+  color: #475569 !important;
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-top: 0.35rem;
@@ -208,7 +265,7 @@ body {
 .section-title {
   font-size: 1.35rem;
   font-weight: 800;
-  color: var(--rr-navy-deep);
+  color: #00173B !important;
   display: flex;
   align-items: center;
   margin-bottom: 1.1rem;
@@ -225,9 +282,9 @@ body {
   margin-right: 0.75rem;
 }
 
-/* ── Premium Tables ─────────────────────────────── */
+/* ── Tables: Deep Navy Headers with Crisp White ─── */
 .rr-table-wrap {
-  background: var(--rr-card-bg);
+  background: #FFFFFF;
   border-radius: 16px;
   border: 1px solid var(--rr-border-subtle);
   box-shadow: var(--shadow-sm);
@@ -236,25 +293,22 @@ body {
   transition: var(--transition);
 }
 
-.rr-table-wrap:hover {
-  box-shadow: var(--shadow-md);
-}
-
 .table {
   margin-bottom: 0;
   font-size: 0.88rem;
   border-collapse: separate;
   border-spacing: 0;
+  color: #0F172A;
 }
 
 .table thead th {
-  background: #001A3D;
-  color: #FFFFFF;
+  background: #00173B !important;
+  color: #FFFFFF !important;
   font-weight: 700;
-  font-size: 0.75rem;
+  font-size: 0.76rem;
   text-transform: uppercase;
   letter-spacing: 0.8px;
-  border: none;
+  border: none !important;
   padding: 1rem 1.1rem;
   white-space: nowrap;
 }
@@ -264,13 +318,14 @@ body {
 }
 
 .table tbody tr:hover {
-  background-color: #F8FAFC !important;
+  background-color: #F1F5F9 !important;
 }
 
 .table tbody td {
   padding: 0.85rem 1.1rem;
-  border-bottom: 1px solid #EDF2F7;
+  border-bottom: 1px solid #E2E8F0;
   vertical-align: middle;
+  color: #0F172A;
 }
 
 .table tbody tr:last-child td {
@@ -313,7 +368,7 @@ body {
 .pri-score {
   font-family: 'JetBrains Mono', monospace;
   font-weight: 800;
-  color: var(--rr-navy-deep);
+  color: #00173B !important;
   font-size: 1.05rem;
   display: block;
 }
@@ -356,7 +411,7 @@ body {
 
 /* ── Filter Bar ──────────────────────────────────── */
 .filter-bar {
-  background: var(--rr-card-bg);
+  background: #FFFFFF;
   border-radius: 14px;
   box-shadow: var(--shadow-sm);
   border: 1px solid var(--rr-border-subtle);
@@ -420,68 +475,47 @@ body {
   transform: translateY(-2px);
 }
 
-/* ── Strategy Deck Aesthetic ─────────────────────── */
-.strategy-banner {
-  background: linear-gradient(135deg, #00173B 0%, #002D6A 60%, #001A3D 100%);
-  border-radius: 18px;
-  box-shadow: var(--shadow-md);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-left: 6px solid var(--rr-pink) !important;
-  color: #fff;
-  position: relative;
-  overflow: hidden;
+/* ── Methodology Cards ───────────────────────────── */
+.method-card {
+  background: #FFFFFF;
+  border-radius: 16px;
+  border: 1px solid var(--rr-border-subtle);
+  box-shadow: var(--shadow-sm);
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  border-left: 5px solid var(--rr-pink);
 }
 
-.strategy-stat-pill {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+.method-card h4,
+.method-card h5 {
+  color: #00173B !important;
+  font-weight: 800;
+}
+
+.formula-box {
+  background: #00173B;
+  color: var(--rr-gold);
   border-radius: 12px;
-  padding: 0.85rem 1rem;
-  transition: var(--transition);
-}
-
-.strategy-stat-pill:hover {
-  background: rgba(255, 255, 255, 0.14);
-  transform: translateY(-2px);
-}
-
-/* ── Strategy Tab Navigation ─────────────────────── */
-.nav-strategy-tabs .nav-link {
-  color: var(--rr-text-muted);
-  font-weight: 700;
-  font-size: 0.88rem;
-  padding: 0.75rem 1.25rem;
-  border-radius: 10px;
-  transition: var(--transition);
-}
-
-.nav-strategy-tabs .nav-link:hover {
-  color: var(--rr-navy-deep);
-  background: rgba(0, 45, 106, 0.05);
-}
-
-.nav-strategy-tabs .nav-link.active {
-  color: #fff !important;
-  background: linear-gradient(135deg, var(--rr-navy), var(--rr-navy-light)) !important;
-  box-shadow: 0 4px 14px rgba(0, 45, 106, 0.25);
+  padding: 1.2rem 1.6rem;
+  margin: 1rem 0;
+  overflow-x: auto;
+  border: 1px solid rgba(255, 193, 7, 0.3);
 }
 
 /* ── Footer ──────────────────────────────────────── */
 footer {
   background: #00173B;
-  color: rgba(255, 255, 255, 0.7);
+  color: #CBD5E1;
   text-align: center;
-  padding: 1.8rem;
-  font-size: 0.84rem;
-  margin-top: 3.5rem;
+  padding: 2rem 1rem;
+  font-size: 0.85rem;
+  margin-top: 4rem;
   border-top: 3px solid var(--rr-pink);
 }
 
 footer span.pink { color: var(--rr-pink); font-weight: 800; }
-footer a { color: var(--rr-gold); text-decoration: none; }
-footer a:hover { text-decoration: underline; }
 
-/* ── Responsive Refinements ──────────────────────── */
+/* ── Responsive ──────────────────────────────────── */
 @media (max-width: 768px) {
   .page-header h1 { font-size: 1.6rem; }
   .stat-card .stat-number { font-size: 1.8rem; }

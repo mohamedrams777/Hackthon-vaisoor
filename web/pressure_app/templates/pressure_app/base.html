@@ -16,72 +16,72 @@
   <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   
-  <!-- Custom RR theme -->
+  <!-- Custom RR theme with Cache Buster v6.0 -->
   {% load static %}
-  <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+  <link rel="stylesheet" href="{% static 'css/custom.css' %}?v=6.0">
   {% block extra_head %}{% endblock %}
 </head>
-<body>
+<body style="background-color: #F4F7FC; color: #0F172A;">
 
-<!-- ── Luxury Frosted Navbar ───────────────────────── -->
-<nav class="navbar navbar-expand-lg navbar-rr sticky-top">
+<!-- ── Luxury Frosted Navbar (Explicit Inline Navy Background) ── -->
+<nav class="navbar navbar-expand-lg navbar-rr sticky-top" style="background: #00173B !important; border-bottom: 3px solid #E91E8C !important;">
   <div class="container-fluid px-lg-4 px-3">
-    <a class="navbar-brand" href="{% url 'home' %}">
+    <a class="navbar-brand text-white" href="{% url 'home' %}">
       <span class="fs-4">👑</span>
       <span style="font-weight:800; letter-spacing:-0.5px;">SupeRR</span><span style="color:#E91E8C; font-weight:800;">Selector</span>
-      <span class="brand-badge ms-1">PRO</span>
+      <span class="brand-badge ms-1" style="background: linear-gradient(135deg, #E91E8C, #FF4081); color:#fff; font-size:0.72rem; padding: 2px 7px; border-radius: 6px; font-weight:800;">PRO</span>
     </a>
     
     <button class="navbar-toggler text-white border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-      <i class="bi bi-list fs-2"></i>
+      <i class="bi bi-list fs-2 text-white"></i>
     </button>
     
     <div class="collapse navbar-collapse" id="navMenu">
       <ul class="navbar-nav ms-auto gap-lg-1 gap-2 align-items-lg-center mt-lg-0 mt-3">
         <li class="nav-item">
-          <a class="nav-link {% if request.resolver_match.url_name == 'home' %}active{% endif %}"
+          <a class="nav-link text-white {% if request.resolver_match.url_name == 'home' %}active{% endif %}"
              href="{% url 'home' %}">
             <i class="bi bi-grid-1x2-fill me-1 text-info"></i>Dashboard
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link nav-strategy-pill {% if request.resolver_match.url_name == 'strategy' %}active{% endif %}"
-             href="{% url 'strategy' %}">
+          <a class="nav-link nav-strategy-pill text-white fw-bold {% if request.resolver_match.url_name == 'strategy' %}active{% endif %}"
+             href="{% url 'strategy' %}" style="background: linear-gradient(135deg, rgba(233, 30, 140, 0.4), rgba(255, 193, 7, 0.25)) !important; border: 1.5px solid #E91E8C !important; border-radius: 8px;">
             <i class="bi bi-stars me-1 text-warning"></i>RR Strategy 2027
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link {% if request.resolver_match.url_name == 'batters' %}active{% endif %}"
+          <a class="nav-link text-white {% if request.resolver_match.url_name == 'batters' %}active{% endif %}"
              href="{% url 'batters' %}">
             <i class="bi bi-person-fill me-1"></i>Batters
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link {% if request.resolver_match.url_name == 'bowlers' %}active{% endif %}"
+          <a class="nav-link text-white {% if request.resolver_match.url_name == 'bowlers' %}active{% endif %}"
              href="{% url 'bowlers' %}">
             <i class="bi bi-bullseye me-1"></i>Bowlers
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link {% if request.resolver_match.url_name == 'ipl_eligible' %}active{% endif %}"
+          <a class="nav-link text-white {% if request.resolver_match.url_name == 'ipl_eligible' %}active{% endif %}"
              href="{% url 'ipl_eligible' %}">
             <i class="bi bi-shield-check me-1 text-success"></i>IPL Eligible
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link {% if request.resolver_match.url_name == 'recent_2025_2026' %}active{% endif %}"
+          <a class="nav-link text-white {% if request.resolver_match.url_name == 'recent_2025_2026' %}active{% endif %}"
              href="{% url 'recent_2025_2026' %}">
             <i class="bi bi-calendar2-range-fill me-1 text-warning"></i>2025&ndash;26
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link {% if request.resolver_match.url_name == 'matches' %}active{% endif %}"
+          <a class="nav-link text-white {% if request.resolver_match.url_name == 'matches' %}active{% endif %}"
              href="{% url 'matches' %}">
             <i class="bi bi-collection-fill me-1"></i>Matches
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link {% if request.resolver_match.url_name == 'methodology' %}active{% endif %}"
+          <a class="nav-link text-white {% if request.resolver_match.url_name == 'methodology' %}active{% endif %}"
              href="{% url 'methodology' %}">
             <i class="bi bi-cpu-fill me-1"></i>Methodology
           </a>
@@ -97,22 +97,22 @@
 </main>
 
 <!-- ── Footer ──────────────────────────────────────── -->
-<footer>
+<footer style="background: #00173B !important; color: #CBD5E1 !important; border-top: 3px solid #E91E8C !important;">
   <div class="container">
     <div class="row align-items-center g-3">
       <div class="col-md-6 text-md-start text-center">
         <div class="fw-bold text-white mb-1">
-          👑 <span>SupeRR</span><span class="pink">Selector</span> &mdash; Rajasthan Royals Hackathon Season 2
+          👑 <span>SupeRR</span><span style="color:#E91E8C;">Selector</span> &mdash; Rajasthan Royals Hackathon Season 2
         </div>
-        <div class="small text-white-50">
+        <div class="small" style="color: #94A3B8;">
           Pressure Reliability Index (PRI) Analytics across 200,999 Deliveries &middot; 867 Matches (2022&ndash;2026)
         </div>
       </div>
       <div class="col-md-6 text-md-end text-center">
-        <div class="small text-white-50">
+        <div class="small" style="color: #94A3B8;">
           IPL 2027 Squad Planning Analysis by <strong class="text-white">Mohamed B</strong>
         </div>
-        <div class="small" style="color:var(--rr-gold);">
+        <div class="small fw-semibold" style="color:#FFC107;">
           Thiagarajar College of Engineering, Madurai
         </div>
       </div>
