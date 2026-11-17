@@ -1,8 +1,8 @@
 {% extends "pressure_app/base.html" %}
-{% block title %}Rajasthan Royals IPL 2027 Squad Planning &amp; Auction Strategy{% endblock %}
+{% block title %}IPL 2027 Squad Planning &ndash; Rajasthan Royals{% endblock %}
 
 {% block content %}
-<!-- Header -->
+<!-- Title Banner -->
 <div class="page-header" style="background: linear-gradient(135deg, #002D6A 0%, #00173B 100%); border-bottom: 4px solid #E91E8C;">
   <div class="container">
     <div class="row align-items-center g-3">
@@ -10,20 +10,20 @@
         <div class="d-flex flex-wrap align-items-center gap-2 mb-2">
           <span class="badge" style="background:#E91E8C; font-size:0.85rem; font-weight:700;">IPL 2027 SQUAD PLANNING</span>
           <span class="badge bg-warning text-dark font-monospace" style="font-size:0.85rem;">SUPERR SELECTOR S2</span>
-          <span class="badge bg-light text-dark">Data: Nov 2024 &ndash; Nov 2026</span>
+          <span class="badge bg-light text-dark">Form Window: Nov 2024 &ndash; Nov 2026</span>
         </div>
         <h1 class="h2 fw-bold text-white mb-2">
-          🎯 Rajasthan Royals: Retentions, Releases, Two XIs &amp; Auction Strategy
+          Rajasthan Royals: Retentions, Releases and Two Playing XIs
         </h1>
-        <p class="subtitle mb-1 text-white-50" style="font-size: 0.95rem;">
-          A holistic blueprint combining 200,999 ball-by-ball Pressure Reliability Index (PRI) metrics, 24-month player form, Sawai Mansingh Stadium pitch dynamics, and ₹33.5 Crore auction budget allocation.
+        <p class="subtitle mb-0 text-white-50" style="font-size: 0.95rem;">
+          Built from your squad notes. Player form covers the last 24 months, November 2024 to November 2026.
         </p>
       </div>
       <div class="col-lg-4 text-lg-end text-start">
         <div class="p-3 rounded-3" style="background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255,255,255,0.15); display: inline-block;">
-          <div class="small text-warning text-uppercase fw-bold" style="letter-spacing:1px;">Author &amp; Lead Analyst</div>
+          <div class="small text-warning text-uppercase fw-bold" style="letter-spacing:1px;">About the Analyst</div>
           <div class="h5 fw-bold text-white mb-0">Mohamed B</div>
-          <div class="small text-white-50">B.Tech, Computer Science &amp; Business Systems</div>
+          <div class="small text-white-50">B.Tech, Computer Science and Business Systems</div>
           <div class="small text-white-50">Thiagarajar College of Engineering, Madurai</div>
         </div>
       </div>
@@ -33,372 +33,469 @@
 
 <div class="container pb-5">
 
-  <!-- Strategy Navigation Tabs -->
-  <ul class="nav nav-pills nav-fill mb-4 p-2 rounded-3 shadow-sm bg-white gap-2" id="strategyTabs" role="tablist">
-    <li class="nav-item" role="presentation">
-      <button class="nav-link active fw-bold text-start text-md-center py-2" id="targets-tab" data-bs-toggle="tab" data-bs-target="#targets" type="button" role="tab">
-        <i class="bi bi-bullseye me-1 text-danger"></i> 1. Auction Targets (Top 20)
+  <!-- Overview Cards: Why, Started, Became -->
+  <div class="row g-3 mb-4">
+    <div class="col-md-4">
+      <div class="card border-0 shadow-sm p-3 h-100" style="border-left: 4px solid #E91E8C !important;">
+        <h6 class="fw-bold text-dark mb-1"><i class="bi bi-heart-fill me-1 text-danger"></i> Why This Project</h6>
+        <p class="small text-muted mb-0">
+          A passion for cricket and for data analysis, brought together to plan Rajasthan Royals' squad for the IPL 2027 auction.
+        </p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card border-0 shadow-sm p-3 h-100" style="border-left: 4px solid #002D6A !important;">
+        <h6 class="fw-bold text-dark mb-1"><i class="bi bi-database-fill me-1 text-primary"></i> Where It Started</h6>
+        <p class="small text-muted mb-0">
+          The SupeRR Selector Season 2 hackathon: a Pressure Reliability Index built on 200,999 deliveries from 867 IPL and T20I matches.
+        </p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card border-0 shadow-sm p-3 h-100" style="border-left: 4px solid #28a745 !important;">
+        <h6 class="fw-bold text-dark mb-1"><i class="bi bi-trophy-fill me-1 text-success"></i> What It Became</h6>
+        <p class="small text-muted mb-0">
+          A full squad review: retentions, releases, buybacks, playing XIs, ground analysis, and auction targets.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Eight Stages Pipeline -->
+  <div class="card border-0 shadow-sm p-4 mb-4 bg-white">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <h5 class="fw-bold mb-0 text-dark"><i class="bi bi-diagram-3-fill me-2 text-primary"></i>Eight Stages from Raw Ball-by-Ball Data to an Auction Plan</h5>
+      <span class="badge bg-secondary font-monospace">Pipeline Overview</span>
+    </div>
+    <div class="row g-2 text-center">
+      <div class="col-6 col-md-3">
+        <div class="p-2 border rounded bg-light h-100">
+          <span class="badge bg-primary mb-1">1</span>
+          <div class="fw-bold small text-dark">Pressure Model</div>
+          <div class="text-muted" style="font-size:0.75rem;">Tagged every ball as pressure/not; 0&ndash;100 PRI scale</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="p-2 border rounded bg-light h-100">
+          <span class="badge bg-primary mb-1">2</span>
+          <div class="fw-bold small text-dark">Team Diagnosis</div>
+          <div class="text-muted" style="font-size:0.75rem;">Phase runs: best powerplay in 2026, weak death batting</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="p-2 border rounded bg-light h-100">
+          <span class="badge bg-primary mb-1">3</span>
+          <div class="fw-bold small text-dark">Grounds</div>
+          <div class="text-muted" style="font-size:0.75rem;">Jaipur's pitch, bowling types that work, 9 away venues</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="p-2 border rounded bg-light h-100">
+          <span class="badge bg-primary mb-1">4</span>
+          <div class="fw-bold small text-dark">Player Form</div>
+          <div class="text-muted" style="font-size:0.75rem;">24-month batting and bowling splits for XI &amp; targets</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="p-2 border rounded bg-light h-100">
+          <span class="badge bg-primary mb-1">5</span>
+          <div class="fw-bold small text-dark">Squad &amp; Prices</div>
+          <div class="text-muted" style="font-size:0.75rem;">All 27 players of 2026 with price and games played</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="p-2 border rounded bg-light h-100">
+          <span class="badge bg-primary mb-1">6</span>
+          <div class="fw-bold small text-dark">Retain / Release</div>
+          <div class="text-muted" style="font-size:0.75rem;">18 kept for ₹87.15 cr; 9 released; 2 buybacks</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="p-2 border rounded bg-light h-100">
+          <span class="badge bg-primary mb-1">7</span>
+          <div class="fw-bold small text-dark">Playing XIs</div>
+          <div class="text-muted" style="font-size:0.75rem;">Probable XI (no trades), plus +/- Jaiswal &amp; backups</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="p-2 border rounded bg-light h-100">
+          <span class="badge bg-primary mb-1">8</span>
+          <div class="fw-bold small text-dark">Auction Plan</div>
+          <div class="text-muted" style="font-size:0.75rem;">₹33 crore aimed at two gaps: No. 6 &amp; death quick</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PPT Slide Navigation Tabs -->
+  <ul class="nav nav-pills nav-fill mb-4 p-2 rounded-3 shadow-sm bg-white gap-2" id="pptTabs" role="tablist">
+    <li class="nav-item">
+      <button class="nav-link active fw-bold py-2" id="tab-ground-btn" data-bs-toggle="tab" data-bs-target="#tab-ground" type="button">
+        <i class="bi bi-geo-alt-fill me-1 text-danger"></i> 1. Grounds &amp; Jaipur Blueprint
       </button>
     </li>
-    <li class="nav-item" role="presentation">
-      <button class="nav-link fw-bold text-start text-md-center py-2" id="squad-tab" data-bs-toggle="tab" data-bs-target="#squad" type="button" role="tab">
-        <i class="bi bi-wallet2 me-1 text-success"></i> 2. Retain, Release &amp; ₹33 Cr Purse
+    <li class="nav-item">
+      <button class="nav-link fw-bold py-2" id="tab-squad-btn" data-bs-toggle="tab" data-bs-target="#tab-squad" type="button">
+        <i class="bi bi-card-checklist me-1 text-primary"></i> 2. 2026 Squad &amp; Retentions
       </button>
     </li>
-    <li class="nav-item" role="presentation">
-      <button class="nav-link fw-bold text-start text-md-center py-2" id="xis-tab" data-bs-toggle="tab" data-bs-target="#xis" type="button" role="tab">
-        <i class="bi bi-people-fill me-1 text-primary"></i> 3. Playing XIs &amp; Gaps
+    <li class="nav-item">
+      <button class="nav-link fw-bold py-2" id="tab-xis-btn" data-bs-toggle="tab" data-bs-target="#tab-xis" type="button">
+        <i class="bi bi-people-fill me-1 text-success"></i> 3. Playing XIs &amp; Backups
       </button>
     </li>
-    <li class="nav-item" role="presentation">
-      <button class="nav-link fw-bold text-start text-md-center py-2" id="grounds-tab" data-bs-toggle="tab" data-bs-target="#grounds" type="button" role="tab">
-        <i class="bi bi-geo-alt-fill me-1 text-warning"></i> 4. Jaipur &amp; Away Grounds
+    <li class="nav-item">
+      <button class="nav-link fw-bold py-2" id="tab-death-btn" data-bs-toggle="tab" data-bs-target="#tab-death" type="button">
+        <i class="bi bi-lightning-fill me-1 text-warning"></i> 4. Overs 16&ndash;20 &amp; Key Impact
       </button>
     </li>
-    <li class="nav-item" role="presentation">
-      <button class="nav-link fw-bold text-start text-md-center py-2" id="death-tab" data-bs-toggle="tab" data-bs-target="#death" type="button" role="tab">
-        <i class="bi bi-lightning-charge-fill me-1 text-info"></i> 5. Death Overs Diagnosis
+    <li class="nav-item">
+      <button class="nav-link fw-bold py-2" id="tab-auction-btn" data-bs-toggle="tab" data-bs-target="#tab-auction" type="button">
+        <i class="bi bi-cash-stack me-1 text-info"></i> 5. ₹33 Cr Auction &amp; Shortlist
       </button>
     </li>
-    <li class="nav-item" role="presentation">
-      <button class="nav-link fw-bold text-start text-md-center py-2" id="framework-tab" data-bs-toggle="tab" data-bs-target="#framework" type="button" role="tab">
-        <i class="bi bi-diagram-3-fill me-1 text-secondary"></i> 6. 8-Stage Framework
+    <li class="nav-item">
+      <button class="nav-link fw-bold py-2" id="tab-form-btn" data-bs-toggle="tab" data-bs-target="#tab-form" type="button">
+        <i class="bi bi-bar-chart-fill me-1 text-secondary"></i> 6. 24-Month Form &amp; Decisions
       </button>
     </li>
   </ul>
 
   <!-- Tab Content -->
-  <div class="tab-content" id="strategyTabsContent">
+  <div class="tab-content" id="pptTabsContent">
 
-    <!-- ==================== TAB 1: AUCTION TARGETS ==================== -->
-    <div class="tab-pane fade show active" id="targets" role="tabpanel">
+    <!-- ==================== TAB 1: GROUNDS & JAIPUR ==================== -->
+    <div class="tab-pane fade show active" id="tab-ground">
 
-      <!-- Executive Overview Banner -->
-      <div class="card border-0 shadow-sm mb-4" style="background:#fff; border-left: 5px solid #E91E8C !important;">
-        <div class="card-body p-4">
-          <div class="row align-items-center g-3">
-            <div class="col-md-8">
-              <h4 class="fw-bold mb-1" style="color:#002D6A;">Auction Strategy Board: Rajasthan Royals (RR)</h4>
-              <p class="text-muted mb-0 small">
-                Filtering criteria: Players available in the auction pool (uncontracted/released from other IPL teams + international free agents) <strong>AND</strong> Rajasthan Royals' own players (core retentions / RTM targets). <em>All Pakistan players strictly excluded. Minimum &ge; 250 pressure balls.</em>
-              </p>
+      <!-- Where RR Stand -->
+      <div class="card border-0 shadow-sm p-4 mb-4" style="background:#002D6A; color:#fff; border-left: 5px solid #E91E8C !important;">
+        <h4 class="fw-bold mb-1 text-white">WHERE RR STAND</h4>
+        <p class="text-white-50 small mb-3">2026 ended in Qualifier 2 while RCB retained the title. The top order and Archer carried the season. The plan for 2027 is about what comes after over 15 with bat and ball.</p>
+        <div class="row g-3 text-center">
+          <div class="col-6 col-md-3">
+            <div class="p-3 rounded" style="background: rgba(255,255,255,0.08);">
+              <div class="display-6 fw-bold text-warning mb-0">4th</div>
+              <div class="small text-white-50">League finish with 8 wins; beat SRH in Eliminator</div>
             </div>
-            <div class="col-md-4 text-md-end">
-              <span class="badge bg-primary px-3 py-2 me-1">RR Core</span>
-              <span class="badge bg-success px-3 py-2 me-1">Free Agent</span>
-              <span class="badge bg-warning text-dark px-3 py-2 me-1">RR Alumni</span>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="p-3 rounded" style="background: rgba(255,255,255,0.08);">
+              <div class="display-6 fw-bold text-warning mb-0">776</div>
+              <div class="small text-white-50">Sooryavanshi's runs at SR 237 (Orange Cap)</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="p-3 rounded" style="background: rgba(255,255,255,0.08);">
+              <div class="display-6 fw-bold text-warning mb-0">25</div>
+              <div class="small text-white-50">Archer's wickets (third-most in season)</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="p-3 rounded" style="background: rgba(255,255,255,0.08);">
+              <div class="display-6 fw-bold text-danger mb-0">7</div>
+              <div class="small text-white-50">Wickets GT won Qualifier 2 by, chasing 215</div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Batters Table -->
-      <div class="d-flex justify-content-between align-items-center mb-2">
-        <h3 class="section-title mb-0"><i class="bi bi-person-fill me-2"></i>Top 20 Batters Available for RR Auction Strategy</h3>
-        <span class="badge bg-secondary font-monospace">Ranked by Pressure Reliability Index (PRI)</span>
-      </div>
-      <div class="rr-table-wrap mb-4">
-        <div class="table-responsive">
-          <table class="table table-hover align-middle">
-            <thead>
-              <tr>
-                <th style="width:60px;">Rank</th>
-                <th>Player</th>
-                <th>Auction Status</th>
-                <th>Press. Balls</th>
-                <th>Runs</th>
-                <th>SR Under Press.</th>
-                <th>Avg Under Press.</th>
-                <th>PRI Score</th>
-              </tr>
-            </thead>
-            <tbody>
-              {% for b in auction_batters %}
-              <tr>
-                <td class="text-center">
-                  {% if b.auction_rank == 1 %}<span class="rank-badge gold">1</span>
-                  {% elif b.auction_rank == 2 %}<span class="rank-badge silver">2</span>
-                  {% elif b.auction_rank == 3 %}<span class="rank-badge bronze">3</span>
-                  {% else %}<span class="rank-badge">{{ b.auction_rank }}</span>{% endif %}
-                </td>
-                <td><strong>{{ b.striker_name }}</strong></td>
-                <td>
-                  {% if 'RR Squad' in b.auction_status or 'Rajasthan Royals' in b.auction_status %}
-                    <span class="badge bg-primary px-2 py-1"><i class="bi bi-shield-fill me-1"></i>{{ b.auction_status }}</span>
-                  {% elif 'RR Alumni' in b.auction_status %}
-                    <span class="badge bg-warning text-dark px-2 py-1"><i class="bi bi-arrow-repeat me-1"></i>{{ b.auction_status }}</span>
-                  {% elif 'Pure Free Agent' in b.auction_status %}
-                    <span class="badge bg-success px-2 py-1"><i class="bi bi-globe me-1"></i>{{ b.auction_status }}</span>
-                  {% else %}
-                    <span class="badge bg-info text-dark px-2 py-1"><i class="bi bi-check-circle me-1"></i>{{ b.auction_status }}</span>
-                  {% endif %}
-                </td>
-                <td>{{ b.balls_press }}</td>
-                <td><strong>{{ b.runs_press }}</strong></td>
-                <td>
-                  <span class="fw-bold {% if b.sr_press >= 160 %}text-success{% elif b.sr_press >= 145 %}text-primary{% else %}text-dark{% endif %}">
-                    {{ b.sr_press|floatformat:1 }}
-                  </span>
-                </td>
-                <td>{{ b.avg_press|floatformat:1 }}</td>
-                <td>
-                  <span class="pri-score">{{ b.pri_bat_score|floatformat:1 }}</span>
-                  <span class="pri-bar" style="width:{{ b.pri_bat_score|floatformat:0 }}%;"></span>
-                </td>
-              </tr>
-              {% empty %}
-              <tr><td colspan="8" class="text-center py-4 text-muted">No auction batters found.</td></tr>
-              {% endfor %}
-            </tbody>
-          </table>
+      <!-- Sawai Mansingh Stadium Details -->
+      <div class="row g-4 mb-4">
+        <div class="col-lg-7">
+          <div class="card border-0 shadow-sm p-4 h-100">
+            <h4 class="fw-bold mb-2" style="color:#002D6A;">Sawai Mansingh, Jaipur: 220-Plus Chasing Ground</h4>
+            <div class="row g-2 mb-3 text-center">
+              <div class="col-3 p-2 bg-light rounded"><span class="small text-muted">2023 Avg</span><div class="h5 fw-bold mb-0">170</div></div>
+              <div class="col-3 p-2 bg-light rounded"><span class="small text-muted">2024 Avg</span><div class="h5 fw-bold mb-0">186</div></div>
+              <div class="col-3 p-2 bg-light rounded"><span class="small text-muted">2025 Avg</span><div class="h5 fw-bold mb-0">197</div></div>
+              <div class="col-3 p-2 bg-primary text-white rounded"><span class="small">2026 Avg</span><div class="h5 fw-bold mb-0 text-white">225</div></div>
+            </div>
+            <ul class="list-unstyled small mb-3">
+              <li class="py-1 border-bottom"><strong>3 of 4</strong> RR home games in 2026 won by the chasing side.</li>
+              <li class="py-1 border-bottom"><strong>43&ndash;24</strong> All-time IPL wins chasing vs batting first (67 games).</li>
+              <li class="py-1 border-bottom"><strong>6 of 13</strong> RR home wins across 2024&ndash;26 (4&ndash;1 in 2024, 1&ndash;4 in 2025, 1&ndash;3 in 2026).</li>
+              <li class="py-1 border-bottom"><strong>Powerplay Split:</strong> Second-innings powerplay runs at <strong>10.65 an over</strong> vs 9.21 in the first (2024&ndash;26).</li>
+              <li class="py-1"><strong>Record Chase:</strong> SRH chased 229/5 in 2026, the highest chase at the ground. RR lost their first three Jaipur games of 2026.</li>
+            </ul>
+
+            <h6 class="fw-bold text-dark mb-1">How the Pitch Plays:</h6>
+            <p class="small text-muted mb-0">
+              Pace and carry early, then slows and grips in overs 7&ndash;15. Least swing of any IPL ground in 2026. Bounce truer under lights; dew helps the chase. Square boundaries longer than straight ones.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-5">
+          <div class="card border-0 shadow-sm p-4 h-100" style="background:#FFF0F5; border-left: 4px solid #E91E8C !important;">
+            <h5 class="fw-bold mb-2" style="color:#002D6A;">HOME GROUND: Who Succeeds in Jaipur</h5>
+            <p class="small text-muted mb-3">Spin and left-arm angle take wickets; right-arm pace leaks.</p>
+            <div class="table-responsive">
+              <table class="table table-sm table-bordered small text-center mb-3">
+                <thead class="table-light">
+                  <tr><th>Bowling Type</th><th>Econ</th><th>Balls/wkt</th><th>RR Options</th></tr>
+                </thead>
+                <tbody>
+                  <tr class="table-success"><td><strong>Off-spin</strong></td><td>8.64</td><td>29.1</td><td>Parag (part-time)</td></tr>
+                  <tr class="table-success"><td><strong>Left-arm orthodox</strong></td><td>8.73</td><td>22.9</td><td>Jadeja</td></tr>
+                  <tr class="table-success"><td><strong>Leg-spin</strong></td><td>8.80</td><td>20.5</td><td>Punja</td></tr>
+                  <tr><td>Left-arm medium-fast</td><td>9.81</td><td>18.8</td><td>Curran, Sushant Mishra</td></tr>
+                  <tr><td>Right-arm medium-fast</td><td>9.89</td><td>22.9</td><td>Sandeep</td></tr>
+                  <tr class="table-danger"><td>Right-arm fast</td><td>10.32</td><td>29.7</td><td>Archer, Brijesh</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="small text-muted">
+              <strong>Pace vs Spin (2025&ndash;26 at Jaipur):</strong><br>
+              &bull; Pace in Jaipur: <strong>10.8 an over</strong>, a wicket every 24.5 balls (IPL-wide 9.9 and 19.3).<br>
+              &bull; Spin: <strong>9.3 and 22.6</strong>.<br>
+              <strong>Batters who fit:</strong> Openers who attack hard new ball, middle order that hits straight against spin, and a finisher for a 220-plus chase.
+            </div>
+          </div>
         </div>
       </div>
 
-      <!-- Bowlers Table -->
-      <div class="d-flex justify-content-between align-items-center mb-2">
-        <h3 class="section-title mb-0"><i class="bi bi-arrow-down-circle-fill me-2"></i>Top 20 Bowlers Available for RR Auction Strategy</h3>
-        <span class="badge bg-secondary font-monospace">Ranked by Pressure Reliability Index (PRI)</span>
-      </div>
-      <div class="rr-table-wrap mb-4">
-        <div class="table-responsive">
-          <table class="table table-hover align-middle">
-            <thead>
-              <tr>
-                <th style="width:60px;">Rank</th>
-                <th>Player</th>
-                <th>Auction Status</th>
-                <th>Press. Balls</th>
-                <th>Wickets</th>
-                <th>Econ Under Press.</th>
-                <th>Bowling SR</th>
-                <th>PRI Score</th>
-              </tr>
-            </thead>
-            <tbody>
-              {% for b in auction_bowlers %}
-              <tr>
-                <td class="text-center">
-                  {% if b.auction_rank == 1 %}<span class="rank-badge gold">1</span>
-                  {% elif b.auction_rank == 2 %}<span class="rank-badge silver">2</span>
-                  {% elif b.auction_rank == 3 %}<span class="rank-badge bronze">3</span>
-                  {% else %}<span class="rank-badge">{{ b.auction_rank }}</span>{% endif %}
-                </td>
-                <td><strong>{{ b.bowler_name }}</strong></td>
-                <td>
-                  {% if 'RR Squad' in b.auction_status or 'Rajasthan Royals' in b.auction_status %}
-                    <span class="badge bg-primary px-2 py-1"><i class="bi bi-shield-fill me-1"></i>{{ b.auction_status }}</span>
-                  {% elif 'RR Alumni' in b.auction_status %}
-                    <span class="badge bg-warning text-dark px-2 py-1"><i class="bi bi-arrow-repeat me-1"></i>{{ b.auction_status }}</span>
-                  {% elif 'Pure Free Agent' in b.auction_status %}
-                    <span class="badge bg-success px-2 py-1"><i class="bi bi-globe me-1"></i>{{ b.auction_status }}</span>
-                  {% else %}
-                    <span class="badge bg-info text-dark px-2 py-1"><i class="bi bi-check-circle me-1"></i>{{ b.auction_status }}</span>
-                  {% endif %}
-                </td>
-                <td>{{ b.balls_press }}</td>
-                <td><strong>{{ b.wickets_press }}</strong></td>
-                <td>
-                  <span class="fw-bold {% if b.econ_press <= 8.5 %}text-success{% elif b.econ_press <= 9.2 %}text-primary{% else %}text-danger{% endif %}">
-                    {{ b.econ_press|floatformat:2 }}
-                  </span>
-                </td>
-                <td>{{ b.sr_press|floatformat:1 }}</td>
-                <td>
-                  <span class="pri-score">{{ b.pri_bowl_score|floatformat:1 }}</span>
-                  <span class="pri-bar" style="width:{{ b.pri_bowl_score|floatformat:0 }}%;"></span>
-                </td>
-              </tr>
-              {% empty %}
-              <tr><td colspan="8" class="text-center py-4 text-muted">No auction bowlers found.</td></tr>
-              {% endfor %}
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <!-- Strict Filter Callout -->
-      <div class="card border-0 shadow-sm p-4 bg-light rounded-3">
-        <h5 class="fw-bold text-dark"><i class="bi bi-info-square-fill me-2 text-primary"></i>Strict Franchise-Exclusive Subset (Zero Other IPL Team History)</h5>
-        <p class="small text-muted mb-3">
-          If filtering strictly for players who have <strong>never represented any other IPL franchise</strong> in the entire 2022–2026 dataset (pure RR players + pure international free agents):
-        </p>
+      <!-- How to Win in Jaipur & Away Grounds -->
+      <div class="card border-0 shadow-sm p-4 mb-4">
+        <h5 class="fw-bold text-dark mb-3"><i class="bi bi-compass-fill me-2 text-primary"></i>HOME GROUND: How to Win in Jaipur</h5>
         <div class="row g-3">
-          <div class="col-md-6">
-            <div class="p-3 bg-white rounded border">
-              <h6 class="fw-bold text-primary mb-2">Pure RR + Intl Free Agent Batters:</h6>
-              <ol class="small mb-0 ps-3">
-                <li><strong>Dhruv Jurel</strong> (RR) &ndash; PRI: 61.56 (SR: 158.0, Avg: 33.4)</li>
-                <li><strong>Shimron Hetmyer</strong> (RR) &ndash; PRI: 50.36 (1,138 runs)</li>
-                <li><strong>Mark Chapman</strong> (Pure FA, NZ) &ndash; PRI: 47.60 (SR: 145.3)</li>
-                <li><strong>Jaker Ali Anik</strong> (Pure FA, BAN) &ndash; PRI: 46.94 (Avg: 24.2)</li>
-                <li><strong>George Dockrell</strong> (Pure FA, IRE) &ndash; PRI: 43.79 (SR: 141.4)</li>
-                <li><strong>Riyan Parag</strong> (RR) &ndash; PRI: 41.21 (SR: 152.6)</li>
-                <li><strong>Towhid Hridoy</strong> (Pure FA, BAN) &ndash; PRI: 41.15</li>
-              </ol>
+          <div class="col-md-3">
+            <div class="p-3 border rounded bg-light h-100">
+              <span class="badge bg-primary mb-1">Step 1</span>
+              <div class="fw-bold small text-dark">Win the toss, bowl</div>
+              <div class="text-muted" style="font-size:0.8rem;">Chasers won 3 of 4 in 2026 and 2nd innings powerplay runs 1.4 an over faster.</div>
             </div>
           </div>
-          <div class="col-md-6">
-            <div class="p-3 bg-white rounded border">
-              <h6 class="fw-bold text-success mb-2">Pure RR + Intl Free Agent Bowlers:</h6>
-              <ol class="small mb-0 ps-3">
-                <li><strong>Taskin Ahmed</strong> (Pure FA, BAN) &ndash; PRI: 55.90 (Econ: 8.58, SR: 11.5)</li>
-                <li><strong>Rishad Hossain</strong> (Pure FA, BAN) &ndash; PRI: 50.77 (SR: 9.79, Dot: 43.1%)</li>
-                <li><strong>Ish Sodhi</strong> (Pure FA, NZ) &ndash; PRI: 46.52 (28 wkts, Econ: 9.04)</li>
-                <li><strong>Mark Adair</strong> (Pure FA, IRE) &ndash; PRI: 40.07 (34 wkts, SR: 9.47)</li>
-                <li><strong>Richard Ngarava</strong> (Pure FA, ZIM) &ndash; PRI: 39.89 (Econ: 9.09)</li>
-                <li><strong>Obed McCoy</strong> (RR) &ndash; PRI: 35.78 (22 wkts)</li>
-              </ol>
+          <div class="col-md-3">
+            <div class="p-3 border rounded bg-light h-100">
+              <span class="badge bg-primary mb-1">Step 2</span>
+              <div class="fw-bold small text-dark">Spin the middle</div>
+              <div class="text-muted" style="font-size:0.8rem;">Jadeja and Punja for 8 overs between 7 and 15; Parag or Ferreira as 6th option.</div>
             </div>
+          </div>
+          <div class="col-md-3">
+            <div class="p-3 border rounded bg-light h-100">
+              <span class="badge bg-primary mb-1">Step 3</span>
+              <div class="fw-bold small text-dark">Pace at the ends</div>
+              <div class="text-muted" style="font-size:0.8rem;">Archer with new ball; Curran's slower balls and gap-2 specialist at death. Avoid middle right-arm pace.</div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="p-3 border rounded bg-light h-100">
+              <span class="badge bg-primary mb-1">Step 4</span>
+              <div class="fw-bold small text-dark">Chase 220</div>
+              <div class="text-muted" style="font-size:0.8rem;">Sooryavanshi &amp; Jaiswal attack PP; gap-1 finisher &amp; Ferreira close. If batting first, par is now 225.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Away Games Table -->
+      <h5 class="section-title"><i class="bi bi-airplane-fill me-2"></i>AWAY GAMES: The Other Home Grounds</h5>
+      <div class="rr-table-wrap mb-4">
+        <div class="table-responsive">
+          <table class="table table-hover align-middle small mb-0">
+            <thead class="table-light">
+              <tr><th>Ground (Team)</th><th>Pitch</th><th>Avg 1st Inns</th><th>RR 2026</th><th>Players Needed</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Hyderabad (SRH)</td><td>Flat, black soil</td><td>~205</td><td>Lost by 57; won Eliminator</td><td>Death bowlers, deep batting</td></tr>
+              <tr><td>Bengaluru (RCB)</td><td>Flat, small, altitude</td><td>~183</td><td>&ndash;</td><td>Six-hitters, yorker bowlers</td></tr>
+              <tr><td>Ahmedabad (GT)</td><td>Fast, high bounce</td><td>170&ndash;195</td><td>Won by 6; lost Q2 by 7 wkts</td><td>Hit-the-deck pace</td></tr>
+              <tr><td>Mumbai (MI)</td><td>True bounce, early swing</td><td>~170</td><td>&ndash;</td><td>Swing bowler, chase depth</td></tr>
+              <tr><td>Mullanpur (PBKS)</td><td>Low bounce, little swing</td><td>170&ndash;180</td><td>Won by 6 wkts</td><td>Cutters, slower balls</td></tr>
+              <tr><td>Kolkata (KKR)</td><td>Balanced, quick outfield</td><td>~190</td><td>&ndash;</td><td>Mystery spin, powerplay hitters</td></tr>
+              <tr class="table-warning"><td>Chennai (CSK)</td><td>Slow, turning</td><td>150&ndash;165</td><td>&ndash;</td><td>Two spinners, sweepers</td></tr>
+              <tr class="table-warning"><td>Delhi (DC)</td><td>Slow, grippy</td><td>~170</td><td>&ndash;</td><td>Spin, middle-overs anchors</td></tr>
+              <tr class="table-warning"><td>Lucknow (LSG)</td><td>Slow, most swing in 2026</td><td>150&ndash;170</td><td>&ndash;</td><td>Swing, wrist spin</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Squad Implications of Away Grounds -->
+      <div class="row g-3">
+        <div class="col-md-6">
+          <div class="p-3 bg-light rounded border h-100">
+            <h6 class="fw-bold text-dark mb-1">Flat Grounds (SRH, RCB, GT, MI, KKR):</h6>
+            <ul class="small text-muted mb-0 ps-3">
+              <li>Gap-1 power finisher in the XI</li>
+              <li>Two death bowlers: Archer plus gap-2 specialist</li>
+              <li>Impact player: extra batter when chasing</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="p-3 bg-light rounded border h-100">
+            <h6 class="fw-bold text-dark mb-1">Slow Grounds (CSK, DC, LSG, PBKS, GAU):</h6>
+            <ul class="small text-muted mb-0 ps-3">
+              <li>Jadeja, Punja and Puthur together</li>
+              <li>Curran and Brijesh using cutters</li>
+              <li>Impact player: second spinner when bowling</li>
+              <li><em>What squad still lacks:</em> A wrist or mystery spinner who bowls 4 overs; swing bowler for MI/LSG; six-hitter for 200+ chases.</li>
+            </ul>
           </div>
         </div>
       </div>
 
     </div>
 
-    <!-- ==================== TAB 2: RETENTIONS & BUDGET ==================== -->
-    <div class="tab-pane fade" id="squad" role="tabpanel">
+    <!-- ==================== TAB 2: SQUAD & RETENTIONS ==================== -->
+    <div class="tab-pane fade" id="tab-squad">
 
+      <!-- RR 2026 Squad Table (All 27 players) -->
+      <h5 class="section-title"><i class="bi bi-cash me-2"></i>RR's 2026 Squad: 27 Players, ₹120.65 Crore</h5>
+      <p class="small text-muted mb-2">Games are out of 16. Total counts two mid-season replacements: Shanaka for Curran, and Emanjot Singh Chahal for Ravi Singh.</p>
+      <div class="rr-table-wrap mb-4">
+        <div class="table-responsive">
+          <table class="table table-hover align-middle small mb-0">
+            <thead class="table-light">
+              <tr>
+                <th>Player</th><th>Price</th><th>Games</th>
+                <th>Player</th><th>Price</th><th>Games</th>
+                <th>Player</th><th>Price</th><th>Games</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Yashasvi Jaiswal</strong></td><td>₹18 cr</td><td>16</td>
+                <td>Nandre Burger (F)</td><td>₹3.5 cr</td><td>13</td>
+                <td>Shubham Dubey</td><td>₹80 lakh</td><td>7</td>
+              </tr>
+              <tr>
+                <td><strong>Dhruv Jurel</strong> (WK)</td><td>₹14 cr</td><td>16</td>
+                <td>Sam Curran (F)</td><td>₹2.4 cr</td><td>0</td>
+                <td>Kuldeep Sen</td><td>₹75 lakh</td><td>0</td>
+              </tr>
+              <tr>
+                <td><strong>Riyan Parag</strong> (C)</td><td>₹14 cr</td><td>14</td>
+                <td>Adam Milne (F)</td><td>₹2.4 cr</td><td>1</td>
+                <td>Yudhvir Singh Charak</td><td>₹35 lakh</td><td>0</td>
+              </tr>
+              <tr>
+                <td><strong>Ravindra Jadeja</strong></td><td>₹14 cr</td><td>14</td>
+                <td>Dasun Shanaka (F)</td><td>₹2 cr</td><td>7</td>
+                <td>Brijesh Sharma</td><td>₹30 lakh</td><td>13</td>
+              </tr>
+              <tr>
+                <td><strong>Jofra Archer</strong> (F)</td><td>₹12.5 cr</td><td>16</td>
+                <td>Kwena Maphaka (F)</td><td>₹1.5 cr</td><td>0</td>
+                <td>Yash Raj Punja</td><td>₹30 lakh</td><td>8</td>
+              </tr>
+              <tr>
+                <td>Shimron Hetmyer (F)</td><td>₹11 cr</td><td>8</td>
+                <td>Vaibhav Sooryavanshi</td><td>₹1.1 cr</td><td>16</td>
+                <td>L. Pretorius (F)</td><td>₹30 lakh</td><td>2</td>
+              </tr>
+              <tr>
+                <td>Ravi Bishnoi</td><td>₹7.2 cr</td><td>9</td>
+                <td>Donovan Ferreira (F)</td><td>₹1 cr</td><td>15</td>
+                <td>Aman Rao</td><td>₹30 lakh</td><td>0</td>
+              </tr>
+              <tr>
+                <td>Tushar Deshpande</td><td>₹6.5 cr</td><td>7</td>
+                <td>Ravi Singh (WK)</td><td>₹95 lakh</td><td>1</td>
+                <td>Vignesh Puthur</td><td>₹30 lakh</td><td>0</td>
+              </tr>
+              <tr>
+                <td>Sandeep Sharma</td><td>₹4 cr</td><td>6</td>
+                <td>Sushant Mishra</td><td>₹90 lakh</td><td>2</td>
+                <td>Emanjot Singh Chahal</td><td>₹30 lakh</td><td>0</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Retain vs Release -->
       <div class="row g-4 mb-4">
-        <!-- Retain Summary -->
         <div class="col-md-6">
-          <div class="card h-100 border-0 shadow-sm" style="border-top: 4px solid #28a745 !important;">
-            <div class="card-body p-4">
-              <div class="d-flex justify-content-between align-items-center mb-3">
-                <h4 class="fw-bold text-success mb-0"><i class="bi bi-check-circle-fill me-2"></i>Retain: 18 Players</h4>
-                <span class="badge bg-success-subtle text-success fs-6 fw-bold">₹87.15 Crore</span>
-              </div>
-              <p class="small text-muted">
-                RR secures its core domestic spine, elite young talent, and multi-skill overseas all-rounders while keeping Sam Curran without trades.
-              </p>
-              <div class="table-responsive">
-                <table class="table table-sm table-borderless small align-middle mb-0">
-                  <thead class="table-light">
-                    <tr><th>Category</th><th>Players Retained</th></tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td class="fw-bold">Batters &amp; WKs</td>
-                      <td>Yashasvi Jaiswal (₹18 cr), Dhruv Jurel (₹14 cr), Vaibhav Sooryavanshi (₹1.1 cr), Ravi Singh (₹95L), Shubham Dubey (₹80L), L. Pretorius (₹30L)</td>
-                    </tr>
-                    <tr>
-                      <td class="fw-bold">All-Rounders</td>
-                      <td>Riyan Parag (₹14 cr, C), Ravindra Jadeja (₹14 cr), Sam Curran (₹2.4 cr, F), Donovan Ferreira (₹1 cr, F), Dasun Shanaka (₹2 cr, F), Emanjot Singh Chahal (₹30L)</td>
-                    </tr>
-                    <tr>
-                      <td class="fw-bold">Bowlers</td>
-                      <td>Jofra Archer (₹12.5 cr, F), Sandeep Sharma (₹4 cr), Sushant Mishra (₹90L), Brijesh Sharma (₹30L), Yash Raj Punja (₹30L, IP), Vignesh Puthur (₹30L)</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div class="alert alert-info py-2 px-3 mt-3 mb-0 small">
-                <strong>Overseas Kept (5 of 8):</strong> Archer, Ferreira, Pretorius, Shanaka, and Curran.
-              </div>
+          <div class="card h-100 border-0 shadow-sm p-4" style="border-top: 4px solid #28a745 !important;">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <h5 class="fw-bold text-success mb-0"><i class="bi bi-check-circle-fill me-2"></i>YOUR PLAN: RETAIN (18 Players, ₹87.15 Cr)</h5>
+            </div>
+            <p class="small text-muted mb-3">Retain 18 players, Jaiswal and Curran included, for ₹87.15 crore.</p>
+            <div class="table-responsive">
+              <table class="table table-sm table-borderless small mb-0">
+                <tbody>
+                  <tr>
+                    <td class="fw-bold" style="width:140px;">Batters &amp; Keepers:</td>
+                    <td>Yashasvi Jaiswal, Vaibhav Sooryavanshi, Lhuan-dre Pretorius (F), Dhruv Jurel (WK), Ravi Singh (WK), Shubham Dubey</td>
+                  </tr>
+                  <tr>
+                    <td class="fw-bold">All-Rounders:</td>
+                    <td>Riyan Parag (C), Ravindra Jadeja, Donovan Ferreira (F), Dasun Shanaka (F), Emanjot Singh Chahal</td>
+                  </tr>
+                  <tr>
+                    <td class="fw-bold">Bowlers:</td>
+                    <td>Jofra Archer (F), Sandeep Sharma, Brijesh Sharma, Sushant Mishra, Yash Raj Punja, Vignesh Puthur, Sam Curran (F)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="alert alert-info py-2 px-3 small mt-3 mb-0">
+              <strong>Sam Curran:</strong> Kept, no trade (₹2.4 crore). Bowls the death with Archer and bats at No. 7.<br>
+              <strong>Overseas Retained (5 of 8):</strong> Archer, Ferreira, Pretorius, Shanaka, and Curran. Yash Raj Punja remains first-choice impact player.
             </div>
           </div>
         </div>
 
-        <!-- Release Summary -->
         <div class="col-md-6">
-          <div class="card h-100 border-0 shadow-sm" style="border-top: 4px solid #dc3545 !important;">
-            <div class="card-body p-4">
-              <div class="d-flex justify-content-between align-items-center mb-3">
-                <h4 class="fw-bold text-danger mb-0"><i class="bi bi-x-circle-fill me-2"></i>Release: 9 Players</h4>
-                <span class="badge bg-danger-subtle text-danger fs-6 fw-bold">₹33.5 Crore Freed</span>
-              </div>
-              <p class="small text-muted">
-                Releasing high-ticket or underutilized assets unlocks significant auction flexibility to solve death bowling and finishing.
-              </p>
-              <div class="table-responsive">
-                <table class="table table-sm align-middle mb-0 small">
-                  <thead class="table-light">
-                    <tr><th>Player</th><th>Price</th><th>IPL 2026 Record</th><th>Action Plan</th></tr>
-                  </thead>
-                  <tbody>
-                    <tr class="table-warning">
-                      <td><strong>Shimron Hetmyer</strong> (F)</td>
-                      <td>₹11.0 cr</td>
-                      <td>8 games &middot; 78 runs</td>
-                      <td><span class="badge bg-warning text-dark">Buy back cheaper</span></td>
-                    </tr>
-                    <tr>
-                      <td>Ravi Bishnoi</td>
-                      <td>₹7.2 cr</td>
-                      <td>9 games &middot; 11 wkts</td>
-                      <td><span class="badge bg-secondary">Release</span></td>
-                    </tr>
-                    <tr class="table-warning">
-                      <td><strong>Tushar Deshpande</strong></td>
-                      <td>₹6.5 cr</td>
-                      <td>7 games &middot; Econ 12.0</td>
-                      <td><span class="badge bg-warning text-dark">Buy back cheaper</span></td>
-                    </tr>
-                    <tr>
-                      <td>Nandre Burger (F)</td>
-                      <td>₹3.5 cr</td>
-                      <td>13 games &middot; 14 wkts</td>
-                      <td><span class="badge bg-secondary">Release (Target at base)</span></td>
-                    </tr>
-                    <tr>
-                      <td>Adam Milne (F)</td>
-                      <td>₹2.4 cr</td>
-                      <td>1 game</td>
-                      <td><span class="badge bg-secondary">Release</span></td>
-                    </tr>
-                    <tr>
-                      <td>Kwena Maphaka (F)</td>
-                      <td>₹1.5 cr</td>
-                      <td>0 games</td>
-                      <td><span class="badge bg-secondary">Release</span></td>
-                    </tr>
-                    <tr>
-                      <td>Kuldeep Sen, Yudhvir, Aman</td>
-                      <td>₹1.4 cr</td>
-                      <td>Uncapped bench</td>
-                      <td><span class="badge bg-secondary">Release</span></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div class="text-muted small mt-2">
-                *Note: No RTM card available in mini-auctions; buyback requires aggressive bidding.
-              </div>
+          <div class="card h-100 border-0 shadow-sm p-4" style="border-top: 4px solid #dc3545 !important;">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <h5 class="fw-bold text-danger mb-0"><i class="bi bi-x-circle-fill me-2"></i>YOUR PLAN: RELEASE (9 Players, ₹33.5 Cr Freed)</h5>
+            </div>
+            <p class="small text-muted mb-3">Release nine players to free ₹33.5 crore.</p>
+            <div class="table-responsive">
+              <table class="table table-sm align-middle small mb-0">
+                <thead class="table-light">
+                  <tr><th>Player</th><th>Price</th><th>IPL 2026</th><th>Plan</th></tr>
+                </thead>
+                <tbody>
+                  <tr class="table-warning"><td><strong>Shimron Hetmyer</strong> (F)</td><td>₹11 cr</td><td>8 games &middot; 78 runs</td><td>Buy back at a lower price</td></tr>
+                  <tr><td>Ravi Bishnoi</td><td>₹7.2 cr</td><td>9 games &middot; 11 wkts</td><td>Release</td></tr>
+                  <tr class="table-warning"><td><strong>Tushar Deshpande</strong></td><td>₹6.5 cr</td><td>7 games &middot; econ 12.0</td><td>Buy back at a lower price</td></tr>
+                  <tr><td>Nandre Burger (F)</td><td>₹3.5 cr</td><td>13 games &middot; 14 wkts</td><td>Release</td></tr>
+                  <tr><td>Adam Milne (F)</td><td>₹2.4 cr</td><td>1 game</td><td>Release</td></tr>
+                  <tr><td>Kwena Maphaka (F)</td><td>₹1.5 cr</td><td>Did not play</td><td>Release</td></tr>
+                  <tr><td>Kuldeep Sen</td><td>₹75 lakh</td><td>Did not play</td><td>Release</td></tr>
+                  <tr><td>Yudhvir Singh Charak</td><td>₹35 lakh</td><td>Did not play</td><td>Release</td></tr>
+                  <tr><td>Aman Rao</td><td>₹30 lakh</td><td>Did not play</td><td>Release</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="small text-muted mt-2">
+              *Keeping Sushant Mishra means RR still have a left-arm seamer after Burger goes. Pink rows = buyback targets.
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Spending the ₹33.5 Crore Purse -->
-      <h4 class="section-title"><i class="bi bi-cash-stack me-2"></i>Spending the ₹33.5 Crore Auction Purse</h4>
-      <div class="row g-3">
-        <div class="col-md-4">
-          <div class="card border-0 shadow-sm p-4 h-100" style="background: linear-gradient(135deg, #FFF0F5 0%, #FFFFFF 100%); border-left: 5px solid #E91E8C !important;">
-            <div class="h5 fw-bold text-danger mb-1">Gap 1: No. 6 Firepower</div>
-            <div class="display-6 fw-bold" style="color:#002D6A;">₹15.0 Cr</div>
-            <div class="text-muted small mb-2">Maximum Budget Ceiling</div>
-            <p class="small text-muted mb-0">
-              Top priority. RR's death batting (overs 16–20) ranked 9th in 2025 and 7th in 2026. Target an explosive domestic or overseas finisher (e.g. Shashank Singh, Suryansh Shedge, Nehal Wadhera, or overseas power hitter).
-            </p>
+      <!-- Buybacks & Needs -->
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="card border-0 shadow-sm p-4 h-100 bg-light">
+            <h5 class="fw-bold text-dark mb-2">YOUR PLAN: BUYBACKS</h5>
+            <p class="small text-muted mb-2">Two players to win back cheaper; Curran stays.</p>
+            <ul class="small text-muted ps-3 mb-2">
+              <li class="mb-2"><strong>Shimron Hetmyer:</strong> Released at ₹11 crore; buy back for less. Only 78 IPL runs in 2026, but 248 runs at the 2026 T20 World Cup and a CPL hundred since.</li>
+              <li class="mb-2"><strong>Tushar Deshpande:</strong> Released at ₹6.5 crore; buy back for less. Reason: delivered in some pressure games. Data warns: death economy 12.1 over 24 months.</li>
+              <li><strong>Sam Curran:</strong> No trade: kept as Archer's death-overs partner. Over 24 months his death economy was 9.2 against 10.3 in powerplay.</li>
+            </ul>
+            <div class="text-danger small"><em>There is no Right to Match card at a mini-auction, so RR must outbid everyone to win Hetmyer or Deshpande back.</em></div>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="card border-0 shadow-sm p-4 h-100" style="background: linear-gradient(135deg, #F0F8FF 0%, #FFFFFF 100%); border-left: 5px solid #002D6A !important;">
-            <div class="h5 fw-bold text-primary mb-1">Gap 2: No. 11 Death Pacer</div>
-            <div class="display-6 fw-bold" style="color:#002D6A;">₹10.0 Cr</div>
-            <div class="text-muted small mb-2">Suggested Ceiling</div>
-            <p class="small text-muted mb-0">
-              Spearhead partner for Jofra Archer at the death. Targets include Nandre Burger at base price, Prince Yadav, Mahli Beardman, Ottneil Baartman, or Mohammed Shami / Mayank Yadav.
-            </p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card border-0 shadow-sm p-4 h-100" style="background: linear-gradient(135deg, #F5FFF0 0%, #FFFFFF 100%); border-left: 5px solid #28a745 !important;">
-            <div class="h5 fw-bold text-success mb-1">Squad Backups (5 Slots)</div>
-            <div class="display-6 fw-bold" style="color:#002D6A;">₹8.5 Cr</div>
-            <div class="text-muted small mb-2">Remaining Allocation</div>
-            <p class="small text-muted mb-0">
-              Fill remaining 5 squad slots (to reach 25 players, including 2 overseas). Backups: Indian batter (covers Jaiswal/Sooryavanshi, e.g. Tushar Raheja), Hetmyer buyback, seam cover.
-            </p>
+
+        <div class="col-md-6">
+          <div class="card border-0 shadow-sm p-4 h-100 bg-light">
+            <h5 class="fw-bold text-dark mb-2">YOUR PLAN: NEEDS</h5>
+            <p class="small text-muted mb-2">Four slots to fill before the season:</p>
+            <ol class="small text-muted ps-3 mb-2">
+              <li class="mb-2"><strong>Indian finisher:</strong> Named in your notes: <em>Suryansh Shedge</em>, with a question mark.</li>
+              <li class="mb-2"><strong>Foreign finisher and an Indian No. 5:</strong> Named: <em>Nehal Wadhera</em> for No. 5.</li>
+              <li class="mb-2"><strong>Indian opener:</strong> Only needed if Jaiswal leaves.</li>
+              <li><strong>Experienced Indian fast bowler:</strong> Named: <em>Mohammed Shami, Mayank Yadav or Prince Yadav</em>.</li>
+            </ol>
+            <div class="small text-muted">Ferreira can bowl spin, so No. 6 doubles as a sixth bowler and slot 7 can be a finishing all-rounder.</div>
           </div>
         </div>
       </div>
@@ -406,97 +503,126 @@
     </div>
 
     <!-- ==================== TAB 3: PLAYING XIS ==================== -->
-    <div class="tab-pane fade" id="xis" role="tabpanel">
+    <div class="tab-pane fade" id="tab-xis">
 
-      <div class="row g-4">
-        <!-- Scenario 1: Probable XI (No Trades) -->
-        <div class="col-lg-6">
-          <div class="card border-0 shadow-sm h-100">
-            <div class="card-header bg-primary text-white py-3">
-              <h5 class="fw-bold mb-0">📋 Probable Starting XI (No Trades, 2 Gaps Filled)</h5>
-            </div>
-            <div class="card-body p-0">
-              <table class="table table-hover align-middle mb-0 small">
-                <thead class="table-light">
-                  <tr><th>#</th><th>Player</th><th>Role</th><th>24-Month Split</th></tr>
-                </thead>
-                <tbody>
-                  <tr><td>1</td><td><strong>Vaibhav Sooryavanshi</strong></td><td>Opener</td><td>1,509 runs &middot; SR 223</td></tr>
-                  <tr><td>2</td><td><strong>Yashasvi Jaiswal</strong></td><td>Opener</td><td>986 runs &middot; SR 157</td></tr>
-                  <tr><td>3</td><td><strong>Dhruv Jurel</strong> (WK)</td><td>No. 3</td><td>854 runs &middot; SR 154</td></tr>
-                  <tr><td>4</td><td><strong>Riyan Parag</strong> (C, B)</td><td>No. 4</td><td>702 runs &middot; SR 163</td></tr>
-                  <tr><td>5</td><td><strong>Donovan Ferreira</strong> (F, B)</td><td>Finisher / Spin</td><td>482 runs &middot; SR 167 (Death SR 222)</td></tr>
-                  <tr class="table-danger"><td>6</td><td><strong>GAP 1: Firepower</strong></td><td>Indian/Overseas</td><td><strong>Auction Target (Up to ₹15 Cr)</strong></td></tr>
-                  <tr><td>7</td><td><strong>Sam Curran</strong> (F, B)</td><td>All-Rounder / Death</td><td>Death Econ 9.2 &middot; SR 148</td></tr>
-                  <tr><td>8</td><td><strong>Ravindra Jadeja</strong> (B)</td><td>Spin All-Rounder</td><td>567 runs &middot; 20 wkts</td></tr>
-                  <tr><td>9</td><td><strong>Jofra Archer</strong> (F)</td><td>Spearhead / Death</td><td>59 wkts &middot; Econ 9.2</td></tr>
-                  <tr><td>10</td><td><strong>Brijesh Sharma</strong></td><td>Seam / Middle-Death</td><td>14 wkts &middot; Econ 9.7</td></tr>
-                  <tr class="table-primary"><td>11</td><td><strong>GAP 2: Death Quick</strong></td><td>Indian/Overseas</td><td><strong>Auction Target (Up to ₹10 Cr)</strong></td></tr>
-                  <tr class="table-warning"><td>IP</td><td><strong>Yash Raj Punja</strong> (B)</td><td>Impact Leg-Spinner</td><td>9 wkts &middot; Econ 9.3</td></tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="card-footer bg-light p-3 small">
-              <strong>Overseas Balance (3 + 1):</strong> Ferreira, Curran, Archer in XI. Only one of Gap 1 or Gap 2 can be overseas; the other must be Indian.
-            </div>
+      <!-- Probable XI -->
+      <div class="card border-0 shadow-sm mb-4">
+        <div class="card-header bg-primary text-white py-3">
+          <h5 class="fw-bold mb-0">Probable Starting XI: No Trades, Two Gaps to Fill</h5>
+        </div>
+        <div class="card-body p-0">
+          <div class="table-responsive">
+            <table class="table table-hover align-middle small mb-0">
+              <thead class="table-light">
+                <tr><th>#</th><th>Player</th><th>Role</th><th>Last 24 Months</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>1</td><td><strong>Vaibhav Sooryavanshi</strong></td><td>Opener</td><td>1,509 runs &middot; SR 223</td></tr>
+                <tr><td>2</td><td><strong>Yashasvi Jaiswal</strong></td><td>Opener</td><td>986 runs &middot; SR 157</td></tr>
+                <tr><td>3</td><td><strong>Dhruv Jurel</strong> (WK)</td><td>No. 3</td><td>854 runs &middot; SR 154</td></tr>
+                <tr><td>4</td><td><strong>Riyan Parag</strong> (C) (B)</td><td>No. 4</td><td>702 runs &middot; SR 163</td></tr>
+                <tr><td>5</td><td><strong>Donovan Ferreira</strong> (F)</td><td>Finisher, spin</td><td>482 runs &middot; SR 167</td></tr>
+                <tr class="table-danger"><td>6</td><td><strong>Gap 1: firepower</strong></td><td>Indian or foreign</td><td>Auction, up to ₹15 cr</td></tr>
+                <tr><td>7</td><td><strong>Sam Curran</strong> (F) (B)</td><td>All-rounder, death</td><td>Death econ 9.2 &middot; SR 148</td></tr>
+                <tr><td>8</td><td><strong>Ravindra Jadeja</strong> (B)</td><td>Spin all-rounder</td><td>567 runs &middot; 20 wkts</td></tr>
+                <tr><td>9</td><td><strong>Jofra Archer</strong> (F)</td><td>Spearhead, death</td><td>59 wkts &middot; econ 9.2</td></tr>
+                <tr><td>10</td><td><strong>Brijesh Sharma</strong></td><td>Seam</td><td>14 wkts &middot; econ 9.7</td></tr>
+                <tr class="table-primary"><td>11</td><td><strong>Gap 2: death specialist</strong></td><td>Indian or foreign</td><td>Auction</td></tr>
+                <tr class="table-warning"><td>IP</td><td><strong>Yash Raj Punja</strong> (B)</td><td>Leg-spin</td><td>9 wkts &middot; econ 9.3</td></tr>
+              </tbody>
+            </table>
           </div>
         </div>
+        <div class="card-footer bg-light p-3 small">
+          <strong>Overseas 3 + 1:</strong> Ferreira, Curran and Archer are in. Only one of the two gaps can be foreign; the other must be Indian.<br>
+          <strong>Bowling:</strong> Archer and Curran at death, Brijesh and gap-2 bowler, with Jadeja, Punja and Parag for spin.
+        </div>
+      </div>
 
-        <!-- Scenario 2: Without Jaiswal / Pretorius Opens -->
-        <div class="col-lg-6">
+      <!-- Scenarios: Without Jaiswal & Trading Curran -->
+      <div class="row g-4 mb-4">
+        <div class="col-md-6">
           <div class="card border-0 shadow-sm h-100">
             <div class="card-header bg-dark text-white py-3">
-              <h5 class="fw-bold mb-0">🔄 Scenario B: Jaiswal Traded / Pretorius Opens</h5>
+              <h6 class="fw-bold mb-0">Pretorius Opens and All Four Overseas Slots Are Used</h6>
             </div>
             <div class="card-body p-0">
-              <table class="table table-hover align-middle mb-0 small">
-                <thead class="table-light">
-                  <tr><th>#</th><th>Player</th><th>Role</th><th>Strategic Rationale</th></tr>
-                </thead>
+              <table class="table table-sm table-hover align-middle small mb-0">
+                <thead class="table-light"><tr><th>#</th><th>Player</th><th>Role</th><th>Last 24 Months</th></tr></thead>
                 <tbody>
-                  <tr><td>1</td><td><strong>Vaibhav Sooryavanshi</strong></td><td>Opener</td><td>Attacks powerplay from ball 1</td></tr>
-                  <tr class="table-info"><td>2</td><td><strong>Lhuan-dre Pretorius</strong> (F)</td><td>Opener</td><td>SA20 top scorer; 188* off 79 balls</td></tr>
-                  <tr><td>3</td><td><strong>Dhruv Jurel</strong> (WK)</td><td>No. 3</td><td>Anchor &amp; pressure finisher</td></tr>
-                  <tr><td>4</td><td><strong>Riyan Parag</strong> (C, B)</td><td>No. 4</td><td>Middle overs spin hitter</td></tr>
-                  <tr class="table-warning"><td>5</td><td><strong>Shimron Hetmyer</strong> (F, BB)</td><td>No. 5 Finisher</td><td>Buyback target; CPL century form</td></tr>
-                  <tr><td>6</td><td><strong>Donovan Ferreira</strong> (F)</td><td>Death Finisher</td><td>Elite 222 death-over strike rate</td></tr>
-                  <tr class="table-danger"><td>7</td><td><strong>Finishing All-Rounder</strong></td><td>No. 7 Slot</td><td>Open Indian slot from auction</td></tr>
-                  <tr><td>8</td><td><strong>Ravindra Jadeja</strong> (B)</td><td>Spin All-Rounder</td><td>Squeezes Jaipur overs 7&ndash;15</td></tr>
-                  <tr class="table-secondary"><td>9</td><td><strong>T. Deshpande / Brijesh</strong></td><td>Seam</td><td>Deshpande buyback or Brijesh Sharma</td></tr>
-                  <tr><td>10</td><td><strong>Jofra Archer</strong> (F)</td><td>Spearhead</td><td>Pace enforcer with new ball &amp; death</td></tr>
-                  <tr class="table-primary"><td>11</td><td><strong>Prince Yadav / Shami</strong></td><td>Indian Quick</td><td>Prince: 31 wkts @ 9.2 (LSG trade asset)</td></tr>
-                  <tr class="table-warning"><td>IP</td><td><strong>Yash Raj Punja</strong> (B)</td><td>Impact Leg-Spin</td><td>Jaipur spin squeeze weapon</td></tr>
+                  <tr><td>1</td><td>Vaibhav Sooryavanshi</td><td>Opener</td><td>1,509 runs &middot; SR 223</td></tr>
+                  <tr class="table-info"><td>2</td><td>Lhuan-dre Pretorius (F)</td><td>Opener</td><td>SA20 2025: 397 at SR 167</td></tr>
+                  <tr><td>3</td><td>Dhruv Jurel (WK)</td><td>No. 3</td><td>854 runs &middot; SR 154</td></tr>
+                  <tr><td>4</td><td>Riyan Parag (C) (B)</td><td>No. 4</td><td>702 runs &middot; SR 163</td></tr>
+                  <tr class="table-warning"><td>5</td><td>Shimron Hetmyer (F) BB</td><td>No. 5</td><td>895 runs &middot; SR 161</td></tr>
+                  <tr><td>6</td><td>Donovan Ferreira (F)</td><td>Finisher, spin</td><td>482 runs &middot; SR 167</td></tr>
+                  <tr class="table-danger"><td>7</td><td>Finishing all-rounder</td><td>Open slot</td><td>Auction</td></tr>
+                  <tr><td>8</td><td>Ravindra Jadeja (B)</td><td>Spin all-rounder</td><td>567 runs &middot; 20 wkts</td></tr>
+                  <tr><td>9</td><td>Deshpande (BB) or Brijesh</td><td>Seam</td><td>13 at 11.2 / 14 at 9.7</td></tr>
+                  <tr><td>10</td><td>Jofra Archer (F)</td><td>Spearhead</td><td>59 wkts &middot; econ 9.2</td></tr>
+                  <tr><td>11</td><td>Prince Yadav, Mayank or Shami</td><td>Indian quick</td><td>Prince: 31 wkts &middot; 9.2</td></tr>
+                  <tr class="table-warning"><td>IP</td><td>Yash Raj Punja (B)</td><td>Leg-spin</td><td>9 wkts &middot; econ 9.3</td></tr>
                 </tbody>
               </table>
             </div>
-            <div class="card-footer bg-light p-3 small">
-              <strong>Overseas Count (4 of 4):</strong> Pretorius, Hetmyer, Ferreira, Archer. No room for overseas Impact Player.
+            <div class="card-footer bg-light p-2 small">
+              <strong>Overseas 4 of 4:</strong> Pretorius, Hetmyer, Ferreira, Archer. No room for overseas impact player.
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card border-0 shadow-sm h-100">
+            <div class="card-header bg-dark text-white py-3">
+              <h6 class="fw-bold mb-0">Trading Curran Keeps Jaiswal and Frees a Slot</h6>
+            </div>
+            <div class="card-body p-0">
+              <table class="table table-sm table-hover align-middle small mb-0">
+                <thead class="table-light"><tr><th>#</th><th>Player</th><th>Role</th><th>Last 24 Months</th></tr></thead>
+                <tbody>
+                  <tr><td>1</td><td>Vaibhav Sooryavanshi</td><td>Opener</td><td>1,509 runs &middot; SR 223</td></tr>
+                  <tr><td>2</td><td>Yashasvi Jaiswal</td><td>Opener</td><td>986 runs &middot; SR 157</td></tr>
+                  <tr><td>3</td><td>Dhruv Jurel (WK)</td><td>No. 3</td><td>854 runs &middot; SR 154</td></tr>
+                  <tr><td>4</td><td>Riyan Parag (C) (B)</td><td>No. 4</td><td>702 runs &middot; SR 163</td></tr>
+                  <tr class="table-warning"><td>5</td><td>Shimron Hetmyer (F) BB</td><td>No. 5</td><td>895 runs &middot; SR 161</td></tr>
+                  <tr><td>6</td><td>Donovan Ferreira (F)</td><td>Finisher, spin</td><td>482 runs &middot; SR 167</td></tr>
+                  <tr class="table-danger"><td>7</td><td>Open slot</td><td>Still to decide</td><td>Can be overseas</td></tr>
+                  <tr><td>8</td><td>Ravindra Jadeja (B)</td><td>Spin all-rounder</td><td>567 runs &middot; 20 wkts</td></tr>
+                  <tr><td>9</td><td>Jofra Archer (F)</td><td>Spearhead</td><td>59 wkts &middot; econ 9.2</td></tr>
+                  <tr class="table-secondary"><td>10</td><td>Tushar Deshpande (BB)</td><td>Seam</td><td>13 wkts &middot; econ 11.2</td></tr>
+                  <tr><td>11</td><td>Shami, Mayank or Prince Yadav</td><td>Indian quick</td><td>Prince: 31 wkts &middot; 9.2</td></tr>
+                  <tr class="table-warning"><td>IP</td><td>Yash Raj Punja (B)</td><td>Leg-spin</td><td>9 wkts &middot; econ 9.3</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="card-footer bg-light p-2 small">
+              <strong>Overseas 3 of 4:</strong> Hetmyer, Ferreira, Archer. Slot 7 can be foreign finisher. Traded out: Curran (400r at SR 148, 14w at 10.0).
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Backup Depth Chart -->
-      <h4 class="section-title mt-4"><i class="bi bi-shield-shaded me-2"></i>Role-by-Role Backup Depth Chart</h4>
+      <!-- Backups Depth Chart -->
+      <h5 class="section-title"><i class="bi bi-shield-shaded me-2"></i>Backups for the XI: Curran and Archer Still Need Cover</h5>
       <div class="rr-table-wrap">
         <div class="table-responsive">
           <table class="table table-hover align-middle small mb-0">
             <thead class="table-light">
-              <tr><th>Starting Slot</th><th>Starter</th><th>Backup Option</th><th>Backup Status &amp; Recent Form</th></tr>
+              <tr><th>#</th><th>Starter</th><th>Backup</th><th>Backup's Last 24 Months</th></tr>
             </thead>
             <tbody>
-              <tr><td>1. Opener</td><td>Vaibhav Sooryavanshi</td><td>Tushar Raheja (Option 1)</td><td>TNPL 2025: 488 runs &middot; SR 186; target at auction</td></tr>
-              <tr><td>2. Opener</td><td>Yashasvi Jaiswal</td><td>Fit / Pretorius (F)</td><td>Pretorius covers opener; uses overseas slot</td></tr>
-              <tr><td>3. No. 3 / WK</td><td>Dhruv Jurel (WK)</td><td>Ravi Singh (WK)</td><td>1 IPL game; recovered from hamstring injury</td></tr>
-              <tr><td>4. No. 4 / C</td><td>Riyan Parag (C)</td><td>Fit / Shanaka (F)</td><td>Shanaka covers middle order &amp; seam all-rounder</td></tr>
-              <tr><td>5. Finisher</td><td>Donovan Ferreira (F)</td><td>Dasun Shanaka (F)</td><td>519 runs &middot; SR 140 &middot; 15 wkts</td></tr>
-              <tr><td>6. Power Finisher</td><td>GAP 1</td><td>Suryansh Shedge / Wadhera</td><td>From auction or PBKS release targets</td></tr>
-              <tr><td>7. All-Rounder</td><td>Sam Curran (F)</td><td>Foreign all-rounder backup</td><td>Needs cover from auction with remaining purse</td></tr>
-              <tr><td>8. Spin All-Rounder</td><td>Ravindra Jadeja</td><td>Shubham Dubey</td><td>187 runs &middot; SR 151; pure batter cover</td></tr>
-              <tr><td>9. Spearhead</td><td>Jofra Archer (F)</td><td>Overseas fast bowler</td><td>Crucial backup needed from auction (e.g. Burger)</td></tr>
-              <tr><td>10. Seam</td><td>Brijesh Sharma</td><td>Sushant Mishra</td><td>22 SMAT wickets 2025&ndash;26; left-arm angle</td></tr>
-              <tr><td>11. Death Specialist</td><td>GAP 2</td><td>Prince Yadav / Shami</td><td>From auction or trade negotiation</td></tr>
-              <tr><td>IP. Leg-Spinner</td><td>Yash Raj Punja</td><td>Vignesh Puthur</td><td>6 IPL wickets at 9.1 economy</td></tr>
+              <tr><td>1</td><td>Vaibhav Sooryavanshi</td><td><span class="text-danger fw-bold">Tushar Raheja (option 1)</span></td><td>TNPL 2025: 488 runs &middot; SR 186; auction buy</td></tr>
+              <tr><td>2</td><td>Yashasvi Jaiswal</td><td>Fit</td><td>&ndash;</td></tr>
+              <tr><td>3</td><td>Dhruv Jurel (WK)</td><td><span class="text-danger fw-bold">Ravi Singh</span></td><td>1 IPL game; hamstring injury, May 2026</td></tr>
+              <tr><td>4</td><td>Riyan Parag (C)</td><td>Fit</td><td>&ndash;</td></tr>
+              <tr><td>5</td><td>Donovan Ferreira (F)</td><td><span class="text-danger fw-bold">Dasun Shanaka (F)</span></td><td>519 runs &middot; SR 140 &middot; 15 wkts</td></tr>
+              <tr class="table-danger"><td>6</td><td>Gap 1: firepower</td><td>&ndash;</td><td>Auction</td></tr>
+              <tr class="table-warning"><td>7</td><td>Sam Curran (F)</td><td><span class="text-danger fw-bold">Foreign all-rounder needed</span></td><td>From the auction</td></tr>
+              <tr><td>8</td><td>Ravindra Jadeja</td><td><span class="text-danger fw-bold">Shubham Dubey</span></td><td>187 runs &middot; SR 151; does not bowl</td></tr>
+              <tr class="table-warning"><td>9</td><td>Jofra Archer (F)</td><td><span class="text-danger fw-bold">Backup needed</span></td><td>Fast bowler, from the auction</td></tr>
+              <tr><td>10</td><td>Brijesh Sharma</td><td><span class="text-danger fw-bold">Sushant Mishra</span></td><td>22 SMAT wkts 2025&ndash;26; 2 IPL games</td></tr>
+              <tr class="table-danger"><td>11</td><td>Gap 2: death specialist</td><td>&ndash;</td><td>Auction</td></tr>
+              <tr><td>IP</td><td>Yash Raj Punja</td><td><span class="text-danger fw-bold">Vignesh Puthur</span></td><td>6 IPL wkts at 9.1 (2025)</td></tr>
             </tbody>
           </table>
         </div>
@@ -504,314 +630,355 @@
 
     </div>
 
-    <!-- ==================== TAB 4: VENUE ANALYSIS ==================== -->
-    <div class="tab-pane fade" id="grounds" role="tabpanel">
+    <!-- ==================== TAB 4: DEATH OVERS & IMPACT ==================== -->
+    <div class="tab-pane fade" id="tab-death">
 
+      <!-- Death Bowling & Batting Comparisons -->
       <div class="row g-4 mb-4">
-        <!-- Jaipur Analysis -->
-        <div class="col-lg-7">
-          <div class="card border-0 shadow-sm p-4 h-100" style="border-left: 5px solid #E91E8C !important;">
-            <h4 class="fw-bold mb-2" style="color:#002D6A;">Sawai Mansingh Stadium, Jaipur: 220+ Chasing Ground</h4>
-            <p class="text-muted small">
-              SMS Stadium has dramatically transformed into a high-scoring chasing venue over four seasons:
-            </p>
-            <div class="row g-2 mb-3 text-center">
-              <div class="col-3">
-                <div class="p-2 border rounded bg-light">
-                  <div class="text-muted small">2023</div>
-                  <div class="h5 fw-bold text-dark mb-0">170</div>
-                </div>
-              </div>
-              <div class="col-3">
-                <div class="p-2 border rounded bg-light">
-                  <div class="text-muted small">2024</div>
-                  <div class="h5 fw-bold text-dark mb-0">186</div>
-                </div>
-              </div>
-              <div class="col-3">
-                <div class="p-2 border rounded bg-light">
-                  <div class="text-muted small">2025</div>
-                  <div class="h5 fw-bold text-dark mb-0">197</div>
-                </div>
-              </div>
-              <div class="col-3">
-                <div class="p-2 border rounded bg-primary text-white">
-                  <div class="small">2026</div>
-                  <div class="h5 fw-bold text-white mb-0">225</div>
-                </div>
-              </div>
-            </div>
-            <ul class="list-unstyled small mb-3">
-              <li class="py-1 border-bottom">🔥 <strong>Chasing Dominance:</strong> 3 of 4 RR home games in 2026 won by the chasing side; all-time record: 43 wins chasing vs 24 batting first.</li>
-              <li class="py-1 border-bottom">⚡ <strong>Powerplay Discrepancy:</strong> Second-innings PP scores <strong>10.65 rpo</strong> vs 9.21 rpo in 1st innings.</li>
-              <li class="py-1 border-bottom">🌪️ <strong>Spin vs Pace:</strong> Pace in Jaipur leaks <strong>10.8 rpo</strong> (24.5 balls/wkt). Spin goes at only <strong>9.3 rpo</strong> (22.6 balls/wkt).</li>
-              <li class="py-1">🎯 <strong>Pitch Behavior:</strong> Pace and carry early, slows and grips in overs 7–15, dew aids chasing under lights. Square boundaries longer than straight ones.</li>
-            </ul>
-
-            <h6 class="fw-bold text-dark mb-2">Bowling Types Success at Jaipur (IPL 2022&ndash;26):</h6>
-            <div class="table-responsive">
-              <table class="table table-sm table-bordered small text-center mb-0">
-                <thead class="table-light">
-                  <tr><th>Bowling Type</th><th>Economy</th><th>Balls / Wkt</th><th>RR Fit</th></tr>
-                </thead>
-                <tbody>
-                  <tr class="table-success"><td><strong>Off-spin</strong></td><td>8.64</td><td>29.1</td><td>Parag (part-time)</td></tr>
-                  <tr class="table-success"><td><strong>Left-arm orthodox</strong></td><td>8.73</td><td>22.9</td><td>Ravindra Jadeja</td></tr>
-                  <tr class="table-success"><td><strong>Leg-spin</strong></td><td>8.80</td><td>20.5</td><td>Yash Raj Punja</td></tr>
-                  <tr><td>Left-arm medium-fast</td><td>9.81</td><td>18.8</td><td>Curran, Sushant Mishra</td></tr>
-                  <tr><td>Right-arm medium-fast</td><td>9.89</td><td>22.9</td><td>Sandeep Sharma</td></tr>
-                  <tr class="table-danger"><td>Right-arm fast</td><td>10.32</td><td>29.7</td><td>Archer, Brijesh Sharma</td></tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-
-        <!-- How to Win in Jaipur -->
-        <div class="col-lg-5">
-          <div class="card border-0 shadow-sm p-4 h-100" style="background:#002D6A; color:#fff;">
-            <h5 class="fw-bold text-warning mb-3"><i class="bi bi-trophy-fill me-2"></i>Jaipur Blueprint: How to Win</h5>
-            <div class="d-flex gap-3 mb-3">
-              <div class="badge bg-warning text-dark fs-6 px-3 py-2 rounded-circle" style="width:40px;height:40px;display:flex;align-items:center;justify-content:center;">1</div>
-              <div>
-                <h6 class="fw-bold mb-1">Win the Toss, Bowl First</h6>
-                <p class="small text-white-50 mb-0">Chasers won 75% of games in 2026. 2nd innings powerplay runs 1.4 runs/over faster due to dew.</p>
-              </div>
-            </div>
-            <div class="d-flex gap-3 mb-3">
-              <div class="badge bg-warning text-dark fs-6 px-3 py-2 rounded-circle" style="width:40px;height:40px;display:flex;align-items:center;justify-content:center;">2</div>
-              <div>
-                <h6 class="fw-bold mb-1">Spin the Middle (Overs 7&ndash;15)</h6>
-                <p class="small text-white-50 mb-0">Deploy Jadeja and Punja for 8 overs. Avoid right-arm pace in middle overs where it leaks 10.8 rpo.</p>
-              </div>
-            </div>
-            <div class="d-flex gap-3 mb-3">
-              <div class="badge bg-warning text-dark fs-6 px-3 py-2 rounded-circle" style="width:40px;height:40px;display:flex;align-items:center;justify-content:center;">3</div>
-              <div>
-                <h6 class="fw-bold mb-1">Pace at the Ends Only</h6>
-                <p class="small text-white-50 mb-0">Archer with the hard new ball; Curran's cutters &amp; Gap-2 specialist at the death.</p>
-              </div>
-            </div>
-            <div class="d-flex gap-3">
-              <div class="badge bg-warning text-dark fs-6 px-3 py-2 rounded-circle" style="width:40px;height:40px;display:flex;align-items:center;justify-content:center;">4</div>
-              <div>
-                <h6 class="fw-bold mb-1">Chase 220+ with Deep Batting</h6>
-                <p class="small text-white-50 mb-0">Sooryavanshi &amp; Jaiswal attack PP; Gap-1 finisher &amp; Ferreira close the final 5 overs.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Away Grounds Matrix -->
-      <h4 class="section-title"><i class="bi bi-airplane-fill me-2"></i>Away Venues: Flat Tracks vs Slow Turners</h4>
-      <div class="rr-table-wrap">
-        <div class="table-responsive">
-          <table class="table table-hover align-middle small mb-0">
-            <thead class="table-light">
-              <tr><th>Venue / Opponent</th><th>Pitch Nature</th><th>Avg 1st Inns</th><th>RR 2026 Result</th><th>Tactical Requirements</th></tr>
-            </thead>
-            <tbody>
-              <tr><td><strong>Hyderabad (SRH)</strong></td><td>Flat, black soil</td><td>~205</td><td>Lost by 57; Won Eliminator</td><td>Two death bowlers, deep batting firepower</td></tr>
-              <tr><td><strong>Bengaluru (RCB)</strong></td><td>Flat, small boundaries</td><td>~183</td><td>&ndash;</td><td>Six-hitters, pinpoint yorker bowlers</td></tr>
-              <tr><td><strong>Ahmedabad (GT)</strong></td><td>Fast, high bounce</td><td>170&ndash;195</td><td>Won by 6; Lost Q2 by 7 wkts</td><td>Hit-the-deck pace (Archer, Brijesh)</td></tr>
-              <tr><td><strong>Mumbai (MI)</strong></td><td>True bounce, early swing</td><td>~170</td><td>&ndash;</td><td>Swing bowler, top-order chase depth</td></tr>
-              <tr><td><strong>Mullanpur (PBKS)</strong></td><td>Low bounce, slow</td><td>170&ndash;180</td><td>Won by 6 wkts</td><td>Cutters, off-pace variations (Curran)</td></tr>
-              <tr><td><strong>Kolkata (KKR)</strong></td><td>Balanced, rapid outfield</td><td>~190</td><td>&ndash;</td><td>Mystery spin, powerplay hitters</td></tr>
-              <tr class="table-warning"><td><strong>Chennai (CSK)</strong></td><td>Slow, turning rank turner</td><td>150&ndash;165</td><td>&ndash;</td><td>Triple spin (Jadeja, Punja, Puthur), sweepers</td></tr>
-              <tr class="table-warning"><td><strong>Delhi (DC)</strong></td><td>Slow, grippy</td><td>~170</td><td>&ndash;</td><td>Middle overs anchors, spin choke</td></tr>
-              <tr class="table-warning"><td><strong>Lucknow (LSG)</strong></td><td>Slow, high swing (2026)</td><td>150&ndash;170</td><td>&ndash;</td><td>Swing, wrist-spin enforcers</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- ==================== TAB 5: DEATH OVERS ==================== -->
-    <div class="tab-pane fade" id="death" role="tabpanel">
-
-      <div class="row g-4 mb-4">
-        <!-- Death Bowling Diagnosis -->
         <div class="col-md-6">
           <div class="card border-0 shadow-sm p-4 h-100">
-            <h4 class="fw-bold text-primary mb-2"><i class="bi bi-shield-check me-2"></i>Death Bowling (Overs 16&ndash;20)</h4>
-            <p class="text-muted small">
-              RR progressed from worst death bowling in 2025 to 5th in 2026:
-            </p>
-            <div class="d-flex align-items-center gap-3 p-3 bg-light rounded mb-3">
-              <div>
-                <span class="text-muted small d-block">2025 Economy</span>
-                <span class="h4 fw-bold text-danger">12.26 rpo</span>
+            <h5 class="fw-bold mb-2 text-primary">Death Bowling: RR Went from Worst in 2025 to Fifth in 2026</h5>
+            <p class="small text-muted mb-2">Runs conceded per over in overs 16&ndash;20, all IPL matches incl. playoffs:</p>
+            <div class="p-3 bg-light rounded mb-3">
+              <div class="d-flex justify-content-between align-items-center mb-1">
+                <span class="fw-bold">2025 Season:</span>
+                <span class="text-danger fw-bold">12.26 rpo (Rank 10 &ndash; Worst)</span>
               </div>
-              <div class="fs-3 text-muted">&rarr;</div>
-              <div>
-                <span class="text-muted small d-block">2026 Economy</span>
-                <span class="h4 fw-bold text-success">10.58 rpo</span>
-              </div>
-              <div class="ms-auto text-end">
-                <span class="badge bg-success">Improved by 1.68 rpo</span>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="fw-bold">2026 Season:</span>
+                <span class="text-success fw-bold">10.58 rpo (Rank 5)</span>
               </div>
             </div>
-            <h6 class="fw-bold text-dark mb-2">Curran &amp; Archer: Left-Right Death Duo</h6>
-            <ul class="small text-muted ps-3 mb-0">
-              <li><strong>Sam Curran (Left-Arm):</strong> 9.2 death economy over 14 overs (7 wkts). Slower balls &amp; cutters make him an effective death partner.</li>
-              <li><strong>Jofra Archer (Right-Arm Fast):</strong> 10.1 death economy over 45 overs (20 wkts). Heavy workload spearhead.</li>
-              <li><strong>Brijesh Sharma (Third Option):</strong> 10.2 death economy over 16 overs (8 wkts). ₹30L bargain discovery.</li>
-            </ul>
+            <div class="small text-muted">
+              2026 League average: <strong>10.72 rpo</strong>. Best: SRH (9.96), KKR (10.08), DC (10.14), RCB (10.19), RR (10.58).
+            </div>
           </div>
         </div>
 
-        <!-- Death Batting Diagnosis -->
         <div class="col-md-6">
-          <div class="card border-0 shadow-sm p-4 h-100" style="border-left: 5px solid #E91E8C !important;">
-            <h4 class="fw-bold mb-2" style="color:#E91E8C;"><i class="bi bi-fire me-2"></i>Death Batting: The Missing Piece</h4>
-            <p class="text-muted small">
-              RR ranked 9th in 2025 and 7th in 2026 in death scoring rate (10.29 rpo):
-            </p>
-            <div class="alert alert-danger py-2 px-3 small mb-3">
-              <strong>Alarming Metric:</strong> RR hit boundaries least frequently at the death in 2026 &mdash; <strong>4.86 balls per boundary</strong> (PBKS: 3.38, RCB: 3.75, SRH: 4.36).
-            </div>
-            <div class="p-3 bg-light rounded mb-0">
-              <h6 class="fw-bold text-dark mb-1">Donovan Ferreira Impact (₹1 Crore):</h6>
-              <p class="small text-muted mb-1">
-                Ferreira was the lone bright spark, striking at <strong>222.0 at the death</strong> (83 balls, 184 runs) and <strong>198.0 under pressure</strong>. All other RR batters combined managed only a <strong>147.0 strike rate</strong> at the death!
-              </p>
-              <div class="small fw-semibold text-danger">
-                &rArr; Spending ₹15 Cr on Gap 1 (No. 6 Power Finisher) is mandatory for IPL 2027.
+          <div class="card border-0 shadow-sm p-4 h-100" style="border-left: 4px solid #E91E8C !important;">
+            <h5 class="fw-bold mb-2 text-danger">Death Batting: RR Ranked Ninth in 2025 and Seventh in 2026</h5>
+            <p class="small text-muted mb-2">Team runs scored per over in overs 16&ndash;20, all IPL matches incl. playoffs:</p>
+            <div class="p-3 bg-light rounded mb-3">
+              <div class="d-flex justify-content-between align-items-center mb-1">
+                <span class="fw-bold">2025 Season:</span>
+                <span class="text-danger fw-bold">10.05 rpo (Rank 9)</span>
               </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="fw-bold">2026 Season:</span>
+                <span class="text-danger fw-bold">10.29 rpo (Rank 7)</span>
+              </div>
+            </div>
+            <div class="small text-muted">
+              Fastest in 2026: PBKS (12.49), RCB (11.52), DC (11.21), SRH (10.64), KKR (10.52), CSK (10.40), RR (10.29).
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Spotlight on Breakout Performers -->
-      <div class="row g-4">
+      <!-- 10-Team Death Overs Comparison Table -->
+      <h5 class="section-title"><i class="bi bi-graph-down-arrow me-2"></i>RR Hit a Boundary Least Often at the Death in 2026</h5>
+      <p class="small text-muted mb-2">Overs 16&ndash;20, all IPL matches incl. playoffs, sorted by 2026 bowling economy:</p>
+      <div class="rr-table-wrap mb-4">
+        <div class="table-responsive">
+          <table class="table table-hover align-middle small mb-0 text-center">
+            <thead class="table-light">
+              <tr>
+                <th>Team</th><th>Bowl Econ 2025</th><th>Bowl Econ 2026</th>
+                <th>Bat RPO 2025</th><th>Bat RPO 2026</th>
+                <th>Wkts Lost 2026</th><th>Balls Per Boundary 2026</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>SRH</td><td>10.97</td><td>9.96</td><td>10.93</td><td>10.64</td><td>38</td><td>4.36</td></tr>
+              <tr><td>KKR</td><td>9.86</td><td>10.08</td><td>11.30</td><td>10.52</td><td>17</td><td>4.13</td></tr>
+              <tr><td>DC</td><td>10.44</td><td>10.14</td><td>11.09</td><td>11.21</td><td>29</td><td>4.03</td></tr>
+              <tr><td>RCB</td><td>10.65</td><td>10.19</td><td>11.33</td><td>11.52</td><td>21</td><td>3.75</td></tr>
+              <tr class="table-warning fw-bold"><td>RR</td><td>12.26</td><td>10.58</td><td>10.05</td><td>10.29</td><td>34</td><td class="text-danger">4.86</td></tr>
+              <tr><td>CSK</td><td>10.77</td><td>10.89</td><td>9.90</td><td>10.40</td><td>23</td><td>4.14</td></tr>
+              <tr><td>MI</td><td>10.11</td><td>11.13</td><td>11.05</td><td>10.26</td><td>30</td><td>4.36</td></tr>
+              <tr><td>GT</td><td>10.87</td><td>11.19</td><td>10.81</td><td>9.97</td><td>32</td><td>4.72</td></tr>
+              <tr><td>LSG</td><td>11.21</td><td>11.29</td><td>10.49</td><td>10.20</td><td>34</td><td>4.28</td></tr>
+              <tr><td>PBKS</td><td>11.27</td><td>11.86</td><td>11.95</td><td>12.49</td><td>23</td><td>3.38</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Ferreira & Brijesh Spotlights -->
+      <div class="row g-4 mb-4">
+        <!-- Ferreira -->
         <div class="col-md-6">
-          <div class="card border-0 shadow-sm p-3 bg-white">
-            <h5 class="fw-bold text-dark mb-1">⭐ Donovan Ferreira (₹1 Cr Buy &middot; ₹1 Cr Retained)</h5>
-            <div class="row g-2 text-center my-2">
-              <div class="col-4 p-2 bg-light rounded"><span class="small text-muted">Death SR</span><div class="h5 fw-bold text-primary mb-0">222.0</div></div>
-              <div class="col-4 p-2 bg-light rounded"><span class="small text-muted">Pressure SR</span><div class="h5 fw-bold text-success mb-0">198.0</div></div>
-              <div class="col-4 p-2 bg-light rounded"><span class="small text-muted">Runs Added</span><div class="h5 fw-bold text-danger mb-0">+43</div></div>
+          <div class="card border-0 shadow-sm p-4 h-100">
+            <h5 class="fw-bold mb-1" style="color:#002D6A;">IPL 2026 IMPACT: Donovan Ferreira, ₹1 Crore</h5>
+            <p class="small text-muted mb-2">Ferreira lifted RR's death strike rate from 147 to 163.</p>
+            <div class="row g-2 text-center mb-3">
+              <div class="col-3 p-2 bg-light rounded"><span class="small text-muted">Death SR</span><div class="h5 fw-bold text-primary mb-0">222</div></div>
+              <div class="col-3 p-2 bg-light rounded"><span class="small text-muted">Runs Added</span><div class="h5 fw-bold text-success mb-0">+43</div></div>
+              <div class="col-3 p-2 bg-light rounded"><span class="small text-muted">Press. SR</span><div class="h5 fw-bold text-danger mb-0">198</div></div>
+              <div class="col-3 p-2 bg-light rounded"><span class="small text-muted">Rest of RR</span><div class="h5 fw-bold text-dark mb-0">147</div></div>
             </div>
-            <p class="small text-muted mb-0">
-              Scored 69 v SRH, 47(14) v DC, 38(11) in Qualifier 2. Also provides valuable off-spin capability.
-            </p>
+            <div class="table-responsive">
+              <table class="table table-sm table-bordered small text-center mb-2">
+                <thead class="table-light"><tr><th>Phase</th><th>Balls</th><th>Runs</th><th>SR</th></tr></thead>
+                <tbody>
+                  <tr><td>Powerplay</td><td>11</td><td>14</td><td>127</td></tr>
+                  <tr><td>Overs 7&ndash;15</td><td>83</td><td>119</td><td>143</td></tr>
+                  <tr class="table-success"><td><strong>Overs 16&ndash;20</strong></td><td>83</td><td>184</td><td><strong>222</strong></td></tr>
+                  <tr class="fw-bold"><td>Season</td><td>177</td><td>317</td><td>179</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="small text-muted">Four of his five 30-plus scores came in defeats: 69 v SRH, 47 off 14 v DC, 38 off 11 in Qualifier 2, 33 v SRH. 15 of 16 games; RR won 8 of them.</div>
           </div>
         </div>
+
+        <!-- Brijesh -->
         <div class="col-md-6">
-          <div class="card border-0 shadow-sm p-3 bg-white">
-            <h5 class="fw-bold text-dark mb-1">⭐ Brijesh Sharma (₹30 Lakh Buy &middot; ₹30 Lakh Retained)</h5>
-            <div class="row g-2 text-center my-2">
-              <div class="col-4 p-2 bg-light rounded"><span class="small text-muted">Wickets</span><div class="h5 fw-bold text-primary mb-0">14 in 13</div></div>
-              <div class="col-4 p-2 bg-light rounded"><span class="small text-muted">Balls / Wicket</span><div class="h5 fw-bold text-success mb-0">19.8</div></div>
-              <div class="col-4 p-2 bg-light rounded"><span class="small text-muted">Death Econ</span><div class="h5 fw-bold text-danger mb-0">10.19</div></div>
+          <div class="card border-0 shadow-sm p-4 h-100">
+            <h5 class="fw-bold mb-1" style="color:#002D6A;">IPL 2026 IMPACT: Brijesh Sharma, ₹30 Lakh</h5>
+            <p class="small text-muted mb-2">A ₹30 lakh buy out-bowled RR's senior seamers.</p>
+            <div class="row g-2 text-center mb-3">
+              <div class="col-3 p-2 bg-light rounded"><span class="small text-muted">Wickets</span><div class="h5 fw-bold text-primary mb-0">14</div></div>
+              <div class="col-3 p-2 bg-light rounded"><span class="small text-muted">Balls/Wkt</span><div class="h5 fw-bold text-success mb-0">19.8</div></div>
+              <div class="col-3 p-2 bg-light rounded"><span class="small text-muted">Death Wkts</span><div class="h5 fw-bold text-danger mb-0">8</div></div>
+              <div class="col-3 p-2 bg-light rounded"><span class="small text-muted">Press. Wkts</span><div class="h5 fw-bold text-dark mb-0">11</div></div>
             </div>
-            <p class="small text-muted mb-0">
-              11 of his 14 wickets came in high-pressure situations at an economy of 9.43. Elite value retention.
-            </p>
+            <div class="table-responsive">
+              <table class="table table-sm table-bordered small text-center mb-2">
+                <thead class="table-light"><tr><th>Phase</th><th>Overs</th><th>Wkts</th><th>Econ</th><th>League</th></tr></thead>
+                <tbody>
+                  <tr><td>Powerplay</td><td>12.1</td><td>1</td><td>10.77</td><td>9.86</td></tr>
+                  <tr class="table-success"><td>Overs 7&ndash;15</td><td>18.0</td><td>5</td><td>8.61</td><td>9.16</td></tr>
+                  <tr class="table-success"><td><strong>Overs 16&ndash;20</strong></td><td>16.0</td><td>8</td><td><strong>10.19</strong></td><td>10.63</td></tr>
+                  <tr class="fw-bold"><td>Season</td><td>46.1</td><td>14</td><td>9.73</td><td>&ndash;</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="small text-muted">19.8 balls/wkt (Deshpande needed 34.5 and Sandeep 23.6). Better than league from over 7 onwards. Use him in middle and at death, not powerplay. 13 of 16 games; RR won 7.</div>
           </div>
         </div>
+      </div>
+
+      <!-- Overs 16-20 Trio -->
+      <div class="card border-0 shadow-sm p-4 bg-light">
+        <h5 class="fw-bold text-dark mb-2">OVERS 16&ndash;20: Curran and Archer Give RR a Left-Right Pair at the Death</h5>
+        <div class="row g-3">
+          <div class="col-md-4">
+            <div class="p-3 bg-white rounded border">
+              <h6 class="fw-bold text-primary mb-1">Sam Curran &middot; Left-Arm</h6>
+              <div class="h4 fw-bold text-dark mb-1">9.2 Econ</div>
+              <div class="small text-muted">14 overs, 7 wickets. Slower balls make him a death bowler, not just new-ball option. Powerplay econ was 10.3.</div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="p-3 bg-white rounded border">
+              <h6 class="fw-bold text-primary mb-1">Jofra Archer &middot; Right-Arm Fast</h6>
+              <div class="h4 fw-bold text-dark mb-1">10.1 Econ</div>
+              <div class="small text-muted">45 overs, 20 wickets. The bigger workload and the most death wickets in the squad.</div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="p-3 bg-white rounded border">
+              <h6 class="fw-bold text-primary mb-1">Brijesh Sharma &middot; Cover</h6>
+              <div class="h4 fw-bold text-dark mb-1">10.2 Econ</div>
+              <div class="small text-muted">16 overs, 8 wickets. The third option if a death specialist isn't bought.</div>
+            </div>
+          </div>
+        </div>
+        <div class="small text-muted mt-2">Curran is left-arm, so RR keep a left-arm seamer at the death even after releasing Burger.</div>
       </div>
 
     </div>
 
-    <!-- ==================== TAB 6: 8-STAGE FRAMEWORK ==================== -->
-    <div class="tab-pane fade" id="framework" role="tabpanel">
+    <!-- ==================== TAB 5: AUCTION & SHORTLIST ==================== -->
+    <div class="tab-pane fade" id="tab-auction">
 
-      <div class="card border-0 shadow-sm p-4 mb-4">
-        <h4 class="fw-bold text-dark mb-3"><i class="bi bi-diagram-3-fill me-2 text-primary"></i>The 8-Stage Squad Optimization Pipeline</h4>
-        <div class="row g-3">
-          <div class="col-md-3">
-            <div class="p-3 border rounded bg-light h-100">
-              <span class="badge bg-primary mb-2">Stage 1</span>
-              <h6 class="fw-bold mb-1">Pressure Model</h6>
-              <p class="small text-muted mb-0">200,999 deliveries tagged across 867 games; 0&ndash;100 Bayesian-shrunk PRI ranking.</p>
-            </div>
+      <!-- Spending ₹33 Crore -->
+      <h5 class="section-title"><i class="bi bi-wallet-fill me-2"></i>SPENDING THE ₹33 CRORE</h5>
+      <p class="small text-muted mb-3">Most of the purse goes on the two gaps in the XI:</p>
+      <div class="row g-3 mb-4">
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm p-4 h-100" style="background:#FFF0F5; border-left: 5px solid #E91E8C !important;">
+            <div class="h6 fw-bold text-danger mb-1">Gap 1: Firepower at No. 6</div>
+            <div class="display-6 fw-bold text-dark mb-1">₹15 cr</div>
+            <div class="small text-muted">Your ceiling. The top priority, since RR's death batting lagged the league in 2024, 2025 and 2026.</div>
           </div>
-          <div class="col-md-3">
-            <div class="p-3 border rounded bg-light h-100">
-              <span class="badge bg-primary mb-2">Stage 2</span>
-              <h6 class="fw-bold mb-1">Team Diagnosis</h6>
-              <p class="small text-muted mb-0">Runs gained/lost by phase: Best powerplay, but bottom-3 death batting in IPL.</p>
-            </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm p-4 h-100" style="background:#F0F8FF; border-left: 5px solid #002D6A !important;">
+            <div class="h6 fw-bold text-primary mb-1">Gap 2: Death Specialist at No. 11</div>
+            <div class="display-6 fw-bold text-dark mb-1">₹10 cr</div>
+            <div class="small text-muted">Suggested ceiling. Burger at base price would leave most of this for backups.</div>
           </div>
-          <div class="col-md-3">
-            <div class="p-3 border rounded bg-light h-100">
-              <span class="badge bg-primary mb-2">Stage 3</span>
-              <h6 class="fw-bold mb-1">Ground Profiling</h6>
-              <p class="small text-muted mb-0">Jaipur SMS pitch turned 220+ chasing venue; spin (9.3) outbowls pace (10.8).</p>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="p-3 border rounded bg-light h-100">
-              <span class="badge bg-primary mb-2">Stage 4</span>
-              <h6 class="fw-bold mb-1">Player Form (24M)</h6>
-              <p class="small text-muted mb-0">Nov 2024 to Nov 2026 splits across international &amp; franchise tournaments.</p>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="p-3 border rounded bg-light h-100">
-              <span class="badge bg-primary mb-2">Stage 5</span>
-              <h6 class="fw-bold mb-1">Squad &amp; Prices</h6>
-              <p class="small text-muted mb-0">Full accounting of 27 players of 2026 totalling ₹120.65 crore salary expenditure.</p>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="p-3 border rounded bg-light h-100">
-              <span class="badge bg-primary mb-2">Stage 6</span>
-              <h6 class="fw-bold mb-1">Retain / Release</h6>
-              <p class="small text-muted mb-0">18 retained for ₹87.15 Cr; 9 released to unlock ₹33.5 Cr purse; 2 buybacks.</p>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="p-3 border rounded bg-light h-100">
-              <span class="badge bg-primary mb-2">Stage 7</span>
-              <h6 class="fw-bold mb-1">Playing XIs</h6>
-              <p class="small text-muted mb-0">Probable starting XI + trade contingencies (without Jaiswal, trading Curran).</p>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="p-3 border rounded bg-light h-100">
-              <span class="badge bg-primary mb-2">Stage 8</span>
-              <h6 class="fw-bold mb-1">Auction Targets</h6>
-              <p class="small text-muted mb-0">Top 20 Batters &amp; Bowlers under pressure targeted with ₹33.5 Cr purse.</p>
-            </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm p-4 h-100" style="background:#F5FFF0; border-left: 5px solid #28a745 !important;">
+            <div class="h6 fw-bold text-success mb-1">Backups (5 Players)</div>
+            <div class="display-6 fw-bold text-dark mb-1">₹8 cr</div>
+            <div class="small text-muted">About five squad players to take RR from 20 to 25. Squad after gaps: 20 players, 6 overseas. Leaves 5 places, 2 overseas.</div>
           </div>
         </div>
       </div>
 
-      <!-- About the Analyst & Sources -->
-      <div class="row g-4">
+      <!-- Auction Shortlist From Your Notes -->
+      <h5 class="section-title"><i class="bi bi-list-check me-2"></i>AUCTION SHORTLIST FROM YOUR NOTES</h5>
+      <p class="small text-muted mb-2">Only Shashank Singh has proven death-over hitting:</p>
+      <div class="rr-table-wrap mb-4">
+        <div class="table-responsive">
+          <table class="table table-hover align-middle small mb-0">
+            <thead class="table-light">
+              <tr><th>Player</th><th>Gap</th><th>Type</th><th>Recent Form</th><th>Catch</th></tr>
+            </thead>
+            <tbody>
+              <tr class="table-success fw-bold">
+                <td>Shashank Singh</td><td>1</td><td>Indian finisher</td>
+                <td>482 runs &middot; SR 162 &middot; death SR 195</td>
+                <td>Only if PBKS release him</td>
+              </tr>
+              <tr>
+                <td>Suryansh Shedge</td><td>1</td><td>Indian finisher</td>
+                <td>173 runs &middot; SR 155 &middot; death SR 127</td>
+                <td>Likely PBKS release; small sample</td>
+              </tr>
+              <tr>
+                <td>Nandre Burger (F)</td><td>2</td><td>Left-arm seam</td>
+                <td>14 wkts &middot; death econ 9.9</td>
+                <td>At base price; knows RR</td>
+              </tr>
+              <tr>
+                <td>Mahli Beardman (F)</td><td>2</td><td>Right-arm fast</td>
+                <td>BBL: 16 wkts &middot; econ 8.0</td>
+                <td>Age 21; stress fractures in 2025</td>
+              </tr>
+              <tr>
+                <td>Ottneil Baartman (F)</td><td>2</td><td>Right-arm seam</td>
+                <td>15 T20I wkts &middot; death econ 11.8</td>
+                <td>Death numbers are weak</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="alert alert-warning py-2 px-3 small mb-4">
+        <strong>Constraint:</strong> If gap 2 goes to a foreign bowler, gap 1 must be Indian: Shashank or Shedge. A foreign finisher at No. 6 means an Indian death bowler instead.
+      </div>
+
+      <!-- Backups with Remaining Purse -->
+      <div class="card border-0 shadow-sm p-4 bg-light">
+        <h5 class="fw-bold text-dark mb-2">BACKUPS WITH THE REMAINING PURSE (Five Backup Places, Two Overseas)</h5>
+        <ul class="small text-muted ps-3 mb-2">
+          <li class="mb-1"><strong>Indian batter:</strong> From your notes. Covers Jaiswal and Sooryavanshi; Pretorius is the only other opener and uses an overseas slot.</li>
+          <li class="mb-1"><strong>Foreign finisher:</strong> From your notes. A Hetmyer buyback at a lower price fits here.</li>
+          <li class="mb-1"><strong>Seam cover:</strong> A Deshpande buyback, or a cheaper seamer. Sandeep and Sushant Mishra are already in.</li>
+          <li><strong>Already covered in the squad:</strong> Spin: Punja, Puthur, Emanjot. Keeper: Ravi Singh. All-rounder: Shanaka. Opener: Pretorius.</li>
+        </ul>
+        <div class="small text-primary fw-semibold">Budget: About ₹8 crore for five players, or more if gap 2 goes to Burger at base price.</div>
+      </div>
+
+    </div>
+
+    <!-- ==================== TAB 6: 24-MONTH FORM & DECISIONS ==================== -->
+    <div class="tab-pane fade" id="tab-form">
+
+      <!-- Batting Table (24 Months) -->
+      <h5 class="section-title"><i class="bi bi-clock-history me-2"></i>Last 24 Months Batting: Sooryavanshi at 223, Jadeja at 135</h5>
+      <p class="small text-muted mb-2">Nov 2024 to Nov 2026 splits (IPL and internationals; &ndash; = under 20 death balls):</p>
+      <div class="rr-table-wrap mb-4">
+        <div class="table-responsive">
+          <table class="table table-hover align-middle small mb-0 text-center">
+            <thead class="table-light">
+              <tr><th>Batter</th><th>Matches</th><th>Runs</th><th>Strike Rate</th><th>Average</th><th>Death-over SR</th></tr>
+            </thead>
+            <tbody>
+              <tr class="table-success fw-bold"><td>Vaibhav Sooryavanshi</td><td>35</td><td>1,509</td><td>223</td><td>43.1</td><td>&ndash;</td></tr>
+              <tr><td>Yashasvi Jaiswal</td><td>30</td><td>986</td><td>157</td><td>36.5</td><td>&ndash;</td></tr>
+              <tr><td>Shimron Hetmyer</td><td>42</td><td>895</td><td>161</td><td>24.9</td><td>146</td></tr>
+              <tr><td>Dhruv Jurel</td><td>31</td><td>854</td><td>154</td><td>34.2</td><td>171</td></tr>
+              <tr><td>Riyan Parag</td><td>28</td><td>702</td><td>163</td><td>28.1</td><td>166</td></tr>
+              <tr><td>Ravindra Jadeja</td><td>27</td><td>567</td><td>135</td><td>43.6</td><td>150</td></tr>
+              <tr class="table-info fw-bold"><td>Donovan Ferreira</td><td>25</td><td>482</td><td>167</td><td>26.8</td><td>211</td></tr>
+              <tr><td>Shubham Dubey</td><td>14</td><td>187</td><td>151</td><td>23.4</td><td>171</td></tr>
+              <tr><td>Lhuan-dre Pretorius</td><td>9</td><td>103</td><td>134</td><td>12.9</td><td>&ndash;</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="small text-muted mb-4">*Pretorius's figures cover only IPL and internationals; he was the SA20 2025 top scorer and hit 188* off 79 balls in October 2026.</div>
+
+      <!-- Bowling Table (24 Months) -->
+      <h5 class="section-title"><i class="bi bi-clock-history me-2"></i>PERFORMANCE: Bowling, Last 24 Months</h5>
+      <p class="small text-muted mb-2">Archer leads the attack; Deshpande and Shami leak at the death (– = under 3 overs):</p>
+      <div class="rr-table-wrap mb-4">
+        <div class="table-responsive">
+          <table class="table table-hover align-middle small mb-0 text-center">
+            <thead class="table-light">
+              <tr><th>Bowler</th><th>Matches</th><th>Overs</th><th>Wkts</th><th>Econ</th><th>Powerplay</th><th>Middle</th><th>Death</th></tr>
+            </thead>
+            <tbody>
+              <tr class="table-success fw-bold"><td>Jofra Archer</td><td>44</td><td>164</td><td>59</td><td>9.15</td><td>9.14</td><td>7.46</td><td>10.07</td></tr>
+              <tr><td>Prince Yadav</td><td>32</td><td>118</td><td>31</td><td>9.17</td><td>8.84</td><td>8.76</td><td>10.05</td></tr>
+              <tr class="table-danger"><td>Mohammed Shami</td><td>24</td><td>87</td><td>21</td><td>9.71</td><td>8.74</td><td>9.84</td><td>13.97</td></tr>
+              <tr><td>Ravindra Jadeja</td><td>27</td><td>71</td><td>20</td><td>8.48</td><td>&ndash;</td><td>8.44</td><td>&ndash;</td></tr>
+              <tr><td>Mayank Yadav</td><td>15</td><td>58</td><td>15</td><td>10.30</td><td>8.79</td><td>11.37</td><td>11.77</td></tr>
+              <tr><td>Brijesh Sharma</td><td>13</td><td>46</td><td>14</td><td>9.73</td><td>10.77</td><td>8.61</td><td>10.19</td></tr>
+              <tr class="table-danger"><td>Tushar Deshpande</td><td>17</td><td>55</td><td>13</td><td>11.18</td><td>10.68</td><td>10.89</td><td>12.06</td></tr>
+              <tr><td>Yash Raj Punja</td><td>8</td><td>30</td><td>9</td><td>9.30</td><td>&ndash;</td><td>9.54</td><td>&ndash;</td></tr>
+              <tr><td>Riyan Parag</td><td>28</td><td>24</td><td>5</td><td>8.62</td><td>&ndash;</td><td>8.55</td><td>&ndash;</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Key Tactical Decisions: Slot 11 and Finishers -->
+      <div class="row g-4 mb-4">
         <div class="col-md-6">
-          <div class="card border-0 shadow-sm p-4 bg-white h-100">
-            <h5 class="fw-bold text-dark mb-2"><i class="bi bi-person-badge-fill me-2 text-primary"></i>About the Analyst</h5>
-            <div class="d-flex align-items-center gap-3 mb-3">
-              <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center fw-bold fs-4" style="width:55px;height:55px;">
-                MB
-              </div>
-              <div>
-                <h6 class="fw-bold mb-0">Mohamed B</h6>
-                <div class="small text-muted">B.Tech, Computer Science and Business Systems</div>
-                <div class="small text-primary">Thiagarajar College of Engineering, Madurai</div>
-              </div>
-            </div>
-            <p class="small text-muted mb-0">
-              "A passion for cricket and for data analysis, brought together to plan Rajasthan Royals' squad for the IPL 2027 auction. What started as the SupeRR Selector Season 2 hackathon became a complete squad review: retentions, releases, buybacks, playing XIs, ground analysis, and auction targets."
-            </p>
+          <div class="card border-0 shadow-sm p-4 h-100 bg-light">
+            <h5 class="fw-bold text-dark mb-2">SLOT 11: The Indian Quick</h5>
+            <p class="small text-muted mb-2">Prince Yadav is the safest pick for slot 11:</p>
+            <ul class="small text-muted ps-3 mb-2">
+              <li class="mb-2"><strong>Prince Yadav:</strong> 16 IPL 2026 wickets at 8.82 an over. Fit all season and now an India T20I player. 31 wickets in 24 months.</li>
+              <li class="mb-2"><strong>Mayank Yadav:</strong> 0 IPL 2026 wickets in 4 games, 11.4 an over. Recurring lumbar stress fracture; retained by LSG at 11 crore.</li>
+              <li><strong>Mohammed Shami:</strong> 14.0 death-over economy in 24 months. 21 wickets at 9.7 overall; turned 36 in September.</li>
+            </ul>
+            <div class="small text-primary"><em>All three play for LSG, so this pick goes with any Jaiswal-to-LSG trade talks.</em></div>
           </div>
         </div>
 
         <div class="col-md-6">
-          <div class="card border-0 shadow-sm p-4 bg-white h-100">
-            <h5 class="fw-bold text-dark mb-2"><i class="bi bi-journal-check me-2 text-success"></i>Methodology &amp; Verification</h5>
-            <ul class="small text-muted ps-3 mb-0">
-              <li class="mb-1"><strong>24-Month Splits:</strong> Computed from the SupeRR Selector ball-by-ball dataset (IPL + T20Is + A-team T20s), 13 Nov 2024 to 1 Nov 2026.</li>
-              <li class="mb-1"><strong>Cross-Checks:</strong> IPL 2026 season totals cross-verified against ESPNcricinfo tables (Business Standard, 31 May 2026). Sooryavanshi, Jurel, Archer, and Prince Yadav verified within 1 run/wicket.</li>
-              <li><strong>Other References:</strong> The Quint, Al Jazeera, CricTracker venue records, and official IPL replacement notices.</li>
+          <div class="card border-0 shadow-sm p-4 h-100 bg-light">
+            <h5 class="fw-bold text-dark mb-2">SLOTS 5 AND 7: Finishers</h5>
+            <p class="small text-muted mb-2">None of the named finishers is yet a proven death hitter:</p>
+            <ul class="small text-muted ps-3 mb-2">
+              <li class="mb-2"><strong>Suryansh Shedge:</strong> 155 strike rate, 173 runs in 13 games. Death SR 127 on small sample. PBKS player.</li>
+              <li class="mb-2"><strong>Nehal Wadhera:</strong> 133 strike rate, 511 runs in 25 games. Death SR 136. Steady No. 5, not a finisher. PBKS player.</li>
+              <li class="mb-2"><strong>Shubham Dubey:</strong> 171 death-over SR, already in squad. 187 runs at 151 overall in 14 games.</li>
+              <li><strong>Sam Curran:</strong> 184 death-over SR before being traded. 400 runs at 148; the best finishing numbers on this page.</li>
             </ul>
+            <div class="small text-danger"><em>A No. 7 who strikes at 170+ in overs 16&ndash;20 is still the missing piece in both XIs.</em></div>
           </div>
+        </div>
+      </div>
+
+      <!-- 4 Numbers Before Retention Deadline -->
+      <div class="card border-0 shadow-sm p-4 mb-4" style="background:#FFF0F5; border-left: 4px solid #E91E8C !important;">
+        <h5 class="fw-bold mb-2" style="color:#002D6A;">BEFORE THE RETENTION DEADLINE: Four Numbers to Check Against the Plan</h5>
+        <ol class="small text-muted ps-3 mb-0">
+          <li class="mb-2"><strong>Burger out, Sandeep kept.</strong> Burger's death-over economy was 9.9 against Sandeep's 12.7. Sushant Mishra (22 SMAT wickets) becomes the only left-arm seamer.</li>
+          <li class="mb-2"><strong>Bishnoi out.</strong> He took 36 wickets in 36 games over 24 months, more than any spinner kept, leaving Jadeja, Punja and Puthur to carry the spin.</li>
+          <li class="mb-2"><strong>Buybacks are a gamble.</strong> With no Right to Match, Hetmyer's T20 World Cup form could push his price back up.</li>
+          <li><strong>Overseas count.</strong> Five kept with Curran. Only one of the two XI gaps can be filled from overseas, and a Hetmyer buyback would make seven of eight.</li>
+        </ol>
+      </div>
+
+      <!-- Method and Sources -->
+      <div class="card border-0 shadow-sm p-4 bg-white">
+        <h5 class="fw-bold text-dark mb-2">METHOD AND SOURCES</h5>
+        <div class="small text-muted">
+          <p class="mb-1"><strong>How the numbers were built:</strong> 24-month splits computed from the SupeRR Selector ball-by-ball dataset (IPL plus internationals and A-team T20s), 13 Nov 2024 to 1 Nov 2026. Domestic leagues such as SA20 and CPL are not in it.</p>
+          <p class="mb-1"><strong>Cross-checks:</strong> IPL 2026 season totals from ESPNcricinfo's tables, as published by Business Standard on 31 May 2026. Sooryavanshi, Jurel, Archer and Prince Yadav match within a run or wicket.</p>
+          <p class="mb-1"><strong>Other sources:</strong> The Quint and Al Jazeera (Pretorius); Business Standard (Mayank Yadav fitness); Delhi Capitals and Tribune/ANI (Hetmyer); Wikipedia from ESPNcricinfo records (SMAT 2025&ndash;26).</p>
+          <p class="mb-0 text-primary fw-bold">Squad plan, XIs and needs are taken from your handwritten notes.</p>
         </div>
       </div>
 
